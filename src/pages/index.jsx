@@ -19,6 +19,8 @@ const App = () => {
         <Skills />
         <Experience />
       </div>
+
+      <div className=" m-20 font-bold tracking-tighter">Share waste stream</div>
       {/*//* Seprador del footer */}
       <div className="bg-[#eeeeee] h-[0.8px] w-full sm:mt-32 mt-20"></div>
       <Footer />

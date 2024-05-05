@@ -15,7 +15,7 @@ const Skills = () => {
           ></div>
           <div>Tecnologías</div>
         </div>
-        <div className="text-[14px] text-[#000000] mt-1">
+        <div className="text-[14px] text-[#808186] mt-1">
           Algunos de los lenguajes de programación, herramientas y tecnologías
           que utilizo.
         </div>

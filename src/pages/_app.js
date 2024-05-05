@@ -1,9 +1,10 @@
 import "@/styles/globals.css";
-import "@fontsource/roboto";
+
+import "@fontsource-variable/inter";
 
 const App = ({ Component, pageProps }) => {
   return (
-    <div style={{ fontFamily: "Roboto, sans-serif" }}>
+    <div style={{ fontFamily: "Inter Variable, sans-serif" }}>
       <Component {...pageProps} />
     </div>
   );

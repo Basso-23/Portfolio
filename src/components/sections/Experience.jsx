@@ -13,7 +13,7 @@ const Experience = () => {
         ></div>
         <div>Experiencia</div>
       </div>
-      <div className="text-[14px] text-[#000000] mt-1">
+      <div className="text-[14px] text-[#808186] mt-1">
         Algunas de las empresas y/o asociaciones con las que he tenido la
         oportunidad de trabajar.
       </div>

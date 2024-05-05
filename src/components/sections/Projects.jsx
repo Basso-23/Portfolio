@@ -5,8 +5,8 @@ import React, { useState, useEffect } from "react";
 
 const Projects = () => {
   return (
-    <div className="mt-8 py-4 pb-4 border-t ">
-      <div className="text-[25px] text-black font-medium flex items-center gap-2">
+    <div className="mt-8 py-4 pb-4 border-t  ">
+      <div className="text-[25px]  font-medium flex items-center gap-2">
         <div
           style={{
             backgroundImage: `url("https://i.imgur.com/qDQBmaf.png")`,
@@ -15,7 +15,7 @@ const Projects = () => {
         ></div>
         <div>Proyectos</div>
       </div>
-      <div className="text-[14px] text-[#000000] mt-1">
+      <div className="text-[14px] text-[#808186] mt-1">
         Estos son algunos de mis últimos proyectos, los cuales representan mi
         pasión y dedicación por el desarrollo de software.
       </div>
