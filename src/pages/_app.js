@@ -1,5 +1,12 @@
 import "@/styles/globals.css";
+import "@fontsource/roboto";
 
-export default function App({ Component, pageProps }) {
-  return <Component {...pageProps} />;
-}
+const App = ({ Component, pageProps }) => {
+  return (
+    <div style={{ fontFamily: "Roboto, sans-serif" }}>
+      <Component {...pageProps} />
+    </div>
+  );
+};
+
+export default App;
