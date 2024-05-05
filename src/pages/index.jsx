@@ -1,3 +1,4 @@
+import Footer from "@/components/sections/Footer";
 import Experience from "../components/sections/Experience";
 import Projects from "@/components/sections/Projects";
 import Skills from "@/components/sections/Skills";
@@ -17,6 +18,9 @@ const App = () => {
         <Experience />
         <Projects />
       </div>
+      <div className="bg-[#eeeeee] h-[0.9px] w-full sm:mt-32 mt-20"></div>
+
+      <Footer />
     </main>
   );
 };
