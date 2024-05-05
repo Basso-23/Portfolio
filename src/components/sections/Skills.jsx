@@ -4,7 +4,7 @@ import { skills } from "@/json/skills";
 
 const Skills = () => {
   return (
-    <div className="mt-8 py-4 pb-4 border-t border-b">
+    <div className="mt-8 py-4 pb-4 border-t">
       <div className="text-[25px] text-black font-medium">
         <div>Conocimientos</div>
         <div style={{}} className=" flex gap-4 mt-2 overflow-x-auto pb-3">

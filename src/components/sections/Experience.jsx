@@ -3,7 +3,7 @@ import Slider from "react-infinite-logo-slider";
 
 const Experience = () => {
   return (
-    <div className="mt-8 py-4 pb-4 border-t border-b">
+    <div className="mt-8 py-4 pb-4 border-t">
       <div className="text-[25px] font-medium ">Experience</div>
       <div className="text-[14px] text-[#808080]">
         <div>Algunas de las empresas con las que he podido trabajar.</div>

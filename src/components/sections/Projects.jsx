@@ -1,9 +1,11 @@
+import Github from "@/icons/Github";
+import Visit from "@/icons/Visit";
 import { projects } from "@/json/projects";
 import React, { useState, useEffect } from "react";
 
 const Projects = () => {
   return (
-    <div className="mt-8 py-4 pb-4 border-t">
+    <div className="mt-8 py-4 pb-4 border-t ">
       <div className="text-[25px] text-black font-medium">
         <div>Projects</div>
       </div>
@@ -41,13 +43,17 @@ const Projects = () => {
                   </div>
                 </div>
               </div>
-              <div className=" grid grid-cols-2 text-sm">
-                <div className="w-full bg-[#101010] text-white flex py-[12px] relative justify-center cursor-pointer border">
-                  <div className=" absolute left-5">L</div>
-                  <div className="ml-1">Ver demo</div>
+              <div className=" grid grid-cols-2 text-sm gap-1 mt-1">
+                <div className="w-full bg-white text-[#101010] flex py-[12px] relative justify-center cursor-pointer border ">
+                  <div className=" absolute left-5 fixedCenterY text-xl">
+                    <Visit />
+                  </div>
+                  <div className="ml-1">Ver página</div>
                 </div>
-                <div className="w-full bg-[#101010] text-white flex  py-[12px] relative justify-center cursor-pointer border">
-                  <div className=" absolute left-5">L</div>
+                <div className="w-full bg-[#101010] text-white flex py-[12px] relative justify-center cursor-pointer border ">
+                  <div className=" absolute left-5 fixedCenterY text-xl">
+                    <Github />
+                  </div>
                   <div className="ml-1">Github</div>
                 </div>
               </div>

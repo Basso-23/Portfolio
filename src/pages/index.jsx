@@ -13,10 +13,9 @@ const App = () => {
           Hola soy Carlos Baso un Ing. de Software. <br />
           Bienvenido a mi portafolio
         </div>
-
+        <Projects />
         <Skills />
         <Experience />
-        <Projects />
       </div>
       <div className="bg-[#eeeeee] h-[0.9px] w-full sm:mt-32 mt-20"></div>
 
