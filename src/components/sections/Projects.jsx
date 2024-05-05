@@ -6,11 +6,18 @@ import React, { useState, useEffect } from "react";
 const Projects = () => {
   return (
     <div className="mt-8 py-4 pb-4 border-t ">
-      <div className="text-[25px] text-black font-medium">
-        <div>Projects</div>
+      <div className="text-[25px] text-black font-medium flex items-center gap-2">
+        <div
+          style={{
+            backgroundImage: `url("https://i.imgur.com/qDQBmaf.png")`,
+          }}
+          className=" bg-contain bg-no-repeat aspect-square marker"
+        ></div>
+        <div>Proyectos</div>
       </div>
-      <div className="text-[14px] text-[#808080]">
-        <div>Algunas de las empresas con las que he podido trabajar.</div>
+      <div className="text-[14px] text-[#000000] mt-1">
+        Estos son algunos de mis últimos proyectos, los cuales representan mi
+        pasión y dedicación por el desarrollo de software.
       </div>
       <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-9 mt-7">
         {projects
