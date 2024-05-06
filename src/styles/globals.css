@@ -238,3 +238,17 @@
 .inactive-filter:hover {
   color: black;
 }
+
+.header-tab {
+  background-color: white;
+  color: black;
+  cursor: pointer;
+  text-transform: capitalize;
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
+
+.header-tab:hover {
+  color: rgb(89, 89, 89);
+}
