@@ -9,6 +9,7 @@ import { originalAtom } from "@/atom";
 import { dataAtom } from "@/atom";
 import { languageAtom } from "@/atom";
 
+import { motion as m } from "framer-motion";
 import Tilt from "react-parallax-tilt";
 
 const Projects = () => {
@@ -38,7 +39,7 @@ const Projects = () => {
       <div className="grid sm:grid-cols-2 grid-cols-1 gap-x-6 gap-y-10 mt-8">
         {data
           .map((item, index) => (
-            <div key={index}>
+            <m.div layout key={index}>
               <Tilt
                 scale={1.04}
                 transitionSpeed={2500}
@@ -71,7 +72,7 @@ const Projects = () => {
                 <div className="border-r pr-2 capitalize"> {item.category}</div>
                 <div>{item.date}</div>
               </div>
-            </div>
+            </m.div>
           ))
           .reverse()}
       </div>

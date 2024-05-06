@@ -253,3 +253,9 @@
 .header-tab:hover {
   color: rgb(89, 89, 89);
 }
+
+.texto {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
