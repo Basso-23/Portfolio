@@ -2,14 +2,30 @@ import React, { useState, useEffect } from "react";
 
 import { useAtom } from "jotai";
 import { filterAtom } from "@/atom";
+
+import { originalAtom } from "@/atom";
+import { dataAtom } from "@/atom";
+import { languageAtom } from "@/atom";
 const Filters = () => {
   const [currentFilter, setCurrentFilter] = useAtom(filterAtom);
+  const [originalData, setOriginalData] = useAtom(originalAtom);
+  const [data, setData] = useAtom(dataAtom);
+  const [language, setLanguage] = useAtom(languageAtom);
+
+  useEffect(() => {
+    if (language) {
+      setCurrentFilter("todos");
+    } else {
+      setCurrentFilter("all");
+    }
+  }, [language]);
 
   const Tab = ({ name }) => {
     return (
       <div
         onClick={() => {
           setCurrentFilter(name);
+          filtering(name);
         }}
         className={currentFilter === name ? "active-filter" : "inactive-filter"}
       >
@@ -18,12 +34,23 @@ const Filters = () => {
     );
   };
 
+  const filtering = (name) => {
+    if (name === "todos" || name === "all") {
+      setData(originalData);
+    } else {
+      const filtered = originalData.filter(
+        (project) => project.category.toLowerCase() === name
+      );
+      setData(filtered);
+    }
+  };
+
   return (
-    <div className=" flex bg-[#f5f5f5] gap-2 w-fit rounded-md text-[14px] font-semibold mt-5 tracking-tight   ">
-      <Tab name={"all"} />
-      <Tab name={"design"} />
-      <Tab name={"utility"} />
-      <Tab name={"other"} />
+    <div className=" flex bg-[#f5f5f5] gap-2 w-fit rounded-md text-[14px] font-semibold mt-5 tracking-tight">
+      <Tab name={language ? "todos" : "all"} />
+      <Tab name={language ? "diseño" : "design"} />
+      <Tab name={"full-stack"} />
+      <Tab name={language ? "otros" : "other"} />
     </div>
   );
 };

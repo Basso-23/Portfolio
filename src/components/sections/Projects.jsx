@@ -1,20 +1,42 @@
 import React, { useState, useEffect } from "react";
-import { projects } from "@/json/projects";
+import { projects_EN } from "@/json/projects_EN";
+import { projects_ES } from "@/json/projects_ES";
 import Filters from "../elements/Filters";
 import Github from "@/icons/Github";
 
+import { useAtom } from "jotai";
+import { originalAtom } from "@/atom";
+import { dataAtom } from "@/atom";
+import { languageAtom } from "@/atom";
+
 const Projects = () => {
+  const [originalData, setOriginalData] = useAtom(originalAtom);
+  const [data, setData] = useAtom(dataAtom);
+  const [language, setLanguage] = useAtom(languageAtom);
+
+  useEffect(() => {
+    setData(originalData);
+  }, [originalData]);
+
+  useEffect(() => {
+    if (language) {
+      setOriginalData(projects_ES);
+    } else {
+      setOriginalData(projects_EN);
+    }
+  }, [language]);
+
   return (
     <div className="mt-4 py-4 pb-4">
       <div className="tracking-tighter text-[25px] font-semibold leading-tighter">
-        All projects
+        {language ? <>Todos los proyectos</> : <>All projects</>}
       </div>
       <Filters />
 
       <div className="grid lg:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-x-6 gap-y-10 mt-8">
-        {projects
+        {data
           .map((item, index) => (
-            <div>
+            <div key={index}>
               <div
                 style={{
                   backgroundImage: `url("${item.image}")`,
@@ -31,7 +53,7 @@ const Projects = () => {
                 </div>
               </div>
               <div className="text-[#5b5b5b] flex gap-2 leading-none font-medium tracking-tighter text-[13px] mt-[2px]">
-                <div className="border-r pr-2"> {item.category}</div>
+                <div className="border-r pr-2 capitalize"> {item.category}</div>
                 <div>{item.date}</div>
               </div>
             </div>

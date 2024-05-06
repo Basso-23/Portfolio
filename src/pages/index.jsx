@@ -6,14 +6,17 @@ import React, { useState, useEffect } from "react";
 import Navbar from "@/components/sections/Navbar";
 import Header from "@/components/sections/Header";
 import ScrollToTop from "@/components/elements/ScrollToTop";
+import { useAtom } from "jotai";
+import { languageAtom } from "@/atom";
 
 const App = () => {
+  const [language, setLanguage] = useAtom(languageAtom);
   return (
     <main>
       <div className="pageSize min-h-screen">
         <Header />
         <div className="sm:hidden flex justify-between py-3 tracking-tighter text-[26px] font-semibold items-center border-b">
-          <div>Portfolio</div>
+          <div>{language ? <>Portafolio</> : <>Portfolio</>}</div>
           <Navbar />
         </div>
         <Skills />

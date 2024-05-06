@@ -1,7 +1,7 @@
-export const projects = [
+export const projects_ES = [
   {
     name: "Babershop",
-    category: "Design",
+    category: "Diseño",
     image: "https://i.imgur.com/u7KKJmO.png",
     url: "https://barbershop-woad.vercel.app/",
     github: "https://github.com/Basso-23/Barbershop",
@@ -9,7 +9,7 @@ export const projects = [
   },
   {
     name: "Ecommerce",
-    category: "Design",
+    category: "Diseño",
     image: "https://i.imgur.com/u7KKJmO.png",
     url: "https://estructura-ecommerce.vercel.app/",
     github: "https://github.com/Basso-23/Estructura_Ecommerce",
@@ -17,7 +17,7 @@ export const projects = [
   },
   {
     name: "Muñoz & Asociados",
-    category: "Design",
+    category: "full-stack",
     image: "https://i.imgur.com/u7KKJmO.png",
     url: "https://pagina-contador-abogado.vercel.app/",
     github: "https://github.com/Basso-23/Abogados_Firma",
@@ -33,7 +33,7 @@ export const projects = [
   },
   {
     name: "Ecommerce",
-    category: "Design",
+    category: "otros",
     image: "https://i.imgur.com/u7KKJmO.png",
     url: "https://estructura-ecommerce.vercel.app/",
     github: "https://github.com/Basso-23/Estructura_Ecommerce",
@@ -41,7 +41,7 @@ export const projects = [
   },
   {
     name: "Muñoz & Asociados",
-    category: "Design",
+    category: "Diseño",
     image: "https://i.imgur.com/u7KKJmO.png",
     url: "https://pagina-contador-abogado.vercel.app/",
     github: "https://github.com/Basso-23/Abogados_Firma",
@@ -49,7 +49,7 @@ export const projects = [
   },
   {
     name: "Babershop",
-    category: "Design",
+    category: "Diseño",
     image: "https://i.imgur.com/u7KKJmO.png",
     url: "https://barbershop-woad.vercel.app/",
     github: "https://github.com/Basso-23/Barbershop",
@@ -57,7 +57,7 @@ export const projects = [
   },
   {
     name: "Ecommerce",
-    category: "Design",
+    category: "full-stack",
     image: "https://i.imgur.com/u7KKJmO.png",
     url: "https://estructura-ecommerce.vercel.app/",
     github: "https://github.com/Basso-23/Estructura_Ecommerce",
@@ -65,7 +65,7 @@ export const projects = [
   },
   {
     name: "Muñoz & Asociados",
-    category: "Design",
+    category: "Diseño",
     image: "https://i.imgur.com/u7KKJmO.png",
     url: "https://pagina-contador-abogado.vercel.app/",
     github: "https://github.com/Basso-23/Abogados_Firma",

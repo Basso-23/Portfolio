@@ -18,8 +18,29 @@ import Check from "@/icons/Check";
 import Github from "@/icons/Github";
 import Download from "@/icons/Download";
 import Linkedin from "@/icons/Linkedin";
+import { CopyToClipboard } from "react-copy-to-clipboard";
+import { toast } from "sonner";
+import { useAtom } from "jotai";
+import { languageAtom } from "@/atom";
 
 const Navbar = () => {
+  const [language, setLanguage] = useAtom(languageAtom);
+
+  const handleToast = () => {
+    toast(
+      language
+        ? "Correo electrónico copiado exitosamente"
+        : "Email copied to clipboard",
+      {
+        description: "carlos.baso23@gmail.com",
+        action: {
+          label: "✔️",
+          onClick: () => console.log("Undo"),
+        },
+      }
+    );
+  };
+
   return (
     <div>
       <Sheet>
@@ -55,64 +76,108 @@ const Navbar = () => {
               <div className=" flex flex-col">
                 <div className=" border-b border-t border-[#ececec] pt-6 pb-7 ">
                   <h1 className=" uppercase text-[11px] text-[#4f4f4f] font-semibold">
-                    correo electrónico
+                    {language ? <>correo electrónico</> : <>email</>}
                   </h1>
-                  <div className="flex items-center rounded-md py-3 px-2 mt-2 gap-2 bg-[#f6f6f6] text-black font-medium">
+                  <a
+                    href="mailto:carlos.baso23@gmail.com"
+                    className="flex items-center rounded-md py-3 px-2 mt-2 gap-2 bg-[#f6f6f6] text-black font-medium"
+                  >
                     <div>
                       <Send />
                     </div>
-                    <div>Enviar correo</div>
-                  </div>
-                  <div className="flex items-center rounded-md py-3 px-2 mt-3 gap-2 bg-[#f6f6f6] text-black font-medium">
                     <div>
-                      <Clip />
+                      {language ? <>Enviar correo </> : <>Send email</>}
                     </div>
-                    <div>Copiar al portapapeles</div>
-                  </div>
+                  </a>
+                  <CopyToClipboard
+                    text={"carlos.baso23@gmail.com"}
+                    onCopy={() => {
+                      handleToast();
+                    }}
+                  >
+                    <div className="flex items-center rounded-md py-3 px-2 mt-3 gap-2 bg-[#f6f6f6] text-black font-medium cursor-pointer">
+                      <div>
+                        <Clip />
+                      </div>
+                      <div>
+                        {language ? (
+                          <>Copiar al portapapeles </>
+                        ) : (
+                          <>Copy to clipboard</>
+                        )}
+                      </div>
+                    </div>
+                  </CopyToClipboard>
                 </div>
                 <div className=" border-b border-t border-t-transparent border-[#ececec] pt-5 pb-7 ">
                   <h1 className=" uppercase text-[11px] text-[#4f4f4f] font-semibold">
                     links
                   </h1>
-                  <div className="flex items-center rounded-md py-3 px-2 mt-2 gap-2 bg-[#f6f6f6] text-black font-medium">
+                  <a
+                    target="_blank"
+                    href="https://github.com/Basso-23"
+                    className="flex items-center rounded-md py-3 px-2 mt-2 gap-2 bg-[#f6f6f6] text-black font-medium"
+                  >
                     <div>
                       <Github />
                     </div>
                     <div>Github</div>
-                  </div>
-                  <div className="flex items-center rounded-md py-3 px-2 mt-3 gap-2 bg-[#f6f6f6] text-black font-medium">
+                  </a>
+                  <a
+                    target="_blank"
+                    href="https://www.linkedin.com/in/carlosbaso/"
+                    className="flex items-center rounded-md py-3 px-2 mt-3 gap-2 bg-[#f6f6f6] text-black font-medium"
+                  >
                     <div>
                       <Linkedin />
                     </div>
                     <div>LinkedIn</div>
-                  </div>
+                  </a>
                 </div>
                 <div className=" border-b border-t border-t-transparent border-[#ececec] pt-5 pb-7 ">
                   <h1 className=" uppercase text-[11px] text-[#4f4f4f] font-semibold">
                     cv
                   </h1>
-                  <div className="flex items-center rounded-md py-3 px-2 mt-2 gap-2 bg-[#f6f6f6] text-black font-medium">
+                  <a
+                    target="_blank"
+                    href={
+                      language
+                        ? "https://drive.google.com/file/d/1xK_8f4Jdlcjvw8a87wCpgfKEqfCBmR3O/view?usp=drive_link"
+                        : "https://drive.google.com/file/d/1O2gmqslUaGKqcvuj-d_cBgdJP1XEpCw4/view?usp=drive_link"
+                    }
+                    className="flex items-center rounded-md py-3 px-2 mt-2 gap-2 bg-[#f6f6f6] text-black font-medium"
+                  >
                     <div>
                       <Download />
                     </div>
-                    <div>Descargar</div>
-                  </div>
+                    <div> {language ? <>Descargar</> : <>Download</>}</div>
+                  </a>
                 </div>
                 <div className=" border-t border-t-transparent border-[#ececec] pt-5 pb-7 ">
                   <h1 className=" uppercase text-[11px] text-[#4f4f4f] font-semibold">
-                    idioma
+                    {language ? <>idioma</> : <>language</>}
                   </h1>
-                  <div className="flex items-center rounded-md py-3 px-2 mt-2 gap-2 bg-[#f6f6f6] text-black font-medium">
-                    <div>
+                  <div
+                    onClick={() => {
+                      setLanguage(true);
+                    }}
+                    className="flex items-center rounded-md py-3 px-2 mt-2 gap-2 bg-[#f6f6f6] text-black font-medium cursor-pointer select-none"
+                  >
+                    <div className={language ? " visible" : " invisible"}>
                       <Check />
                     </div>
-                    <div>Español</div>
+                    <div>{language ? <>Español</> : <>Spanish</>}</div>
                   </div>
-                  <div className="flex items-center rounded-md py-3 px-2 mt-3 gap-2 bg-[#f6f6f6] text-black font-medium">
-                    <div>
+                  <div
+                    onClick={() => {
+                      setLanguage(false);
+                    }}
+                    className="flex items-center rounded-md py-3 px-2 mt-3 gap-2 bg-[#f6f6f6] text-black font-medium cursor-pointer select-none"
+                  >
+                    <div className={!language ? " visible" : " invisible"}>
                       <Check />
                     </div>
-                    <div>Inglés</div>
+                    <div>{language ? <>Inglés</> : <>English</>}</div>
                   </div>
                 </div>
               </div>

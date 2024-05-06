@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from "react";
-
 import {
   Popover,
   PopoverContent,
@@ -8,58 +7,139 @@ import {
 import Send from "@/icons/Send";
 import Clip from "@/icons/Clip";
 import Check from "@/icons/Check";
+import { useAtom } from "jotai";
+import { languageAtom } from "@/atom";
+import { PopoverClose } from "@radix-ui/react-popover";
+import { CopyToClipboard } from "react-copy-to-clipboard";
+import { toast } from "sonner";
 
 const Header = () => {
+  const [language, setLanguage] = useAtom(languageAtom);
+
+  const handleToast = () => {
+    toast(
+      language
+        ? "Correo electrónico copiado exitosamente"
+        : "Email copied to clipboard",
+      {
+        description: "carlos.baso23@gmail.com",
+        action: {
+          label: "✔️",
+          onClick: () => console.log("Undo"),
+        },
+      }
+    );
+  };
+
   return (
     <div className="sm:flex hidden justify-between border-b pb-7 mt-8 tracking-tighter">
       <div className="   text-[26px] font-semibold ">
-        Welcome to my portfolio
+        {language ? (
+          <>Bienvenido a mi portafolio</>
+        ) : (
+          <>Welcome to my portfolio</>
+        )}
       </div>
       <div className=" tracking-tight font-medium text-[14px] flex gap-8 uppercase items-center">
         <div>
           <Popover>
             <PopoverTrigger asChild>
-              <div className="header-tab ">correo electrónico</div>
+              <div className="header-tab ">
+                {language ? <>correo electrónico</> : <>email</>}
+              </div>
             </PopoverTrigger>
             <PopoverContent asChild>
               <div className="text-[13px] tracking-tight">
-                <div className="flex items-center rounded-md py-3 px-2 mt-2 gap-2 bg-[#f6f6f6] text-black font-medium">
+                <a
+                  href="mailto:carlos.baso23@gmail.com"
+                  className="flex items-center rounded-md py-3 px-2 mt-2 gap-2 bg-[#f6f6f6] text-black font-medium cursor-pointer select-none"
+                >
                   <div>
                     <Send />
                   </div>
-                  <div>Enviar correo</div>
-                </div>
-                <div className="flex items-center rounded-md py-3 px-2 mt-2 gap-2 bg-[#f6f6f6] text-black font-medium">
-                  <div>
-                    <Clip />
+                  <div>{language ? <>Enviar correo </> : <>Send email</>}</div>
+                </a>
+                <CopyToClipboard
+                  text={"carlos.baso23@gmail.com"}
+                  onCopy={() => {
+                    handleToast();
+                  }}
+                >
+                  <div className="flex items-center rounded-md py-3 px-2 mt-2 gap-2 bg-[#f6f6f6] text-black font-medium cursor-pointer select-none">
+                    <div>
+                      <Clip />
+                    </div>
+                    <div>
+                      {language ? (
+                        <>Copiar al portapapeles </>
+                      ) : (
+                        <>Copy to clipboard</>
+                      )}
+                    </div>
                   </div>
-                  <div>Copiar al portapapeles</div>
-                </div>
+                </CopyToClipboard>
               </div>
             </PopoverContent>
           </Popover>
         </div>
-        <div className="header-tab">github</div>
-        <div className="header-tab">LinkedIn</div>
-        <div className="header-tab">currículum</div>
+        <a
+          target="_blank"
+          href="https://github.com/Basso-23"
+          className="header-tab"
+        >
+          github
+        </a>
+        <a
+          target="_blank"
+          href="https://www.linkedin.com/in/carlosbaso/"
+          className="header-tab"
+        >
+          LinkedIn
+        </a>
+        <a
+          target="_blank"
+          href={
+            language
+              ? "https://drive.google.com/file/d/1xK_8f4Jdlcjvw8a87wCpgfKEqfCBmR3O/view?usp=drive_link"
+              : "https://drive.google.com/file/d/1O2gmqslUaGKqcvuj-d_cBgdJP1XEpCw4/view?usp=drive_link"
+          }
+          className="header-tab"
+        >
+          {language ? <>currículum</> : <>Resume</>}
+        </a>
         <div>
           <Popover>
             <PopoverTrigger asChild>
-              <div className="header-tab">idioma</div>
+              <div className="header-tab">
+                {language ? <>idioma</> : <>language</>}
+              </div>
             </PopoverTrigger>
             <PopoverContent asChild>
               <div className="text-[13px] tracking-tight">
-                <div className="flex items-center rounded-md py-3 px-2 mt-2 gap-2 bg-[#f6f6f6] text-black font-medium">
+                <div
+                  onClick={() => {
+                    setLanguage(true);
+                  }}
+                  className="flex items-center rounded-md py-3 px-2 mt-2 gap-2 bg-[#f6f6f6] text-black font-medium cursor-pointer select-none"
+                >
                   <div>
-                    <Check />
+                    <div className={language ? " visible" : " invisible"}>
+                      <Check />
+                    </div>
                   </div>
-                  <div>Español</div>
+                  <div>{language ? <>Español</> : <>Spanish</>}</div>
                 </div>
-                <div className="flex items-center rounded-md py-3 px-2 mt-2 gap-2 bg-[#f6f6f6] text-black font-medium">
-                  <div>
+
+                <div
+                  onClick={() => {
+                    setLanguage(false);
+                  }}
+                  className="flex items-center rounded-md py-3 px-2 mt-2 gap-2 bg-[#f6f6f6] text-black font-medium cursor-pointer select-none"
+                >
+                  <div className={!language ? " visible" : " invisible"}>
                     <Check />
                   </div>
-                  <div>Inglés</div>
+                  <div>{language ? <>Inglés</> : <>English</>}</div>
                 </div>
               </div>
             </PopoverContent>
