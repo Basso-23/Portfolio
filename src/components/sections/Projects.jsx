@@ -9,6 +9,8 @@ import { originalAtom } from "@/atom";
 import { dataAtom } from "@/atom";
 import { languageAtom } from "@/atom";
 
+import Tilt from "react-parallax-tilt";
+
 const Projects = () => {
   const [originalData, setOriginalData] = useAtom(originalAtom);
   const [data, setData] = useAtom(dataAtom);
@@ -33,17 +35,30 @@ const Projects = () => {
       </div>
       <Filters />
 
-      <div className="grid lg:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-x-6 gap-y-10 mt-8">
+      <div className="grid sm:grid-cols-2 grid-cols-1 gap-x-6 gap-y-10 mt-8">
         {data
           .map((item, index) => (
             <div key={index}>
-              <div
-                style={{
-                  backgroundImage: `url("${item.image}")`,
-                }}
-                className=" aspect-video w-full bg-no-repeat bg-cover rounded-sm shadow-sm"
-                key={index}
-              ></div>
+              <Tilt
+                scale={1.04}
+                transitionSpeed={2500}
+                tiltMaxAngleX={1.1}
+                tiltMaxAngleY={1.1}
+                className=" cursor-pointer"
+              >
+                <div
+                  style={{
+                    backgroundImage: `url("${item.image}")`,
+                  }}
+                  className=" aspect-video w-full bg-no-repeat bg-cover rounded-sm shadow-sm relative bg-top"
+                >
+                  <a
+                    target="_blank"
+                    href={item.url}
+                    className=" absolute w-full h-full"
+                  ></a>
+                </div>
+              </Tilt>
               <div className=" flex justify-between items-center mt-4">
                 <div className="font-bold tracking-tighter text-[14px]">
                   {item.name}
