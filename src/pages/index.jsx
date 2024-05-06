@@ -8,15 +8,13 @@ import Navbar from "@/components/sections/Navbar";
 const App = () => {
   return (
     <main>
-      <div className="pageSize sm:pt-10 pt-4 min-h-screen">
-        <Navbar />
+      <div className="pageSize min-h-screen">
         {/*//* Title */}
-        <div className="text-[30px] sm:text-[40px] font-medium mt-12 leading-tight">
-          Hola soy Carlos Baso un Ing. de Software <br />
-          Bienvenido a mi portafolio
+        <div className="text-[30px] font-semibold mt-12 leading-tighter border-b pb-6">
+          Welcome back
         </div>
-        <Projects />
         <Skills />
+        <Projects />
         <Experience />
       </div>
 

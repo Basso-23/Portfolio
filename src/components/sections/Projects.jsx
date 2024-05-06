@@ -5,7 +5,7 @@ import React, { useState, useEffect } from "react";
 
 const Projects = () => {
   return (
-    <div className="mt-8 py-4 pb-4 border-t  ">
+    <div className="mt-8 py-4 pb-4">
       <div className="text-[25px]  font-medium flex items-center gap-2">
         <div
           style={{
