@@ -26,11 +26,11 @@ const Projects = () => {
                 <div className="font-bold tracking-tighter text-[14px]">
                   {item.name}
                 </div>
-                <div className="text-[30px] cursor-pointer hover:scale-110 transition-all">
+                <div className="text-[30px] cursor-pointer hover:scale-110 transition-all hidden">
                   <Github />
                 </div>
               </div>
-              <div className="text-[#5b5b5b] flex gap-2 leading-none font-medium tracking-tighter text-[13px]">
+              <div className="text-[#5b5b5b] flex gap-2 leading-none font-medium tracking-tighter text-[13px] mt-[2px]">
                 <div className="border-r pr-2"> {item.category}</div>
                 <div>{item.date}</div>
               </div>

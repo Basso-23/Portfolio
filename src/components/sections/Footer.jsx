@@ -2,8 +2,8 @@ import React, { useState, useEffect } from "react";
 
 const Footer = () => {
   return (
-    <section className="sm:py-10 py-7 flex sm:justify-between text-[#484848] sm:text-[13px] text-[14px] max-w-[1300px] px-3 sm:px-8 mx-auto flex-wrap gap-4 tracking-tighter font-medium">
-      <div className=" mx-auto sm:mx-0"> © 2024 CarlosBaso</div>
+    <section className="sm:py-10 py-7 flex sm:justify-between text-[#696969] sm:text-[13px] text-[14px] max-w-[1300px] px-3 sm:px-8 mx-auto flex-wrap gap-4 tracking-tight font-normal">
+      <div className=" mx-auto sm:mx-0">©2024 CarlosBaso</div>
       <div className="sm:flex hidden gap-6">
         <div className=" cursor-pointer">
           <div>Correo electrónico</div>

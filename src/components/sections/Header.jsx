@@ -15,11 +15,11 @@ const Header = () => {
       <div className="   text-[26px] font-semibold ">
         Welcome to my portfolio
       </div>
-      <div className=" tracking-tight font-semibold text-[14px] flex gap-8 uppercase items-center">
+      <div className=" tracking-tight font-medium text-[14px] flex gap-8 uppercase items-center">
         <div>
           <Popover>
             <PopoverTrigger asChild>
-              <div className="header-tab">correo electrónico</div>
+              <div className="header-tab ">correo electrónico</div>
             </PopoverTrigger>
             <PopoverContent asChild>
               <div className="text-[13px] tracking-tight">
