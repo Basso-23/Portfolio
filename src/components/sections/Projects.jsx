@@ -1,61 +1,38 @@
 import React, { useState, useEffect } from "react";
-import Github from "@/icons/Github";
-import Visit from "@/icons/Visit";
 import { projects } from "@/json/projects";
 import Filters from "../elements/Filters";
+import Github from "@/icons/Github";
 
 const Projects = () => {
   return (
-    <div className="mt-8 py-4 pb-4">
+    <div className="mt-4 py-4 pb-4">
       <div className="tracking-tighter text-[25px] font-semibold leading-tighter">
         All projects
       </div>
       <Filters />
 
-      <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-9 mt-7">
+      <div className="grid lg:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-x-6 gap-y-10 mt-8">
         {projects
           .map((item, index) => (
-            <div
-              key={index}
-              className="flex w-full flex-col aspect-square max-h-[325px]"
-            >
+            <div>
               <div
                 style={{
                   backgroundImage: `url("${item.image}")`,
                 }}
-                className={
-                  "w-full aspect-square max-h-[325px] border-[1px] border-[#e2e2e2] relative mx-auto projectImage"
-                }
-              >
-                {/* Anchor */}
-                <div className="focus w-full h-full relative">
-                  <a
-                    target="_blank"
-                    href={item.url}
-                    className="w-full h-full z-50 absolute"
-                  ></a>
+                className=" aspect-video w-full bg-no-repeat bg-cover rounded-sm shadow-sm"
+                key={index}
+              ></div>
+              <div className=" flex justify-between items-center mt-4">
+                <div className="font-bold tracking-tighter text-[14px]">
+                  {item.name}
                 </div>
-                {/* Tag desktop */}
-                <div className="focus-content sm:flex hidden justify-center flex-col gap-0 pl-10 tracking-wide max-w-[350px]">
-                  <div className="text-[18px] roboto-light">{item.name}</div>
-                  <div className="text-[13px] text-[#b0b0b0]">
-                    {item.category}
-                  </div>
+                <div className="text-[30px] cursor-pointer hover:scale-110 transition-all">
+                  <Github />
                 </div>
               </div>
-              <div className=" grid grid-cols-2 text-sm gap-1 mt-1">
-                <div className="w-full bg-white text-[#101010] flex py-[12px] relative justify-center cursor-pointer border ">
-                  <div className=" absolute left-5 fixedCenterY text-xl">
-                    <Visit />
-                  </div>
-                  <div className="ml-1">Ver página</div>
-                </div>
-                <div className="w-full bg-[#101010] text-white flex py-[12px] relative justify-center cursor-pointer border ">
-                  <div className=" absolute left-5 fixedCenterY text-xl">
-                    <Github />
-                  </div>
-                  <div className="ml-1">Github</div>
-                </div>
+              <div className="text-[#5b5b5b] flex gap-2 leading-none font-medium tracking-tighter text-[13px]">
+                <div className="border-r pr-2"> {item.category}</div>
+                <div>{item.date}</div>
               </div>
             </div>
           ))

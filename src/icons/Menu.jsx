@@ -1,7 +1,7 @@
-import { GrMenu } from "react-icons/gr";
+import { BiMenuAltRight } from "react-icons/bi";
 
 const Menu = () => {
-  return <GrMenu />;
+  return <BiMenuAltRight />;
 };
 
 export default Menu;

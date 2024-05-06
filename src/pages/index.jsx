@@ -10,15 +10,14 @@ const App = () => {
     <main>
       <div className="pageSize min-h-screen">
         {/*//* Title */}
-        <div className="tracking-tighter text-[25px] font-semibold mt-12 leading-tighter border-b pb-7">
-          Welcome back
+        <div className=" border-b pb-7 mt-8 tracking-tighter text-[25px] font-semibold">
+          Welcome to my portfolio
         </div>
         <Skills />
         <Projects />
         <Experience />
       </div>
 
-      <div className=" m-20 font-bold tracking-tighter">Share waste stream</div>
       {/*//* Seprador del footer */}
       <div className="bg-[#eeeeee] h-[0.8px] w-full sm:mt-32 mt-20"></div>
       <Footer />
