@@ -16,7 +16,16 @@ const App = () => {
       <div className="pageSize min-h-screen">
         <Header />
         <div className="sm:hidden flex justify-between py-3 tracking-tighter text-[26px] font-semibold items-center border-b">
-          <div>{language ? <>Portafolio</> : <>Portfolio</>}</div>
+          <div className=" relative">
+            {language ? <>Portafolio</> : <>Portfolio</>}
+            <div
+              className={`font-bold tracking-tighter text-[11px] absolute uppercase top-0 bg-black text-white rounded-md px-[8px] py-[2px] ${
+                language ? "right-[-60px]" : "right-[-48px]"
+              }`}
+            >
+              {language ? <>nuevo</> : <>new</>}
+            </div>
+          </div>
           <Navbar />
         </div>
         <Skills />
@@ -24,9 +33,11 @@ const App = () => {
         <Experience />
       </div>
 
-      {/*//* Seprador del footer */}
-      <div className="bg-[#eeeeee] h-[0.8px] w-full sm:mt-32 mt-20"></div>
-      <Footer />
+      <div className="bg-[#f7f7f7] border-t mt-20">
+        <div className="pageSize">
+          <Footer />
+        </div>
+      </div>
 
       <ScrollToTop />
     </main>

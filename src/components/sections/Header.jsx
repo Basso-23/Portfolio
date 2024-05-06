@@ -33,12 +33,19 @@ const Header = () => {
 
   return (
     <div className="sm:flex hidden justify-between border-b pb-7 mt-8 tracking-tighter">
-      <div className="   text-[26px] font-semibold ">
+      <div className="   text-[26px] font-semibold relative">
         {language ? (
           <>Bienvenido a mi portafolio</>
         ) : (
           <>Welcome to my portfolio</>
         )}
+        <div
+          className={`font-bold tracking-tighter text-[11px] absolute uppercase top-0 bg-black text-white rounded-md px-[8px] py-[2px] ${
+            language ? "right-[-60px]" : "right-[-48px]"
+          }`}
+        >
+          {language ? <>nuevo</> : <>new</>}
+        </div>
       </div>
       <div className=" tracking-tight font-medium text-[14px] flex gap-8 uppercase items-center">
         <div>

@@ -31,12 +31,13 @@ const Projects = () => {
 
   return (
     <div className="mt-4 py-4 pb-4">
-      <div className="tracking-tighter text-[25px] font-semibold leading-tighter">
-        {language ? <>Todos los proyectos</> : <>All projects</>}
+      <div className="animate-fade-up delay-75">
+        <div className="tracking-tighter text-[25px] font-semibold leading-tighter ">
+          {language ? <>Todos los proyectos</> : <>All projects</>}
+        </div>
+        <Filters />
       </div>
-      <Filters />
-
-      <div className="grid sm:grid-cols-2 grid-cols-1 gap-x-6 gap-y-10 mt-8">
+      <div className="grid sm:grid-cols-2 grid-cols-1 gap-x-6 gap-y-10 mt-8 animate-fade-up delay-150">
         {data
           .map((item, index) => (
             <m.div layout key={index}>
@@ -51,7 +52,7 @@ const Projects = () => {
                   style={{
                     backgroundImage: `url("${item.image}")`,
                   }}
-                  className=" aspect-video w-full bg-no-repeat bg-cover rounded-sm shadow-sm relative bg-top"
+                  className=" aspect-video w-full bg-no-repeat bg-cover rounded-sm shadow-sm relative bg-top border"
                 >
                   <a
                     target="_blank"

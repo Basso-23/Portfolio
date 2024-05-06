@@ -14,7 +14,7 @@ import Linux from "@/icons/skills/Linux";
 
 const Skills = () => {
   return (
-    <div className="mt-8">
+    <div className="mt-8 animate-fade-up">
       <div className="text-[25px] text-black font-medium">
         <div className=" flex gap-4 mt-6 overflow-x-auto pb-3">
           <Badge name={"Javascript"} logo={<JS />} />
