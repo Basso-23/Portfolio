@@ -10,9 +10,14 @@ const App = () => {
     <main>
       <div className="pageSize min-h-screen">
         {/*//* Title */}
-        <div className=" border-b pb-7 mt-8 tracking-tighter text-[25px] font-semibold">
+        <div className=" border-b pb-7 mt-8 tracking-tighter text-[25px] font-semibold sm:flex hidden">
           Welcome to my portfolio
         </div>
+        <div className="sm:hidden flex justify-between mt-4 tracking-tighter text-[25px] font-semibold items-center border-b pb-5">
+          <div>Portfolio</div>
+          <Navbar />
+        </div>
+
         <Skills />
         <Projects />
         <Experience />

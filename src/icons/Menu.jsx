@@ -1,7 +1,7 @@
-import { BiMenuAltRight } from "react-icons/bi";
+import { MdOutlineMenu } from "react-icons/md";
 
 const Menu = () => {
-  return <BiMenuAltRight />;
+  return <MdOutlineMenu />;
 };
 
 export default Menu;
