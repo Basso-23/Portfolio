@@ -31,13 +31,13 @@ const Projects = () => {
 
   return (
     <div className="mt-4 py-4 pb-4">
-      <div className="animate-fade-up delay-75">
-        <div className="tracking-tighter text-[25px] font-semibold leading-tighter ">
+      <div className="animate-fade-up delay-150">
+        <div className="tracking-tighter text-[25px] font-semibold leading-tighter relative w-fit">
           {language ? <>Todos los proyectos</> : <>All projects</>}
         </div>
         <Filters />
       </div>
-      <div className="grid sm:grid-cols-2 grid-cols-1 gap-x-6 gap-y-10 mt-8 animate-fade-up delay-150">
+      <div className="grid sm:grid-cols-2 grid-cols-1 gap-x-6 gap-y-10 mt-8 animate-fade-up delay-300">
         {data
           .map((item, index) => (
             <m.div layout key={index}>

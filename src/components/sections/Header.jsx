@@ -12,9 +12,21 @@ import { languageAtom } from "@/atom";
 import { PopoverClose } from "@radix-ui/react-popover";
 import { CopyToClipboard } from "react-copy-to-clipboard";
 import { toast } from "sonner";
+import TextTransition, { presets } from "react-text-transition";
 
 const Header = () => {
   const [language, setLanguage] = useAtom(languageAtom);
+  const [index, setIndex] = useState(0);
+
+  const TEXTS = ["React", "Next", "Astro", "Git", "Node", "JS", "html", "ccs"];
+
+  useEffect(() => {
+    const intervalId = setInterval(
+      () => setIndex((index) => index + 1),
+      5000 //* every 5 seconds
+    );
+    return () => clearTimeout(intervalId);
+  }, []);
 
   const handleToast = () => {
     toast(
@@ -33,18 +45,18 @@ const Header = () => {
 
   return (
     <div className="sm:flex hidden justify-between border-b pb-7 mt-8 tracking-tighter">
-      <div className="   text-[26px] font-semibold relative">
-        {language ? (
-          <>Bienvenido a mi portafolio</>
-        ) : (
-          <>Welcome to my portfolio</>
-        )}
-        <div
-          className={`font-bold tracking-tighter text-[11px] absolute uppercase top-0 bg-black text-white rounded-md px-[8px] py-[2px] ${
-            language ? "right-[-60px]" : "right-[-48px]"
-          }`}
-        >
-          {language ? <>nuevo</> : <>new</>}
+      <div className="flex text-[26px] font-semibold">
+        <div>
+          {language ? (
+            <>Bienvenido a mi portafolio</>
+          ) : (
+            <>Welcome to my portfolio</>
+          )}
+        </div>
+        <div className="font-bold tracking-tighter text-[11px] uppercase top-0 bg-black text-white rounded-md px-[8px] py-[2px] h-fit ml-2">
+          <TextTransition springConfig={presets.stiff}>
+            {TEXTS[index % TEXTS.length]}
+          </TextTransition>
         </div>
       </div>
       <div className=" tracking-tight font-medium text-[14px] flex gap-8 uppercase items-center">
