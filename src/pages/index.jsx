@@ -10,7 +10,7 @@ const App = () => {
     <main>
       <div className="pageSize min-h-screen">
         {/*//* Title */}
-        <div className="text-[30px] font-semibold mt-12 leading-tighter border-b pb-6">
+        <div className="tracking-tighter text-[25px] font-semibold mt-12 leading-tighter border-b pb-7">
           Welcome back
         </div>
         <Skills />

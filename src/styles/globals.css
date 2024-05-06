@@ -200,3 +200,41 @@
 .border-l button {
   display: none;
 }
+
+.active-filter {
+  background-color: white;
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
+  padding-top: 3.5px;
+  padding-bottom: 3.5px;
+  border-width: 1px;
+  border-radius: calc(var(--radius) - 2px);
+  color: black;
+  pointer-events: none;
+  text-transform: capitalize;
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
+
+.inactive-filter {
+  font-weight: 500;
+  background-color: transparent;
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
+  padding-top: 3.5px;
+  padding-bottom: 3.5px;
+  border-width: 1px;
+  border-radius: calc(var(--radius) - 2px);
+  border-color: transparent;
+  color: #afafaf;
+  cursor: pointer;
+  text-transform: capitalize;
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
+
+.inactive-filter:hover {
+  color: black;
+}

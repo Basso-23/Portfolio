@@ -1,24 +1,17 @@
+import React, { useState, useEffect } from "react";
 import Github from "@/icons/Github";
 import Visit from "@/icons/Visit";
 import { projects } from "@/json/projects";
-import React, { useState, useEffect } from "react";
+import Filters from "../elements/Filters";
 
 const Projects = () => {
   return (
     <div className="mt-8 py-4 pb-4">
-      <div className="text-[25px]  font-medium flex items-center gap-2">
-        <div
-          style={{
-            backgroundImage: `url("https://i.imgur.com/qDQBmaf.png")`,
-          }}
-          className=" bg-contain bg-no-repeat aspect-square marker"
-        ></div>
-        <div>Proyectos</div>
+      <div className="tracking-tighter text-[25px] font-semibold leading-tighter">
+        All projects
       </div>
-      <div className="text-[14px] text-[#808186] mt-1">
-        Estos son algunos de mis últimos proyectos, los cuales representan mi
-        pasión y dedicación por el desarrollo de software.
-      </div>
+      <Filters />
+
       <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-9 mt-7">
         {projects
           .map((item, index) => (
