@@ -74,7 +74,7 @@ const Navbar = () => {
             </SheetTitle>
             <SheetDescription asChild>
               <div className=" flex flex-col">
-                <div className=" border-b border-t border-[#ececec] pt-3 pb-5 ">
+                <div className=" border-t border-[#ececec] pb-2 pt-5 ">
                   <h1 className=" uppercase text-[11px] text-[#4f4f4f] font-semibold">
                     {language ? <>correo electrónico</> : <>email</>}
                   </h1>
@@ -109,7 +109,7 @@ const Navbar = () => {
                     </div>
                   </CopyToClipboard>
                 </div>
-                <div className=" border-b border-t border-t-transparent border-[#ececec] pt-3 pb-5 ">
+                <div className="py-2">
                   <h1 className=" uppercase text-[11px] text-[#4f4f4f] font-semibold">
                     links
                   </h1>
@@ -134,7 +134,7 @@ const Navbar = () => {
                     <div>LinkedIn</div>
                   </a>
                 </div>
-                <div className=" border-b border-t border-t-transparent border-[#ececec] pt-3 pb-5 ">
+                <div className="py-2">
                   <h1 className=" uppercase text-[11px] text-[#4f4f4f] font-semibold">
                     cv
                   </h1>
@@ -153,7 +153,7 @@ const Navbar = () => {
                     <div> {language ? <>Descargar</> : <>Download</>}</div>
                   </a>
                 </div>
-                <div className=" border-t border-t-transparent border-[#ececec] pt-3 pb-5 ">
+                <div className="py-2">
                   <h1 className=" uppercase text-[11px] text-[#4f4f4f] font-semibold">
                     {language ? <>idioma</> : <>language</>}
                   </h1>

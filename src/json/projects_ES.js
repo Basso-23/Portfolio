@@ -5,7 +5,7 @@ export const projects_ES = [
     image: "https://i.imgur.com/CN9S1FO.png",
     url: "https://portfolio-v2-three-woad.vercel.app/",
     github: "https://github.com/Basso-23/Portfolio_v2",
-    date: "19. Marzo 2023",
+    date: "19 Marzo 2023",
   },
   {
     name: "Babershop",
@@ -13,7 +13,7 @@ export const projects_ES = [
     image: "https://i.imgur.com/u7KKJmO.png",
     url: "https://barbershop-woad.vercel.app/",
     github: "https://github.com/Basso-23/Barbershop",
-    date: "30. Junio 2023",
+    date: "30 Junio 2023",
   },
   {
     name: "Ecommerce",
@@ -21,7 +21,7 @@ export const projects_ES = [
     image: "https://i.imgur.com/L7T2wmf.png",
     url: "https://estructura-ecommerce.vercel.app/",
     github: "https://github.com/Basso-23/Estructura_Ecommerce",
-    date: "10. Julio 2023",
+    date: "10 Julio 2023",
   },
   {
     name: "Hoshi Creative",
@@ -29,7 +29,7 @@ export const projects_ES = [
     image: "https://i.imgur.com/eFmKV76.png",
     url: "https://www.hoshicreative.art/",
     github: "https://www.hoshicreative.art/",
-    date: "10. Agosto 2023",
+    date: "10 Agosto 2023",
   },
   {
     name: "Dogur",
@@ -37,7 +37,7 @@ export const projects_ES = [
     image: "https://i.imgur.com/LsbEqGb.png",
     url: "https://dogur.vercel.app/",
     github: "https://github.com/Basso-23/Dogur",
-    date: "19. Septiembre 2023",
+    date: "19 Septiembre 2023",
   },
   {
     name: "Muñoz & Asociados",
@@ -45,14 +45,14 @@ export const projects_ES = [
     image: "https://i.imgur.com/rCI8l6b.png",
     url: "https://pagina-contador-abogado.vercel.app/",
     github: "https://github.com/Basso-23/Abogados_Firma",
-    date: "29. Octubre 2023",
+    date: "29 Octubre 2023",
   },
   {
-    name: "Sitema de votación",
+    name: "Sistema de votación",
     category: "full-stack",
     image: "https://i.imgur.com/78vwRho.png",
     url: "https://github.com/Basso-23/Sistema_Elecciones",
     github: "https://github.com/Basso-23/Sistema_Elecciones",
-    date: "4. Mayo 2024",
+    date: "4 Mayo 2024",
   },
 ];

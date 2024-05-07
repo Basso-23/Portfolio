@@ -53,7 +53,7 @@ const Header = () => {
             <>Welcome to my portfolio</>
           )}
         </div>
-        <div className="font-bold tracking-tighter text-[11px] uppercase top-0 bg-black text-white rounded-md px-[8px] py-[2px] h-fit ml-2">
+        <div className="font-bold tracking-tighter text-[11px] uppercase top-0 bg-black text-white rounded-md px-[8px] py-[2px] h-fit ml-2 min-h-[20px]">
           <TextTransition springConfig={presets.stiff}>
             {TEXTS[index % TEXTS.length]}
           </TextTransition>

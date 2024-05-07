@@ -21,10 +21,10 @@ const Header_Mobile = () => {
     <div className="sm:hidden flex justify-between py-3 tracking-tighter text-[26px] font-semibold items-center border-b">
       <div className="flex">
         {language ? <>Portafolio</> : <>Portfolio</>}
-        <div className="font-bold tracking-tighter text-[11px] uppercase top-0 bg-black text-white rounded-md px-[8px] py-[2px] h-fit ml-2">
+        <div className="font-bold tracking-tighter text-[11px] uppercase top-0 bg-black text-white rounded-md px-[8px] py-[2px] h-fit ml-2 min-h-[20px]">
           <TextTransition springConfig={presets.stiff}>
             {TEXTS[index % TEXTS.length]}
-          </TextTransition>
+          </TextTransition>{" "}
         </div>
       </div>
       <Navbar />

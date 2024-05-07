@@ -11,6 +11,7 @@ import { languageAtom } from "@/atom";
 
 import { motion as m } from "framer-motion";
 import Tilt from "react-parallax-tilt";
+import Git from "@/icons/skills/Git";
 
 const Projects = () => {
   const [originalData, setOriginalData] = useAtom(originalAtom);
@@ -52,7 +53,7 @@ const Projects = () => {
                   style={{
                     backgroundImage: `url("${item.image}")`,
                   }}
-                  className=" aspect-video w-full bg-no-repeat bg-cover rounded-sm shadow-sm relative bg-top border"
+                  className=" aspect-video w-full bg-no-repeat bg-cover rounded-sm relative bg-top border"
                 >
                   <a
                     target="_blank"
@@ -62,16 +63,25 @@ const Projects = () => {
                 </div>
               </Tilt>
               <div className=" flex justify-between items-center mt-4">
-                <div className="font-bold tracking-tighter text-[14px]">
-                  {item.name}
+                <div>
+                  <div className="font-bold tracking-tighter text-[14px]">
+                    {item.name}
+                  </div>
+                  <div className="text-[#5b5b5b] flex gap-2 leading-none font-medium tracking-tighter text-[13px] mt-[2px] relative">
+                    <div className="border-r pr-2 capitalize">
+                      {item.category}
+                    </div>
+                    <div>{item.date}</div>
+                  </div>
                 </div>
-                <div className="text-[30px] cursor-pointer hover:scale-110 transition-all hidden">
+                <a
+                  target="_blank"
+                  href={item.github}
+                  className=" flex gap-2 items-center bg-black text-white px-2 py-1 rounded-sm hover:bg-[#1e1e1e] transition-all"
+                >
                   <Github />
-                </div>
-              </div>
-              <div className="text-[#5b5b5b] flex gap-2 leading-none font-medium tracking-tighter text-[13px] mt-[2px]">
-                <div className="border-r pr-2 capitalize"> {item.category}</div>
-                <div>{item.date}</div>
+                  <div className="text-[13px]">Github</div>
+                </a>
               </div>
             </m.div>
           ))

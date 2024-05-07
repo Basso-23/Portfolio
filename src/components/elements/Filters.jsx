@@ -50,7 +50,7 @@ const Filters = () => {
   };
 
   return (
-    <div className=" flex bg-[#f5f5f5] sm:gap-2 w-fit rounded-md text-[14px] font-semibold mt-5 tracking-tight">
+    <div className=" flex bg-[#f5f5f5] sm:gap-2 w-fit rounded-md text-[13px] font-semibold mt-5 tracking-tight">
       <Tab name={language ? "todos" : "all"} />
       <Tab name={language ? "diseño" : "design"} />
       <Tab name={"full-stack"} />
