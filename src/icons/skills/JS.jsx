@@ -1,7 +1,7 @@
-import { DiJavascript } from "react-icons/di";
+import { BiLogoJavascript } from "react-icons/bi";
 
 const JS = () => {
-  return <DiJavascript />;
+  return <BiLogoJavascript />;
 };
 
 export default JS;
