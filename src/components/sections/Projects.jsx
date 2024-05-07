@@ -13,9 +13,6 @@ import Tilt from "react-parallax-tilt";
 import Link from "next/link";
 import Visit from "@/icons/Visit";
 
-import { PageTransition } from "@steveeeie/react-page-transition";
-import { BrowserRouter, Switch, Route } from "react-router-dom";
-
 import { useRouter } from "next/router";
 
 const Projects = () => {
