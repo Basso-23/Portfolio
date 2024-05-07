@@ -2,7 +2,6 @@ import React, { useState, useEffect } from "react";
 import { projects_EN } from "@/json/projects_EN";
 import { projects_ES } from "@/json/projects_ES";
 import Filters from "../elements/Filters";
-import Github from "@/icons/Github";
 
 import { useAtom } from "jotai";
 import { originalAtom } from "@/atom";
@@ -11,7 +10,13 @@ import { languageAtom } from "@/atom";
 
 import { motion as m } from "framer-motion";
 import Tilt from "react-parallax-tilt";
-import Git from "@/icons/skills/Git";
+import Link from "next/link";
+import Visit from "@/icons/Visit";
+
+import { PageTransition } from "@steveeeie/react-page-transition";
+import { BrowserRouter, Switch, Route } from "react-router-dom";
+
+import { useRouter } from "next/router";
 
 const Projects = () => {
   const [originalData, setOriginalData] = useAtom(originalAtom);
@@ -29,6 +34,9 @@ const Projects = () => {
       setOriginalData(projects_EN);
     }
   }, [language]);
+
+  const router = useRouter();
+  const id = router.query.id;
 
   return (
     <div className="mt-4 py-4 pb-4">
@@ -55,11 +63,13 @@ const Projects = () => {
                   }}
                   className=" aspect-video w-full bg-no-repeat bg-cover rounded-sm relative bg-top border"
                 >
-                  <a
-                    target="_blank"
-                    href={item.url}
+                  <Link
+                    href={{
+                      pathname: "/projects/[id]",
+                      query: { id: item.name.replace(/ /g, "-") },
+                    }}
                     className=" absolute w-full h-full"
-                  ></a>
+                  ></Link>
                 </div>
               </Tilt>
               <div className=" flex justify-between items-center mt-4">
@@ -74,14 +84,20 @@ const Projects = () => {
                     <div>{item.date}</div>
                   </div>
                 </div>
-                <a
-                  target="_blank"
-                  href={item.github}
-                  className=" flex gap-2 items-center bg-black text-white px-2 py-1 rounded-sm hover:bg-[#1e1e1e] transition-all"
+
+                <Link
+                  href={{
+                    pathname: "/projects/[id]",
+                    query: { id: item.name.replace(/ /g, "-") },
+                  }}
                 >
-                  <Github />
-                  <div className="text-[13px]">Github</div>
-                </a>
+                  <div className=" flex gap-2 items-center bg-black text-white px-2 py-1 rounded-sm hover:bg-[#1e1e1e] transition-all">
+                    <Visit />
+                    <div className="text-[13px]">
+                      {language ? <>Ver detalles</> : <>View details</>}
+                    </div>
+                  </div>
+                </Link>
               </div>
             </m.div>
           ))

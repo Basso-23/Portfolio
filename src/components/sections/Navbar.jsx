@@ -56,7 +56,7 @@ const Navbar = () => {
         >
           <SheetHeader>
             <SheetTitle asChild>
-              <div className=" flex justify-between items-center mb-4">
+              <div className=" flex justify-between items-center mb-2">
                 <div
                   style={{
                     fontSize: 17,
@@ -74,7 +74,7 @@ const Navbar = () => {
             </SheetTitle>
             <SheetDescription asChild>
               <div className=" flex flex-col">
-                <div className=" border-t border-[#ececec] pb-2 pt-5 ">
+                <div className=" border-t border-[#ececec] pb-2 pt-5">
                   <h1 className=" uppercase text-[11px] text-[#4f4f4f] font-semibold">
                     {language ? <>correo electrónico</> : <>email</>}
                   </h1>
