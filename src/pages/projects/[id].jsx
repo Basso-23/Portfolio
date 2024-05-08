@@ -1,7 +1,9 @@
 import React, { useState, useEffect, useRef } from "react";
 import { useRouter } from "next/router";
 import { useAtom } from "jotai";
+import { languageAtom } from "@/atom";
 import { originalAtom } from "@/atom";
+
 import ArrowLeft from "@/icons/ArrowLeft";
 
 import JS from "@/icons/skills/JS";
@@ -17,6 +19,7 @@ import Head from "next/head";
 const ProductInfo = () => {
   const router = useRouter();
   const [originalData, setOriginalData] = useAtom(originalAtom);
+  const [language, setLanguage] = useAtom(languageAtom);
 
   const id = router.query.id;
   //console.log(id, "ID");
@@ -77,7 +80,7 @@ const ProductInfo = () => {
                   className="hidden lg:flex gap-[2px] items-center text-[13px] text-[#9d9d9d] hover:text-black"
                 >
                   <ArrowLeft />
-                  Back to Projects
+                  {language ? <>Voler a Proyectos</> : <>Back to Projects</>}
                 </a>
                 {/*//* Nombre */}
                 <h1 className="lg:text-[48px] text-[32px] font-bold tracking-tighter leading-none mt-8">
@@ -85,9 +88,9 @@ const ProductInfo = () => {
                 </h1>
                 {/*//* Summary */}
                 <h2 className="lg:mt-8 mt-6 text-[15px] text-[#585858]">
-                  Get started with Next.js and React in seconds.
+                  {item.summary}
                 </h2>
-                <div className=" grid grid-cols-2 gap-6 text-center mt-4 text-[14px]">
+                <div className=" grid grid-cols-2 gap-6 text-center mt-4 text-[13.5px]">
                   {/*//* Demo button */}
                   <a
                     target="_blank"
@@ -107,12 +110,16 @@ const ProductInfo = () => {
                 </div>
                 {/*//* Fecha */}
                 <div className=" border-b flex justify-between  text-[14px] py-2 mt-3 text-[#585858]">
-                  <div className="font-semibold">Date</div>
+                  <div className="font-semibold">
+                    {language ? <>Fecha</> : <>Date</>}
+                  </div>
                   <div>{item.date}</div>
                 </div>
                 {/*//* Category */}
                 <div className=" border-b flex justify-between  text-[14px] py-2 text-[#585858] capitalize">
-                  <div className="font-semibold">Category</div>
+                  <div className="font-semibold">
+                    {language ? <>Categoría</> : <>Category</>}
+                  </div>
                   <div>{item.category}</div>
                 </div>
                 {/*//* Techs */}

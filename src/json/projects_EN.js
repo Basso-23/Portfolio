@@ -9,7 +9,8 @@ export const projects_EN = [
     tech1: "Next",
     tech2: "React",
     tech: ["Next", "React", "Tailwind", "Javascript"],
-    summary: "",
+    summary:
+      "This is my first portfolio as a software developer, created with Next.js.",
   },
   {
     name: "Babershop",
@@ -21,7 +22,8 @@ export const projects_EN = [
     tech1: "Next",
     tech2: "React",
     tech: ["Next", "React", "Tailwind", "Javascript", "Node"],
-    summary: "",
+    summary:
+      "Design for a modern barber shop, designed to highlight the quality of the service offered.",
   },
   {
     name: "Ecommerce",
@@ -33,7 +35,7 @@ export const projects_EN = [
     tech1: "Next",
     tech2: "React",
     tech: ["Next", "React", "Tailwind"],
-    summary: "",
+    summary: "Design for an eCommerce site for tech products.",
   },
   {
     name: "Hoshi Creative",
@@ -45,7 +47,8 @@ export const projects_EN = [
     tech1: "Next",
     tech2: "React",
     tech: ["Next", "React", "Tailwind"],
-    summary: "",
+    summary:
+      "Design for a design company, focused on reflecting its creativity.",
   },
   {
     name: "Dogur",
@@ -57,7 +60,8 @@ export const projects_EN = [
     tech1: "Astro",
     tech2: "Tailwind",
     tech: ["Astro", "Tailwind", "Javascript"],
-    summary: "",
+    summary:
+      "Design for a donut shop, designed to highlight its variety of unique flavors.",
   },
   {
     name: "Muñoz & Asociados",
@@ -69,7 +73,8 @@ export const projects_EN = [
     tech1: "Next",
     tech2: "React",
     tech: ["Next", "React", "Tailwind"],
-    summary: "",
+    summary:
+      "Design for a law firm, focused on professionalism and accessibility.",
   },
   {
     name: "Voting system",
@@ -89,6 +94,6 @@ export const projects_EN = [
       "Javascript",
       "Node",
     ],
-    summary: "",
+    summary: "Online voting system for the 2024 Panama elections.",
   },
 ];
