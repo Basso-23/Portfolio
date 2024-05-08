@@ -43,7 +43,7 @@ const ProductInfo = () => {
         .map((item, index) => (
           <div key={index} className="flex my-10">
             <section className="w-[470px] border-r min-h-screen relative">
-              <div className="fixed w-[470px] pr-[50px]">
+              <div className="fixed w-[470px] pr-[50px] pl-[25px]">
                 <a
                   href="https://www.carlosbaso.com/"
                   className="flex gap-[2px] items-center text-[13px] text-[#9d9d9d] hover:text-black transition-all"
@@ -54,16 +54,53 @@ const ProductInfo = () => {
                 <h1 className="text-[48px] font-bold tracking-tighter leading-none mt-10">
                   {item.name}
                 </h1>
-                {item.tech.map((item, index) => (
-                  <div key={index} className=" flex gap-10">
-                    <TechToRender name={item} />
-                  </div>
-                ))}
+
+                <h2 className=" mt-8 text-[15px] text-[#585858]">
+                  Get started with Next.js and React in seconds.
+                </h2>
+
+                <div className=" grid grid-cols-2 gap-8 text-center mt-4 text-[14px]">
+                  <a
+                    target="_blank"
+                    href={item.url}
+                    className=" py-2 border rounded-md cursor-pointer hover:bg-[#ebebeb] transition-all"
+                  >
+                    Demo
+                  </a>
+                  <a
+                    target="_blank"
+                    href={item.github}
+                    className=" py-2 bg-black rounded-md text-white cursor-pointer hover:bg-[#343434] transition-all"
+                  >
+                    Github
+                  </a>
+                </div>
+
+                <div className=" border-b flex justify-between  text-[14px] py-2 mt-3 text-[#585858]">
+                  <div className="font-medium">Date</div>
+                  <div>{item.date}</div>
+                </div>
+                <div className=" border-b flex justify-between  text-[14px] py-2 text-[#585858] capitalize">
+                  <div className="font-medium">Category</div>
+                  <div>{item.category}</div>
+                </div>
+                <div className=" flex gap-2 text-[25px] mt-4 justify-end">
+                  {item.tech.map((item, index) => (
+                    <div key={index}>
+                      <TechToRender name={item} />
+                    </div>
+                  ))}
+                </div>
               </div>
             </section>
 
-            <section className=" flex-1 h-full ml-[50px]">
-              <div>da</div>
+            <section className=" flex-1 h-full ml-[50px] mt-8">
+              <div
+                style={{
+                  backgroundImage: `url("${item.image}")`,
+                }}
+                className=" aspect-video w-full bg-no-repeat bg-cover rounded-sm relative bg-top border"
+              ></div>
             </section>
           </div>
         ))}

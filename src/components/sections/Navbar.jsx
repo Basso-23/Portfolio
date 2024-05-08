@@ -56,7 +56,7 @@ const Navbar = () => {
         >
           <SheetHeader>
             <SheetTitle asChild>
-              <div className=" flex justify-between items-center mb-3">
+              <div className=" flex justify-between items-center mb-4">
                 <div
                   style={{
                     fontSize: 17,
