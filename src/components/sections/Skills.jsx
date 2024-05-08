@@ -11,16 +11,18 @@ import NodeJS from "@/icons/skills/NodeJS";
 import Html from "@/icons/skills/Html";
 import Css from "@/icons/skills/Css";
 import Linux from "@/icons/skills/Linux";
+import Shadcn from "@/icons/skills/Shadcn";
 
 const Skills = () => {
   return (
-    <div className="mt-8 animate-fade-up">
+    <div className="mt-8 ">
       <div className="text-[25px] text-black font-medium">
         <div className=" flex gap-4 mt-6 overflow-x-auto pb-3">
           <Badge name={"Javascript"} logo={<JS />} />
           <Badge name={"React JS"} logo={<React_logo />} />
           <Badge name={"Next JS"} logo={<Next />} />
           <Badge name={"Tailwind CSS"} logo={<Tailwind />} />
+          <Badge name={"Shadcn/ui"} logo={<Shadcn />} />
           <Badge name={"Astro"} logo={<Astro />} />
           <Badge name={"Firebase"} logo={<Firebase />} />
           <Badge name={"Git"} logo={<Git />} />

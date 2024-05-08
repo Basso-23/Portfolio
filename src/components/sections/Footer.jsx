@@ -21,7 +21,7 @@ const Footer = () => {
     );
   };
   return (
-    <section className=" sm:py-10 py-7 flex 2xl:justify-between text-[#696969] text-[13px] flex-wrap gap-4 tracking-tight font-normal">
+    <section className=" py-7 flex 2xl:justify-between text-[#696969] text-[13px] flex-wrap gap-4 tracking-tight font-normal">
       <div className=" mx-auto sm:mx-0">©2024 CarlosBaso</div>
       <div className="sm:flex hidden gap-6 pl-4 sm:border-l">
         <CopyToClipboard

@@ -6,6 +6,9 @@ export const projects_ES = [
     url: "https://portfolio-v2-three-woad.vercel.app/",
     github: "https://github.com/Basso-23/Portfolio_v2",
     date: "19 Marzo 2023",
+    tech1: "Next",
+    tech2: "React",
+    tech: ["Next", "React", "Tailwind", "Javascript"],
   },
   {
     name: "Babershop",
@@ -14,6 +17,9 @@ export const projects_ES = [
     url: "https://barbershop-woad.vercel.app/",
     github: "https://github.com/Basso-23/Barbershop",
     date: "30 Junio 2023",
+    tech1: "Next",
+    tech2: "React",
+    tech: ["Next", "React", "Tailwind", "Javascript", "Node"],
   },
   {
     name: "Ecommerce",
@@ -22,6 +28,9 @@ export const projects_ES = [
     url: "https://estructura-ecommerce.vercel.app/",
     github: "https://github.com/Basso-23/Estructura_Ecommerce",
     date: "10 Julio 2023",
+    tech1: "Next",
+    tech2: "React",
+    tech: ["Next", "React", "Tailwind"],
   },
   {
     name: "Hoshi Creative",
@@ -30,6 +39,9 @@ export const projects_ES = [
     url: "https://www.hoshicreative.art/",
     github: "https://www.hoshicreative.art/",
     date: "10 Agosto 2023",
+    tech1: "Next",
+    tech2: "React",
+    tech: ["Next", "React", "Tailwind"],
   },
   {
     name: "Dogur",
@@ -38,6 +50,9 @@ export const projects_ES = [
     url: "https://dogur.vercel.app/",
     github: "https://github.com/Basso-23/Dogur",
     date: "19 Septiembre 2023",
+    tech1: "Astro",
+    tech2: "Tailwind",
+    tech: ["Astro", "Tailwind", "Javascript"],
   },
   {
     name: "Muñoz & Asociados",
@@ -46,6 +61,9 @@ export const projects_ES = [
     url: "https://pagina-contador-abogado.vercel.app/",
     github: "https://github.com/Basso-23/Abogados_Firma",
     date: "29 Octubre 2023",
+    tech1: "Next",
+    tech2: "React",
+    tech: ["Next", "React", "Tailwind"],
   },
   {
     name: "Sistema de votación",
@@ -54,5 +72,27 @@ export const projects_ES = [
     url: "https://github.com/Basso-23/Sistema_Elecciones",
     github: "https://github.com/Basso-23/Sistema_Elecciones",
     date: "4 Mayo 2024",
+    tech1: "Next",
+    tech2: "React",
+    tech: [
+      "Next",
+      "React",
+      "Firebase",
+      "Tailwind",
+      "Shadcn",
+      "Javascript",
+      "Node",
+    ],
   },
 ];
+
+//tech: [
+//  "Firebase",
+//  "Astro",
+//  "Next",
+//  "React",
+//  "Tailwind",
+//  "Shadcn",
+//  "Javascript",
+//  "Node",
+//],

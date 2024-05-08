@@ -11,9 +11,14 @@ import { languageAtom } from "@/atom";
 import { motion as m } from "framer-motion";
 import Tilt from "react-parallax-tilt";
 import Link from "next/link";
-import Visit from "@/icons/Visit";
-
-import { useRouter } from "next/router";
+import JS from "@/icons/skills/JS";
+import React_logo from "@/icons/skills/React";
+import Next from "@/icons/skills/Next";
+import Tailwind from "@/icons/skills/Tailwind";
+import Astro from "@/icons/skills/Astro";
+import Firebase from "@/icons/skills/Firebase";
+import NodeJS from "@/icons/skills/NodeJS";
+import Shadcn from "@/icons/skills/Shadcn";
 
 const Projects = () => {
   const [originalData, setOriginalData] = useAtom(originalAtom);
@@ -24,26 +29,30 @@ const Projects = () => {
     setData(originalData);
   }, [originalData]);
 
-  useEffect(() => {
-    if (language) {
-      setOriginalData(projects_ES);
-    } else {
-      setOriginalData(projects_EN);
-    }
-  }, [language]);
+  const skills = {
+    Next: <Next />,
+    Javascript: <JS />,
+    React: <React_logo />,
+    Tailwind: <Tailwind />,
+    Astro: <Astro />,
+    Firebase: <Firebase />,
+    Node: <NodeJS />,
+    Shadcn: <Shadcn />,
+  };
 
-  const router = useRouter();
-  const id = router.query.id;
+  const TechToRender = ({ name }) => {
+    const Tech = skills[name];
+    return Tech ? Tech : null;
+  };
 
   return (
     <div className="mt-4 py-4 pb-4">
-      <div className="animate-fade-up delay-150">
-        <div className="tracking-tighter text-[25px] font-semibold leading-tighter relative w-fit">
-          {language ? <>Todos los proyectos</> : <>All projects</>}
-        </div>
-        <Filters />
+      <div className="tracking-tighter text-[25px] font-semibold leading-tighter relative w-fit">
+        {language ? <>Todos los proyectos</> : <>All projects</>}
       </div>
-      <div className="grid sm:grid-cols-2 grid-cols-1 gap-x-6 gap-y-10 mt-8 animate-fade-up delay-300">
+      <Filters />
+
+      <div className="grid xl:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-x-6 gap-y-10 mt-8 ">
         {data
           .map((item, index) => (
             <m.div layout key={index}>
@@ -69,9 +78,9 @@ const Projects = () => {
                   ></Link>
                 </div>
               </Tilt>
-              <div className=" flex justify-between items-center mt-4">
+              <div className=" flex justify-between items-center mt-3">
                 <div>
-                  <div className="font-bold tracking-tighter text-[14px]">
+                  <div className="font-bold tracking-tighter text-[14px] ">
                     {item.name}
                   </div>
                   <div className="text-[#5b5b5b] flex gap-2 leading-none font-medium tracking-tighter text-[13px] mt-[2px] relative">
@@ -82,19 +91,17 @@ const Projects = () => {
                   </div>
                 </div>
 
-                <Link
-                  href={{
-                    pathname: "/projects/[id]",
-                    query: { id: item.name.replace(/ /g, "-") },
-                  }}
-                >
-                  <div className=" flex gap-2 items-center bg-black text-white px-2 py-1 rounded-sm hover:bg-[#1e1e1e] transition-all">
-                    <Visit />
-                    <div className="text-[13px]">
-                      {language ? <>Ver detalles</> : <>View details</>}
-                    </div>
+                <div className="flex relative text-[11px] leading-none text-[#7e7e7e] -mt-8 select-none">
+                  <div className="flex justify-center items-center w-7 rounded-full aspect-square bg-[#eeeeee] border-[2px] border-white z-30 absolute right-0 tracking-tight">
+                    +{item.tech.length - 2}
                   </div>
-                </Link>
+                  <div className="text-[15px] flex justify-center items-center w-7 rounded-full aspect-square bg-[#eeeeee] border-[2px] border-white z-20 absolute right-[20px] tracking-tight">
+                    <TechToRender name={item.tech1} />
+                  </div>
+                  <div className="text-[15px] flex justify-center items-center w-7 rounded-full aspect-square bg-[#eeeeee] border-[2px] border-white z-10 absolute right-[40px] tracking-tight">
+                    <TechToRender name={item.tech2} />
+                  </div>
+                </div>
               </div>
             </m.div>
           ))

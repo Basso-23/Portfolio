@@ -21,12 +21,6 @@ const App = () => {
         <Experience />
       </div>
 
-      <div className="bg-[#f7f7f7] border-t mt-20">
-        <div className="pageSize">
-          <Footer />
-        </div>
-      </div>
-
       <ScrollToTop />
     </main>
   );
