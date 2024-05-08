@@ -23,7 +23,7 @@ const Projects = () => {
 
   useEffect(() => {
     setData(originalData);
-  }, [originalData]);
+  }, [originalData, setData]);
 
   const skills = {
     Next: <Next />,

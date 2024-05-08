@@ -21,7 +21,7 @@ const App = ({ Component, pageProps }) => {
     } else {
       setOriginalData(projects_EN);
     }
-  }, [language]);
+  }, [language, setOriginalData]);
 
   return (
     <div style={{ fontFamily: "Inter Variable, sans-serif" }}>

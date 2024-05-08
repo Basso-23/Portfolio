@@ -18,7 +18,7 @@ const Filters = () => {
     } else {
       setCurrentFilter("all");
     }
-  }, [language]);
+  }, [language, setCurrentFilter]);
 
   const Tab = ({ name }) => {
     return (

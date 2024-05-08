@@ -40,7 +40,7 @@ const ProductInfo = () => {
     <main className="pageSize min-h-screen relative">
       <a
         href="https://www.carlosbaso.com/"
-        className="flex gap-[2px] items-center text-[13px] text-[#9d9d9d] hover:text-black transition-all absolute top-0 lg:left-[48px] sm:left-6"
+        className="lg:hidden flex gap-[2px] items-center text-[13px] text-[#9d9d9d] hover:text-black absolute top-0 lg:left-[48px] sm:left-6"
       >
         <ArrowLeft />
         Back to Projects
@@ -50,11 +50,24 @@ const ProductInfo = () => {
         .map((item, index) => (
           <div
             key={index}
-            className="lg:flex lg:flex-row flex flex-col-reverse sm:my-10 my-5"
+            className="lg:flex lg:flex-row flex flex-col lg:my-10 my-5"
           >
-            <section className="lg:w-[470px] lg:border-r lg:min-h-screen relative">
-              <div className="lg:fixed lg:w-[470px] lg:pr-[50px] lg:pl-[25px]">
-                <h1 className="lg:text-[48px] text-[32px] font-bold tracking-tighter leading-none sm:mt-16 mt-8">
+            <section className="xl:w-[470px] lg:w-[375px] lg:border-r lg:min-h-screen relative ">
+              <div
+                style={{
+                  backgroundImage: `url("${item.image}")`,
+                }}
+                className=" aspect-video w-full bg-no-repeat bg-cover rounded-sm relative bg-top border lg:hidden flex mt-10"
+              ></div>
+              <div className="lg:fixed xl:w-[470px] lg:w-[375px] lg:pr-[50px] lg:pl-[25px] ">
+                <a
+                  href="https://www.carlosbaso.com/"
+                  className="hidden lg:flex gap-[2px] items-center text-[13px] text-[#9d9d9d] hover:text-black"
+                >
+                  <ArrowLeft />
+                  Back to Projects
+                </a>
+                <h1 className="lg:text-[48px] text-[32px] font-bold tracking-tighter leading-none mt-8">
                   {item.name}
                 </h1>
 
@@ -80,11 +93,11 @@ const ProductInfo = () => {
                 </div>
 
                 <div className=" border-b flex justify-between  text-[14px] py-2 mt-3 text-[#585858]">
-                  <div className="font-medium">Date</div>
+                  <div className="font-semibold">Date</div>
                   <div>{item.date}</div>
                 </div>
                 <div className=" border-b flex justify-between  text-[14px] py-2 text-[#585858] capitalize">
-                  <div className="font-medium">Category</div>
+                  <div className="font-semibold">Category</div>
                   <div>{item.category}</div>
                 </div>
                 <div className=" flex gap-2 text-[25px] mt-4 justify-end">
@@ -97,13 +110,14 @@ const ProductInfo = () => {
               </div>
             </section>
 
-            <section className="lg:flex-1 lg:ml-[50px] sm:mt-8 mt-10">
+            <section className="lg:flex-1 lg:ml-[50px] lg:mt-8 mt-10">
               <div
                 style={{
                   backgroundImage: `url("${item.image}")`,
                 }}
-                className=" aspect-video w-full bg-no-repeat bg-cover rounded-sm relative bg-top border"
+                className=" aspect-video w-full bg-no-repeat bg-cover rounded-sm relative bg-top border hidden lg:flex"
               ></div>
+              <div className=" lg:mt-12 mt-6">Contenido</div>
             </section>
           </div>
         ))}
