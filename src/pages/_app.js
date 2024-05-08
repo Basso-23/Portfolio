@@ -25,13 +25,6 @@ const App = ({ Component, pageProps }) => {
 
   return (
     <div style={{ fontFamily: "Inter Variable, sans-serif" }}>
-      <Head>
-        <title>Carlos Baso</title>
-        <meta
-          name="description"
-          content="Portafolio - Carlos Baso Ing. de Software, JavaScript, React JS, Next JS. ¡Echa un vistazo a mis proyectos!"
-        />
-      </Head>
       <Component {...pageProps} />
       <div className="bg-[#f7f7f7] border-t mt-20">
         <div className="pageSize">

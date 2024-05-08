@@ -9,6 +9,7 @@ export const projects_EN = [
     tech1: "Next",
     tech2: "React",
     tech: ["Next", "React", "Tailwind", "Javascript"],
+    summary: "",
   },
   {
     name: "Babershop",
@@ -20,6 +21,7 @@ export const projects_EN = [
     tech1: "Next",
     tech2: "React",
     tech: ["Next", "React", "Tailwind", "Javascript", "Node"],
+    summary: "",
   },
   {
     name: "Ecommerce",
@@ -31,6 +33,7 @@ export const projects_EN = [
     tech1: "Next",
     tech2: "React",
     tech: ["Next", "React", "Tailwind"],
+    summary: "",
   },
   {
     name: "Hoshi Creative",
@@ -42,6 +45,7 @@ export const projects_EN = [
     tech1: "Next",
     tech2: "React",
     tech: ["Next", "React", "Tailwind"],
+    summary: "",
   },
   {
     name: "Dogur",
@@ -53,6 +57,7 @@ export const projects_EN = [
     tech1: "Astro",
     tech2: "Tailwind",
     tech: ["Astro", "Tailwind", "Javascript"],
+    summary: "",
   },
   {
     name: "Muñoz & Asociados",
@@ -64,6 +69,7 @@ export const projects_EN = [
     tech1: "Next",
     tech2: "React",
     tech: ["Next", "React", "Tailwind"],
+    summary: "",
   },
   {
     name: "Voting system",
@@ -83,15 +89,6 @@ export const projects_EN = [
       "Javascript",
       "Node",
     ],
+    summary: "",
   },
 ];
-
-//tech: [
-//{ skill: "Firebase" },
-//{ skill: "Next" },
-//{ skill: "React" },
-//{ skill: "Tailwind" },
-//{ skill: "Javascript" },
-//{ skill: "Node" },
-//{ skill: "Shadcn" },
-//],
