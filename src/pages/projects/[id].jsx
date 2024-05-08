@@ -37,29 +37,32 @@ const ProductInfo = () => {
   };
 
   return (
-    <main className="pageSize min-h-screen">
+    <main className="pageSize min-h-screen relative">
+      <a
+        href="https://www.carlosbaso.com/"
+        className="flex gap-[2px] items-center text-[13px] text-[#9d9d9d] hover:text-black transition-all absolute top-0 lg:left-[48px] sm:left-6"
+      >
+        <ArrowLeft />
+        Back to Projects
+      </a>
       {originalData
         .filter((item) => item.name.replace(/ /g, "-") === id)
         .map((item, index) => (
-          <div key={index} className="flex my-10">
-            <section className="w-[470px] border-r min-h-screen relative">
-              <div className="fixed w-[470px] pr-[50px] pl-[25px]">
-                <a
-                  href="https://www.carlosbaso.com/"
-                  className="flex gap-[2px] items-center text-[13px] text-[#9d9d9d] hover:text-black transition-all"
-                >
-                  <ArrowLeft />
-                  Back to Projects
-                </a>
-                <h1 className="text-[48px] font-bold tracking-tighter leading-none mt-10">
+          <div
+            key={index}
+            className="lg:flex lg:flex-row flex flex-col-reverse sm:my-10 my-5"
+          >
+            <section className="lg:w-[470px] lg:border-r lg:min-h-screen relative">
+              <div className="lg:fixed lg:w-[470px] lg:pr-[50px] lg:pl-[25px]">
+                <h1 className="lg:text-[48px] text-[32px] font-bold tracking-tighter leading-none sm:mt-16 mt-8">
                   {item.name}
                 </h1>
 
-                <h2 className=" mt-8 text-[15px] text-[#585858]">
+                <h2 className="lg:mt-8 mt-6 text-[15px] text-[#585858]">
                   Get started with Next.js and React in seconds.
                 </h2>
 
-                <div className=" grid grid-cols-2 gap-8 text-center mt-4 text-[14px]">
+                <div className=" grid grid-cols-2 gap-6 text-center mt-4 text-[14px]">
                   <a
                     target="_blank"
                     href={item.url}
@@ -94,7 +97,7 @@ const ProductInfo = () => {
               </div>
             </section>
 
-            <section className=" flex-1 h-full ml-[50px] mt-8">
+            <section className="lg:flex-1 lg:ml-[50px] sm:mt-8 mt-10">
               <div
                 style={{
                   backgroundImage: `url("${item.image}")`,

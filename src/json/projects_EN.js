@@ -77,9 +77,9 @@ export const projects_EN = [
     tech: [
       "Next",
       "React",
-      "Firebase",
       "Tailwind",
       "Shadcn",
+      "Firebase",
       "Javascript",
       "Node",
     ],
