@@ -1,13 +1,9 @@
 import React, { useState, useEffect } from "react";
-import { projects_EN } from "@/json/projects_EN";
-import { projects_ES } from "@/json/projects_ES";
 import Filters from "../elements/Filters";
-
 import { useAtom } from "jotai";
 import { originalAtom } from "@/atom";
 import { dataAtom } from "@/atom";
 import { languageAtom } from "@/atom";
-
 import { motion as m } from "framer-motion";
 import Tilt from "react-parallax-tilt";
 import Link from "next/link";
