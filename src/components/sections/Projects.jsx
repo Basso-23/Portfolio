@@ -4,6 +4,7 @@ import { useAtom } from "jotai";
 import { originalAtom } from "@/atom";
 import { dataAtom } from "@/atom";
 import { languageAtom } from "@/atom";
+import { imageAtom } from "@/atom";
 import { motion as m } from "framer-motion";
 import Tilt from "react-parallax-tilt";
 import Link from "next/link";
@@ -15,11 +16,13 @@ import Astro from "@/icons/skills/Astro";
 import Firebase from "@/icons/skills/Firebase";
 import NodeJS from "@/icons/skills/NodeJS";
 import Shadcn from "@/icons/skills/Shadcn";
+import Loader from "../elements/Loader";
 
 const Projects = () => {
   const [originalData, setOriginalData] = useAtom(originalAtom);
   const [data, setData] = useAtom(dataAtom);
   const [language, setLanguage] = useAtom(languageAtom);
+  const [imageLoaded, setImageLoaded] = useAtom(imageAtom);
 
   useEffect(() => {
     setData(originalData);
@@ -41,6 +44,15 @@ const Projects = () => {
     return Tech ? Tech : null;
   };
 
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      if (!imageLoaded) {
+        setImageLoaded(true);
+      }
+    }, 1500);
+    return () => clearTimeout(timer);
+  }, []);
+
   return (
     <div className="mt-4 py-4 pb-4">
       <div className="tracking-tighter text-[25px] font-semibold leading-tighter relative w-fit">
@@ -57,20 +69,28 @@ const Projects = () => {
                 transitionSpeed={2500}
                 tiltMaxAngleX={1.1}
                 tiltMaxAngleY={1.1}
-                className=" cursor-pointer"
               >
                 <div
                   style={{
                     backgroundImage: `url("${item.image}")`,
                   }}
-                  className=" aspect-video w-full bg-no-repeat bg-cover rounded-sm relative bg-top border"
+                  className=" aspect-video w-full bg-no-repeat bg-cover rounded-sm relative bg-top border over"
                 >
+                  <div
+                    className={
+                      !imageLoaded
+                        ? "absolute w-full h-full z-30 bg-[#eeeeee] justify-center items-center flex"
+                        : "hidden"
+                    }
+                  >
+                    <Loader />
+                  </div>
                   <Link
                     href={{
                       pathname: "/projects/[id]",
                       query: { id: item.name.replace(/ /g, "-") },
                     }}
-                    className=" absolute w-full h-full"
+                    className=" absolute w-full h-full cursor-pointer"
                   ></Link>
                 </div>
               </Tilt>

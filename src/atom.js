@@ -11,3 +11,6 @@ export const dataAtom = atom([]);
 
 //* Idioma
 export const languageAtom = atom(true);
+
+//* Image
+export const imageAtom = atom(false);

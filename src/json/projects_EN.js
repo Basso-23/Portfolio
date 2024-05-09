@@ -22,7 +22,7 @@ export const projects_EN = [
   {
     name: "Babershop",
     category: "design",
-    image: "https://i.imgur.com/MGVy1q8.jpeg",
+    image: "https://i.imgur.com/LI4vJSJ.jpeg",
     url: "https://barbershop-woad.vercel.app/",
     github: "https://github.com/Basso-23/Barbershop",
     date: "30 June 2023",
