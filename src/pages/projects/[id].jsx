@@ -52,10 +52,10 @@ const ProductInfo = () => {
       {/*//* Back (mobile) */}
       <a
         href="https://www.carlosbaso.com/"
-        className="lg:hidden flex gap-[2px] items-center text-[13px] text-[#9d9d9d] hover:text-black absolute top-0 lg:left-[48px] sm:left-6"
+        className="z-40 w-fit lg:hidden flex gap-[2px] items-center text-[13px] text-[#9d9d9d] hover:text-black absolute top-0 lg:left-[48px] sm:left-6"
       >
         <ArrowLeft />
-        Back to Projects
+        {language ? <>Voler a Proyectos</> : <>Back to Projects</>}
       </a>
       {originalData
         .filter((item) => item.name.replace(/ /g, "-") === id)
@@ -77,7 +77,7 @@ const ProductInfo = () => {
                 {/*//* Back (desktop) */}
                 <a
                   href="https://www.carlosbaso.com/"
-                  className="hidden lg:flex gap-[2px] items-center text-[13px] text-[#9d9d9d] hover:text-black"
+                  className="w-fit hidden lg:flex gap-[2px] items-center text-[13px] text-[#9d9d9d] hover:text-black"
                 >
                   <ArrowLeft />
                   {language ? <>Voler a Proyectos</> : <>Back to Projects</>}
@@ -87,7 +87,7 @@ const ProductInfo = () => {
                   {item.name}
                 </h1>
                 {/*//* Summary */}
-                <h2 className="lg:mt-8 mt-6 text-[15px] text-[#585858]">
+                <h2 className="lg:mt-8 mt-6 text-[16px] text-[#585858] tracking-tight">
                   {item.summary}
                 </h2>
                 <div className=" grid grid-cols-2 gap-6 text-center mt-4 text-[13.5px]">
@@ -142,8 +142,25 @@ const ProductInfo = () => {
                 }}
                 className=" aspect-video w-full bg-no-repeat bg-cover rounded-sm relative bg-top border hidden lg:flex animate-fade-right duration-500"
               ></div>
+              {item.h1.map((text, index) => (
+                <div key={index}>
+                  <div className="lg:mt-10 mt-0 text-[32px] font-bold tracking-tighter">
+                    {text.title}
+                  </div>
+                  <div
+                    dangerouslySetInnerHTML={{ __html: text.content }}
+                    className="mt-3 text-[16px] text-[#585858] h1-content tracking-tight text-balance"
+                  ></div>
+                </div>
+              ))}
 
-              <div className=" lg:mt-12 mt-6">Contenido</div>
+              <div className="mt-6 text-[24px] font-bold tracking-tighter">
+                Quick Start
+              </div>
+              <div className="mt-3 text-[16px] text-[#585858] tracking-tight text-balance">
+                Then, run pnpm dev to start the development server and visit
+                localhost:3000.
+              </div>
             </section>
           </div>
         ))}

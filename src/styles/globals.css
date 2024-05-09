@@ -259,3 +259,24 @@
   white-space: nowrap;
   text-overflow: ellipsis;
 }
+
+.h1-content code {
+  display: inline-block;
+  color: black;
+  background: #f0f0f0;
+  border-radius: 4px;
+  font-weight: 400;
+  padding: 0 4px;
+  line-height: 1.5;
+  white-space: pre-wrap;
+  font-size: 16px;
+}
+
+.h1-content a {
+  color: #3291ff;
+  font-weight: 500;
+}
+
+.h1-content a:hover {
+  text-decoration-line: underline;
+}

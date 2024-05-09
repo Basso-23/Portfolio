@@ -11,6 +11,13 @@ export const projects_ES = [
     tech: ["Next", "React", "Tailwind", "Javascript"],
     summary:
       "Este es mi primer portafolio como desarrollador de software, creado con Next.js.",
+    h1: [
+      {
+        title: "Software Developer Portfolio",
+        content:
+          "Este es un proyecto de <a target=_blank href=https://nextjs.org/>Next.js</a> inicializado con <code>create-next-app</code>.</code>",
+      },
+    ],
   },
 
   {
@@ -25,7 +32,15 @@ export const projects_ES = [
     tech: ["Next", "React", "Tailwind", "Javascript", "Node"],
     summary:
       "Diseño para una barbería moderna, diseñada para resaltar la calidad del servicio ofrecido.",
+    h1: [
+      {
+        title: "Diseño Web",
+        content:
+          "Este es un proyecto de <a target=_blank href=https://nextjs.org/>Next.js</a> inicializado con <code>create-next-app</code>.</code>",
+      },
+    ],
   },
+
   {
     name: "Ecommerce",
     category: "diseño",
@@ -37,6 +52,13 @@ export const projects_ES = [
     tech2: "React",
     tech: ["Next", "React", "Tailwind"],
     summary: "Diseño para un sitio de eCommerce para productos tecnológicos.",
+    h1: [
+      {
+        title: "Diseño Web",
+        content:
+          "Este es un proyecto de <a target=_blank href=https://nextjs.org/>Next.js</a> inicializado con <code>create-next-app</code>.</code>",
+      },
+    ],
   },
   {
     name: "Hoshi Creative",
@@ -50,6 +72,13 @@ export const projects_ES = [
     tech: ["Next", "React", "Tailwind"],
     summary:
       "Diseño para una compañía de diseño, enfocado en reflejar su creatividad.",
+    h1: [
+      {
+        title: "Diseño Web",
+        content:
+          "Este es un proyecto de <a target=_blank href=https://nextjs.org/>Next.js</a> inicializado con <code>create-next-app</code>.</code>",
+      },
+    ],
   },
   {
     name: "Dogur",
@@ -63,6 +92,13 @@ export const projects_ES = [
     tech: ["Astro", "Tailwind", "Javascript"],
     summary:
       "Diseño para una tienda de donas, diseñado para destacar su variedad de sabores únicos.",
+    h1: [
+      {
+        title: "Diseño Web",
+        content:
+          "Este es un proyecto de <a target=_blank href=https://astro.build//>Astro</a> inicializado con <code>create astro@latest.</code>",
+      },
+    ],
   },
   {
     name: "Muñoz & Asociados",
@@ -76,6 +112,13 @@ export const projects_ES = [
     tech: ["Next", "React", "Tailwind"],
     summary:
       "Diseño para una firma de abogados, enfocado en profesionalismo y accesibilidad.",
+    h1: [
+      {
+        title: "Diseño Web",
+        content:
+          "Este es un proyecto de <a target=_blank href=https://nextjs.org/>Next.js</a> inicializado con <code>create-next-app</code>.</code>",
+      },
+    ],
   },
   {
     name: "Sistema de votación",
@@ -96,5 +139,12 @@ export const projects_ES = [
       "Node",
     ],
     summary: "Sistema de votación para elecciones Panamá 2024.",
+    h1: [
+      {
+        title: "Elecciones Panamá 2024",
+        content:
+          "Este es un proyecto de <a target=_blank href=https://nextjs.org/>Next.js</a> inicializado con <code>create-next-app</code>.</code>",
+      },
+    ],
   },
 ];

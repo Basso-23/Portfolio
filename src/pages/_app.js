@@ -12,7 +12,6 @@ import { projects_EN } from "@/json/projects_EN";
 
 const App = ({ Component, pageProps }) => {
   const [originalData, setOriginalData] = useAtom(originalAtom);
-
   const [language, setLanguage] = useAtom(languageAtom);
 
   useEffect(() => {

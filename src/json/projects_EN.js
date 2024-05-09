@@ -11,6 +11,13 @@ export const projects_EN = [
     tech: ["Next", "React", "Tailwind", "Javascript"],
     summary:
       "This is my first portfolio as a software developer, created with Next.js.",
+    h1: [
+      {
+        title: "Software Developer Portfolio",
+        content:
+          "This is a <a target=_blank href=https://nextjs.org/>Next.js</a> project initialized with <code>create-next-app.</code>",
+      },
+    ],
   },
   {
     name: "Babershop",
@@ -24,6 +31,13 @@ export const projects_EN = [
     tech: ["Next", "React", "Tailwind", "Javascript", "Node"],
     summary:
       "Design for a modern barber shop, designed to highlight the quality of the service offered.",
+    h1: [
+      {
+        title: "Web Design",
+        content:
+          "This is a <a target=_blank href=https://nextjs.org/>Next.js</a> project initialized with <code>create-next-app.</code>",
+      },
+    ],
   },
   {
     name: "Ecommerce",
@@ -36,6 +50,13 @@ export const projects_EN = [
     tech2: "React",
     tech: ["Next", "React", "Tailwind"],
     summary: "Design for an eCommerce site for tech products.",
+    h1: [
+      {
+        title: "Web Design",
+        content:
+          "This is a <a target=_blank href=https://nextjs.org/>Next.js</a> project initialized with <code>create-next-app.</code>",
+      },
+    ],
   },
   {
     name: "Hoshi Creative",
@@ -49,6 +70,13 @@ export const projects_EN = [
     tech: ["Next", "React", "Tailwind"],
     summary:
       "Design for a design company, focused on reflecting its creativity.",
+    h1: [
+      {
+        title: "Web Design",
+        content:
+          "This is a <a target=_blank href=https://nextjs.org/>Next.js</a> project initialized with <code>create-next-app.</code>",
+      },
+    ],
   },
   {
     name: "Dogur",
@@ -62,6 +90,13 @@ export const projects_EN = [
     tech: ["Astro", "Tailwind", "Javascript"],
     summary:
       "Design for a donut shop, designed to highlight its variety of unique flavors.",
+    h1: [
+      {
+        title: "Web Design",
+        content:
+          "This is a <a target=_blank href=https://astro.build//>Astro</a> project initialized with <code>create astro@latest.</code>",
+      },
+    ],
   },
   {
     name: "Muñoz & Asociados",
@@ -75,6 +110,13 @@ export const projects_EN = [
     tech: ["Next", "React", "Tailwind"],
     summary:
       "Design for a law firm, focused on professionalism and accessibility.",
+    h1: [
+      {
+        title: "Web Design",
+        content:
+          "This is a <a target=_blank href=https://nextjs.org/>Next.js</a> project initialized with <code>create-next-app.</code>",
+      },
+    ],
   },
   {
     name: "Voting system",
@@ -95,5 +137,12 @@ export const projects_EN = [
       "Node",
     ],
     summary: "Online voting system for the 2024 Panama elections.",
+    h1: [
+      {
+        title: "Panama Elections 2024",
+        content:
+          "This is a <a target=_blank href=https://nextjs.org/>Next.js</a> project initialized with <code>create-next-app.</code>",
+      },
+    ],
   },
 ];
