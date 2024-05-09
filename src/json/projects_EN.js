@@ -18,6 +18,7 @@ export const projects_EN = [
           "This is a <a target=_blank href=https://nextjs.org/>Next.js</a> project initialized with <code>create-next-app.</code>",
       },
     ],
+    h2: "",
   },
   {
     name: "Babershop",
@@ -38,6 +39,7 @@ export const projects_EN = [
           "This is a <a target=_blank href=https://nextjs.org/>Next.js</a> project initialized with <code>create-next-app.</code>",
       },
     ],
+    h2: "",
   },
   {
     name: "Ecommerce",
@@ -57,6 +59,7 @@ export const projects_EN = [
           "This is a <a target=_blank href=https://nextjs.org/>Next.js</a> project initialized with <code>create-next-app.</code>",
       },
     ],
+    h2: "",
   },
   {
     name: "Hoshi Creative",
@@ -77,6 +80,7 @@ export const projects_EN = [
           "This is a <a target=_blank href=https://nextjs.org/>Next.js</a> project initialized with <code>create-next-app.</code>",
       },
     ],
+    h2: "",
   },
   {
     name: "Dogur",
@@ -97,6 +101,7 @@ export const projects_EN = [
           "This is a <a target=_blank href=https://astro.build//>Astro</a> project initialized with <code>create astro@latest.</code>",
       },
     ],
+    h2: "",
   },
   {
     name: "Muñoz & Asociados",
@@ -117,6 +122,7 @@ export const projects_EN = [
           "This is a <a target=_blank href=https://nextjs.org/>Next.js</a> project initialized with <code>create-next-app.</code>",
       },
     ],
+    h2: "",
   },
   {
     name: "Voting system",
@@ -144,5 +150,6 @@ export const projects_EN = [
           "This is a <a target=_blank href=https://nextjs.org/>Next.js</a> project initialized with <code>create-next-app.</code>",
       },
     ],
+    h2: "",
   },
 ];

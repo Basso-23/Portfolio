@@ -154,13 +154,10 @@ const ProductInfo = () => {
                 </div>
               ))}
 
-              <div className="mt-6 text-[24px] font-bold tracking-tighter">
-                Quick Start
-              </div>
-              <div className="mt-3 text-[16px] text-[#585858] tracking-tight text-balance">
-                Then, run pnpm dev to start the development server and visit
-                localhost:3000.
-              </div>
+              <div
+                dangerouslySetInnerHTML={{ __html: item.h2 }}
+                className="mt-3 h2-content"
+              ></div>
             </section>
           </div>
         ))}

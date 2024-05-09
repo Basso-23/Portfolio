@@ -18,6 +18,7 @@ export const projects_ES = [
           "Este es un proyecto de <a target=_blank href=https://nextjs.org/>Next.js</a> inicializado con <code>create-next-app</code>.</code>",
       },
     ],
+    h2: "<div><h1>Quick Start</h1><p>Then, run pnpm dev to start the development server and visit localhost:3000.</p><h1>Quick Start</h1><p>Then, run pnpm dev to start the development server and visit localhost:3000.</p><p>Then, run pnpm dev to start the development server and visit localhost:3000.</p><p>Then, run pnpm dev to start the development server and visit localhost:3000.</p></div>",
   },
 
   {
@@ -39,6 +40,7 @@ export const projects_ES = [
           "Este es un proyecto de <a target=_blank href=https://nextjs.org/>Next.js</a> inicializado con <code>create-next-app</code>.</code>",
       },
     ],
+    h2: "",
   },
 
   {
@@ -59,6 +61,7 @@ export const projects_ES = [
           "Este es un proyecto de <a target=_blank href=https://nextjs.org/>Next.js</a> inicializado con <code>create-next-app</code>.</code>",
       },
     ],
+    h2: "",
   },
   {
     name: "Hoshi Creative",
@@ -79,6 +82,7 @@ export const projects_ES = [
           "Este es un proyecto de <a target=_blank href=https://nextjs.org/>Next.js</a> inicializado con <code>create-next-app</code>.</code>",
       },
     ],
+    h2: "",
   },
   {
     name: "Dogur",
@@ -99,6 +103,7 @@ export const projects_ES = [
           "Este es un proyecto de <a target=_blank href=https://astro.build//>Astro</a> inicializado con <code>create astro@latest.</code>",
       },
     ],
+    h2: "",
   },
   {
     name: "Muñoz & Asociados",
@@ -119,6 +124,7 @@ export const projects_ES = [
           "Este es un proyecto de <a target=_blank href=https://nextjs.org/>Next.js</a> inicializado con <code>create-next-app</code>.</code>",
       },
     ],
+    h2: "",
   },
   {
     name: "Sistema de votación",
@@ -146,5 +152,6 @@ export const projects_ES = [
           "Este es un proyecto de <a target=_blank href=https://nextjs.org/>Next.js</a> inicializado con <code>create-next-app</code>.</code>",
       },
     ],
+    h2: "",
   },
 ];
