@@ -2,7 +2,7 @@ export const projects_ES = [
   {
     name: "Portafolio_v1",
     category: "diseño",
-    image: "https://i.imgur.com/CN9S1FO.png",
+    image: "https://i.imgur.com/UuDXeh8.jpeg",
     url: "https://portfolio-v2-three-woad.vercel.app/",
     github: "https://github.com/Basso-23/Portfolio_v2",
     date: "19 Marzo 2023",
@@ -13,7 +13,7 @@ export const projects_ES = [
       "Este es mi primer portafolio como desarrollador de software, creado con Next.js.",
     h1: [
       {
-        title: "Software Developer Portfolio",
+        title: "Desarrollador de Software / Portafolio",
         content:
           "Este es un proyecto de <a target=_blank href=https://nextjs.org/>Next.js</a> inicializado con <code>create-next-app</code>.</code>",
       },
@@ -23,7 +23,7 @@ export const projects_ES = [
   {
     name: "Babershop",
     category: "diseño",
-    image: "https://i.imgur.com/u7KKJmO.png",
+    image: "https://i.imgur.com/MGVy1q8.jpeg",
     url: "https://barbershop-woad.vercel.app/",
     github: "https://github.com/Basso-23/Barbershop",
     date: "30 Junio 2023",
@@ -44,7 +44,7 @@ export const projects_ES = [
   {
     name: "Ecommerce",
     category: "diseño",
-    image: "https://i.imgur.com/L7T2wmf.png",
+    image: "https://i.imgur.com/0knFxc3.jpeg",
     url: "https://estructura-ecommerce.vercel.app/",
     github: "https://github.com/Basso-23/Estructura_Ecommerce",
     date: "10 Julio 2023",
@@ -63,7 +63,7 @@ export const projects_ES = [
   {
     name: "Hoshi Creative",
     category: "diseño",
-    image: "https://i.imgur.com/eFmKV76.png",
+    image: "https://i.imgur.com/B6IE1nn.jpeg",
     url: "https://www.hoshicreative.art/",
     github: "https://www.hoshicreative.art/",
     date: "10 Agosto 2023",
@@ -82,8 +82,8 @@ export const projects_ES = [
   },
   {
     name: "Dogur",
-    category: "Diseño",
-    image: "https://i.imgur.com/LsbEqGb.png",
+    category: "diseño",
+    image: "https://i.imgur.com/3OPxyuh.jpeg",
     url: "https://dogur.vercel.app/",
     github: "https://github.com/Basso-23/Dogur",
     date: "19 Septiembre 2023",
@@ -103,7 +103,7 @@ export const projects_ES = [
   {
     name: "Muñoz & Asociados",
     category: "diseño",
-    image: "https://i.imgur.com/rCI8l6b.png",
+    image: "https://i.imgur.com/1w6yvWH.jpeg",
     url: "https://pagina-contador-abogado.vercel.app/",
     github: "https://github.com/Basso-23/Abogados_Firma",
     date: "29 Octubre 2023",
@@ -123,7 +123,7 @@ export const projects_ES = [
   {
     name: "Sistema de votación",
     category: "full-stack",
-    image: "https://i.imgur.com/78vwRho.png",
+    image: "https://i.imgur.com/5E3eLZy.jpeg",
     url: "https://github.com/Basso-23/Sistema_Elecciones",
     github: "https://github.com/Basso-23/Sistema_Elecciones",
     date: "4 Mayo 2024",
