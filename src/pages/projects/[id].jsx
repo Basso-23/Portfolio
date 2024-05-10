@@ -15,6 +15,8 @@ import NodeJS from "@/icons/skills/NodeJS";
 import Shadcn from "@/icons/skills/Shadcn";
 import Head from "next/head";
 import Link from "next/link";
+import Html from "@/icons/skills/Html";
+import Css from "@/icons/skills/Css";
 
 const ProductInfo = () => {
   const router = useRouter();
@@ -33,6 +35,8 @@ const ProductInfo = () => {
     Firebase: <Firebase />,
     Node: <NodeJS />,
     Shadcn: <Shadcn />,
+    HTML: <Html />,
+    CSS: <Css />,
   };
 
   const TechToRender = ({ name }) => {

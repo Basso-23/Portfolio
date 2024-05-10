@@ -9,17 +9,16 @@ export const projects_ES = [
     tech1: "Next",
     tech2: "React",
     tech: ["Next", "React", "Tailwind", "Javascript"],
-    summary:
-      "Este es un diseño de portafolio que realicé como desarrollador de software en 2023.",
+    summary: "Este es el diseño de mi portafolio que creado en 2023.",
     h1:
       "<div>" +
-      "<h1>Desarrollador de Software / Portafolio</h1>" +
+      "<h1>Desarrollador Web / Portafolio</h1>" +
       "<p>Este es un proyecto de <a target=_blank href=https://nextjs.org/>Next.js</a> inicializado con <code>create-next-app</code>.</code></p>" +
       "</div>",
     h2:
       "<div>" +
       "<h1>Resumen</h1>" +
-      "<p>Portafolio en donde doy a conocer mis capacidades, proyectos y visión como desarrollador de software.</p>" +
+      "<p>Portafolio en donde doy a conocer mis capacidades, proyectos y visión como desarrollador web.</p>" +
       "<h1>Aspectos relevantes</h1>" +
       "<p>- Diseño moderno</p>" +
       "<p>- Animaciones fluidas</p>" +
@@ -76,15 +75,24 @@ export const projects_ES = [
     github: "https://github.com/Basso-23/Estructura_Ecommerce",
     date: "10 Julio 2023",
     tech1: "Next",
-    tech2: "React",
-    tech: ["Next", "React", "Tailwind"],
+    tech2: "HTML",
+    tech: ["Next", "HTML", "CSS"],
     summary: "Diseño para un sitio de eCommerce para productos tecnológicos.",
     h1:
       "<div>" +
       "<h1>Diseño Web</h1>" +
       "<p>Este es un proyecto de <a target=_blank href=https://nextjs.org/>Next.js</a> inicializado con <code>create-next-app</code>.</code></p>" +
       "</div>",
-    h2: "",
+    h2:
+      "<div>" +
+      "<h1>Resumen</h1>" +
+      "<p>Estructura de una página web para un eCommerce de tecnología.</p>" +
+      "<h1>Aspectos relevantes</h1>" +
+      "<p>- Diseño moderno</p>" +
+      "<p>- Creada con solo HTML y CSS</p>" +
+      "<h1>Herramientas</h1>" +
+      "<p><a target=_blank href=https://vercel.com/>Vercel</a> para el despliegue del sitio web.</p>" +
+      "</div>",
   },
   {
     name: "Hoshi Creative",
@@ -97,13 +105,25 @@ export const projects_ES = [
     tech2: "React",
     tech: ["Next", "React", "Tailwind"],
     summary:
-      "Diseño para una compañía de diseño, enfocado en reflejar su creatividad.",
+      "Diseño para un estudio de desarrollo web, enfocado en reflejar su creatividad.",
     h1:
       "<div>" +
       "<h1>Diseño Web</h1>" +
       "<p>Este es un proyecto de <a target=_blank href=https://nextjs.org/>Next.js</a> inicializado con <code>create-next-app</code>.</code></p>" +
       "</div>",
-    h2: "",
+    h2:
+      "<div>" +
+      "<h1>Resumen</h1>" +
+      "<p>Página web que muestra el catálogo de los trabajos realizados por el estudio.</p>" +
+      "<h1>Aspectos relevantes</h1>" +
+      "<p>- Diseño moderno</p>" +
+      "<p>- Animaciones fluidas</p>" +
+      "<p>- Selección de idioma</p>" +
+      "<h1>Herramientas</h1>" +
+      "<p><a target=_blank href=https://vercel.com/>Vercel</a> para el despliegue del sitio web.</p>" +
+      "<p>Framework de CSS para realizar la interfaz gráfica <a target=_blank href=https://tailwindcss.com/>Tailwind</a>.</p>" +
+      "<p><a target=_blank href=https://www.framer.com/motion/>Framer Motion</a> para las animaciones; una biblioteca de Framer para desarrolladores.</p>" +
+      "</div>",
   },
   {
     name: "Dogur",
@@ -113,16 +133,28 @@ export const projects_ES = [
     github: "https://github.com/Basso-23/Dogur",
     date: "19 Septiembre 2023",
     tech1: "Astro",
-    tech2: "Tailwind",
-    tech: ["Astro", "Tailwind", "Javascript"],
+    tech2: "Javascript",
+    tech: ["Astro", "Javascript", "Tailwind"],
     summary:
       "Diseño para una tienda de donas, diseñado para destacar su variedad de sabores únicos.",
     h1:
       "<div>" +
       "<h1>Diseño Web</h1>" +
-      "<p>Este es un proyecto de <a target=_blank href=https://astro.build//>Astro</a> inicializado con <code>create astro@latest.</code>" +
+      "<p>Este es un proyecto de <a target=_blank href=https://astro.build/>Astro</a> inicializado con <code>create astro@latest.</code>" +
       "</div>",
-    h2: "",
+    h2:
+      "<div>" +
+      "<h1>Resumen</h1>" +
+      "<p>Página web que muestra el catálogo de los trabajos realizados por el estudio.</p>" +
+      "<h1>Aspectos relevantes</h1>" +
+      "<p>- Diseño moderno</p>" +
+      "<p>- Animaciones fluidas</p>" +
+      "<p>- Selección de idioma</p>" +
+      "<h1>Herramientas</h1>" +
+      "<p><a target=_blank href=https://vercel.com/>Vercel</a> para el despliegue del sitio web.</p>" +
+      "<p>Framework de CSS para realizar la interfaz gráfica <a target=_blank href=https://tailwindcss.com/>Tailwind</a>.</p>" +
+      "<p><a target=_blank href=https://www.framer.com/motion/>Framer Motion</a> para las animaciones; una biblioteca de Framer para desarrolladores.</p>" +
+      "</div>",
   },
   {
     name: "Muñoz & Asociados",

@@ -17,6 +17,8 @@ import Firebase from "@/icons/skills/Firebase";
 import NodeJS from "@/icons/skills/NodeJS";
 import Shadcn from "@/icons/skills/Shadcn";
 import Loader from "../elements/Loader";
+import Html from "@/icons/skills/Html";
+import Css from "@/icons/skills/Css";
 
 const Projects = () => {
   const [originalData, setOriginalData] = useAtom(originalAtom);
@@ -37,6 +39,8 @@ const Projects = () => {
     Firebase: <Firebase />,
     Node: <NodeJS />,
     Shadcn: <Shadcn />,
+    HTML: <Html />,
+    CSS: <Css />,
   };
 
   const TechToRender = ({ name }) => {

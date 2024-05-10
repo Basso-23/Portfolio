@@ -9,17 +9,16 @@ export const projects_EN = [
     tech1: "Next",
     tech2: "React",
     tech: ["Next", "React", "Tailwind", "Javascript"],
-    summary:
-      "This is a portfolio design I created as a software developer in 2023.",
+    summary: "This is the design of my portfolio created in 2023.",
     h1:
       "<div>" +
-      "<h1>Software Developer / Portfolio</h1>" +
+      "<h1>Web Developer / Portfolio</h1>" +
       "<p>This is a <a target=_blank href=https://nextjs.org/>Next.js</a> project initialized with <code>create-next-app</code>.</p>" +
       "</div>",
     h2:
       "<div>" +
       "<h1>Overview</h1>" +
-      "<p>Portfolio where I showcase my skills, projects, and vision as a software developer.</p>" +
+      "<p>Portfolio where I showcase my skills, projects, and vision as a web developer.</p>" +
       "<h1>Key Features</h1>" +
       "<p>- Modern design</p>" +
       "<p>- Smooth animations</p>" +
@@ -74,11 +73,24 @@ export const projects_EN = [
     github: "https://github.com/Basso-23/Estructura_Ecommerce",
     date: "10 July 2023",
     tech1: "Next",
-    tech2: "React",
-    tech: ["Next", "React", "Tailwind"],
+    tech2: "HTML",
+    tech: ["Next", "HTML", "CSS"],
     summary: "Design for an eCommerce site for tech products.",
-    h1: "",
-    h2: "",
+    h1:
+      "<div>" +
+      "<h1>Web Design</h1>" +
+      "<p>This is a <a target=_blank href=https://nextjs.org/>Next.js</a> project initialized with <code>create-next-app</code>.</p>" +
+      "</div>",
+    h2:
+      "<div>" +
+      "<h1>Overview</h1>" +
+      "<p>Structure of a web page for a technology eCommerce.</p>" +
+      "<h1>Key Features</h1>" +
+      "<p>- Modern design</p>" +
+      "<p>- Created with only HTML and CSS</p>" +
+      "<h1>Tools</h1>" +
+      "<p><a target=_blank href=https://vercel.com/>Vercel</a> for the website deployment.</p>" +
+      "</div>",
   },
   {
     name: "Hoshi Creative",
@@ -91,9 +103,25 @@ export const projects_EN = [
     tech2: "React",
     tech: ["Next", "React", "Tailwind"],
     summary:
-      "Design for a design company, focused on reflecting its creativity.",
-    h1: "",
-    h2: "",
+      "Design for a web development studio, focused on reflecting its creativity.",
+    h1:
+      "<div>" +
+      "<h1>Web Design</h1>" +
+      "<p>This is a <a target=_blank href=https://nextjs.org/>Next.js</a> project initialized with <code>create-next-app</code>.</p>" +
+      "</div>",
+    h2:
+      "<div>" +
+      "<h1>Overview</h1>" +
+      "<p>Website showcasing the catalog of works done by the studio.</p>" +
+      "<h1>Key Features</h1>" +
+      "<p>- Modern design</p>" +
+      "<p>- Smooth animations</p>" +
+      "<p>- Language selection</p>" +
+      "<h1>Tools</h1>" +
+      "<p><a target=_blank href=https://vercel.com/>Vercel</a> for the website deployment.</p>" +
+      "<p>CSS framework for the graphical interface <a target=_blank href=https://tailwindcss.com/>Tailwind</a>.</p>" +
+      "<p><a target=_blank href=https://www.framer.com/motion/>Framer Motion</a> for animations; a Framer library for developers.</p>" +
+      "</div>",
   },
   {
     name: "Dogur",
@@ -103,12 +131,28 @@ export const projects_EN = [
     github: "https://github.com/Basso-23/Dogur",
     date: "19 September 2023",
     tech1: "Astro",
-    tech2: "Tailwind",
-    tech: ["Astro", "Tailwind", "Javascript"],
+    tech2: "Javascript",
+    tech: ["Astro", "Javascript", "Tailwind"],
     summary:
       "Design for a donut shop, designed to highlight its variety of unique flavors.",
-    h1: "",
-    h2: "",
+    h1:
+      "<div>" +
+      "<h1>Web Design</h1>" +
+      "<p>This is a <a target=_blank href=https://astro.build/>Astro</a> project initialized with <code>create astro@latest</code>.</p>" +
+      "</div>",
+    h2:
+      "<div>" +
+      "<h1>Overview</h1>" +
+      "<p>Website showcasing the catalog of works done by the studio.</p>" +
+      "<h1>Key Features</h1>" +
+      "<p>- Modern design</p>" +
+      "<p>- Smooth animations</p>" +
+      "<p>- Language selection</p>" +
+      "<h1>Tools</h1>" +
+      "<p><a target=_blank href=https://vercel.com/>Vercel</a> for the website deployment.</p>" +
+      "<p>CSS framework for the graphical interface <a target=_blank href=https://tailwindcss.com/>Tailwind</a>.</p>" +
+      "<p><a target=_blank href=https://www.framer.com/motion/>Framer Motion</a> for animations; a Framer library for developers.</p>" +
+      "</div>",
   },
   {
     name: "Muñoz & Asociados",
