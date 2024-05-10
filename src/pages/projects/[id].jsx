@@ -177,7 +177,7 @@ const ProductInfo = () => {
               <>Get to know a little more about me</>
             )}
           </h1>
-          <h2 className="sm:text-[24px] text-[20px] mt-5 leading-tight text-[#5f5f5f]">
+          <h2 className="sm:text-[22px] text-[20px] mt-5 leading-tight text-[#5f5f5f]">
             {language ? (
               <>
                 Echa un vistazo a mi experiencia previa y a mis diversas
