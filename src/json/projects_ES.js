@@ -9,7 +9,7 @@ export const projects_ES = [
     tech1: "Next",
     tech2: "React",
     tech: ["Next", "React", "Tailwind", "Javascript"],
-    summary: "Este es el diseño de mi portafolio que creado en 2023.",
+    summary: "Este es el diseño de mi portafolio creado en 2023.",
     h1:
       "<div>" +
       "<h1>Desarrollador Web / Portafolio</h1>" +
@@ -136,7 +136,7 @@ export const projects_ES = [
     tech2: "Javascript",
     tech: ["Astro", "Javascript", "Tailwind"],
     summary:
-      "Diseño para una tienda de donas, diseñado para destacar su variedad de sabores únicos.",
+      "Diseño para una tienda de donas, enfocado en destacar su variedad de sabores únicos.",
     h1:
       "<div>" +
       "<h1>Diseño Web</h1>" +
@@ -145,15 +145,15 @@ export const projects_ES = [
     h2:
       "<div>" +
       "<h1>Resumen</h1>" +
-      "<p>Página web que muestra el catálogo de los trabajos realizados por el estudio.</p>" +
+      "<p>Página web para dar a conocer la historia del negocio, variedad de productos y reputación.</p>" +
       "<h1>Aspectos relevantes</h1>" +
       "<p>- Diseño moderno</p>" +
       "<p>- Animaciones fluidas</p>" +
-      "<p>- Selección de idioma</p>" +
       "<h1>Herramientas</h1>" +
       "<p><a target=_blank href=https://vercel.com/>Vercel</a> para el despliegue del sitio web.</p>" +
       "<p>Framework de CSS para realizar la interfaz gráfica <a target=_blank href=https://tailwindcss.com/>Tailwind</a>.</p>" +
       "<p><a target=_blank href=https://www.framer.com/motion/>Framer Motion</a> para las animaciones; una biblioteca de Framer para desarrolladores.</p>" +
+      "<p>La librería <a target=_blank href=https://github.com/nanostores/nanostores>Nano Stores</a> para compartir el estado entre las diferentes Islas.</p>" +
       "</div>",
   },
   {
@@ -167,13 +167,24 @@ export const projects_ES = [
     tech2: "React",
     tech: ["Next", "React", "Tailwind"],
     summary:
-      "Diseño para una firma de abogados, enfocado en profesionalismo y accesibilidad.",
+      "Diseño para una firma de abogados mostrando su profesionalismo y accesibilidad.",
     h1:
       "<div>" +
       "<h1>Diseño Web</h1>" +
       "<p>Este es un proyecto de <a target=_blank href=https://nextjs.org/>Next.js</a> inicializado con <code>create-next-app</code>.</code></p>" +
       "</div>",
-    h2: "",
+    h2:
+      "<div>" +
+      "<h1>Resumen</h1>" +
+      "<p>Página web para dar a conocer los servicios, historia, visión y equipo de la compañía.</p>" +
+      "<h1>Aspectos relevantes</h1>" +
+      "<p>- Diseño moderno</p>" +
+      "<p>- Animaciones fluidas</p>" +
+      "<h1>Herramientas</h1>" +
+      "<p><a target=_blank href=https://vercel.com/>Vercel</a> para el despliegue del sitio web.</p>" +
+      "<p>Framework de CSS para realizar la interfaz gráfica <a target=_blank href=https://tailwindcss.com/>Tailwind</a>.</p>" +
+      "<p><a target=_blank href=https://www.framer.com/motion/>Framer Motion</a> para las animaciones; una biblioteca de Framer para desarrolladores.</p>" +
+      "</div>",
   },
   {
     name: "Sistema de votación",
@@ -199,6 +210,27 @@ export const projects_ES = [
       "<h1>Elecciones Panamá 2024</h1>" +
       "<p>Este es un proyecto de <a target=_blank href=https://nextjs.org/>Next.js</a> inicializado con <code>create-next-app</code>.</code></p>" +
       "</div>",
-    h2: "",
+    h2:
+      "<div>" +
+      "<h1>Resumen</h1>" +
+      "<p>Página web que muestra el conteo de votos conseguidos y faltantes.</p>" +
+      "<h1>Aspectos relevantes</h1>" +
+      "<p>- Manejo de usuarios: <strong>ADMIN o DIRIGENTE</strong>.</p>" +
+      "<p>- Manejo de permisos dependiendo del tipo de usuario.</p>" +
+      "<p>- Creación, eliminación y edición de datos: <strong>ADMIN</strong>.</p>" +
+      "<p>- Lectura de datos: <strong>ADMIN y DIRIGENTE</strong>.</p>" +
+      "<p>- Porcentaje total de votos conseguidos.</p>" +
+      "<p>- Porcentaje de votos conseguidos por centro de votación.</p>" +
+      "<p>- Porcentaje de votos conseguidos por dirigente.</p>" +
+      "<p>- Datos ordenables individual y grupalmente para impresión.</p>" +
+      "<p>- Popup que muestra cada vez que se crea, elimina o edita un votante.</p>" +
+      "<p><em>*Dirigente: persona encargada de buscar votantes.*</em></p>" +
+      "<h1>Herramientas</h1>" +
+      "<p>Uso de un VPS de <a target=_blank href=https://www.hostinger.com//>Hostinger</a> para el despliegue del sitio web.</p>" +
+      "<p>Framework de CSS para realizar la interfaz gráfica <a target=_blank href=https://tailwindcss.com/>Tailwind</a>.</p>" +
+      "<p>Biblioteca de componentes <a target=_blank href=https://ui.shadcn.com/>Shadcn/ui</a>.</p>" +
+      "<p>Almacenamiento de datos en la nube con <a target=_blank href=https://firebase.google.com/docs/firestore?hl=es-419>Firebase Firestore</a>.</p>" +
+      "<p>Proceso de autenticación de usuarios con <a target=_blank href=https://firebase.google.com/docs/auth?hl=es-419>Firebase Auth</a> .</p>" +
+      "</div>",
   },
 ];
