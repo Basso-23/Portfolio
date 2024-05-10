@@ -17,7 +17,7 @@ import Head from "next/head";
 import Link from "next/link";
 import Html from "@/icons/skills/Html";
 import Css from "@/icons/skills/Css";
-import Related from "@/components/elements/Related";
+import Related from "@/components/sections/Related";
 
 const ProductInfo = () => {
   const router = useRouter();
@@ -169,7 +169,49 @@ const ProductInfo = () => {
       <Related />
 
       <section className=" w-full sm:py-20 py-12 pageSize -mb-16">
-        <div className="bg-[#F7F7F7] h-64 w-full rounded-lg border"></div>
+        <div className="bg-[#F7F7F7] w-full rounded-lg border tracking-tighter flex flex-col justify-center lg:px-15 lg:pt-14 lg:pb-16 p-14 lg:text-start text-center relative">
+          <h1 className=" font-bold lg:text-[48px] text-[32px] leading-none">
+            {language ? (
+              <>Conoce un poco más de mi </>
+            ) : (
+              <>Get to know a little more about me</>
+            )}
+          </h1>
+          <h2 className="sm:text-[24px] text-[20px] mt-5 leading-tight text-[#5f5f5f]">
+            {language ? (
+              <>
+                Echa un vistazo a mi experiencia previa y a mis diversas
+                habilidades
+              </>
+            ) : (
+              <>Take a look at my previous experience and my various skills</>
+            )}
+          </h2>
+          {/*//* Download CV (desktop) */}
+          <a
+            target="_blank"
+            href={
+              language
+                ? "https://drive.google.com/file/d/1xK_8f4Jdlcjvw8a87wCpgfKEqfCBmR3O/view?usp=drive_link"
+                : "https://drive.google.com/file/d/1O2gmqslUaGKqcvuj-d_cBgdJP1XEpCw4/view?usp=drive_link"
+            }
+            className="lg:flex hidden absolute right-16 fixedCenterY py-3 px-6 bg-black rounded-md text-white hover:bg-[#343434] transition-all"
+          >
+            {language ? <>Descargar CV</> : <>Download CV</>}
+          </a>
+          {/*//* Download CV (mobile) */}
+          <a
+            target="_blank"
+            href={
+              language
+                ? "https://drive.google.com/file/d/1xK_8f4Jdlcjvw8a87wCpgfKEqfCBmR3O/view?usp=drive_link"
+                : "https://drive.google.com/file/d/1O2gmqslUaGKqcvuj-d_cBgdJP1XEpCw4/view?usp=drive_link"
+            }
+            className="flex lg:hidden py-3 px-6 bg-black rounded-md text-white hover:bg-[#343434] transition-all w-fit mx-auto mt-7"
+          >
+            {language ? <>Descargar CV</> : <>Download CV</>}
+          </a>
+        </div>
       </section>
     </main>
   );
