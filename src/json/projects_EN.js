@@ -41,7 +41,7 @@ export const projects_EN = [
     tech2: "React",
     tech: ["Next", "React", "Tailwind", "Javascript", "Node"],
     summary:
-      "Design for a unique barber shop, designed to highlight the quality of the service offered.",
+      "Design for a unique barber shop to highlight the quality of the service offered.",
     h1:
       "<div>" +
       "<h1>Web Design</h1>" +
@@ -103,7 +103,7 @@ export const projects_EN = [
     tech2: "React",
     tech: ["Next", "React", "Tailwind"],
     summary:
-      "Design for a web development studio, focused on reflecting its creativity.",
+      "Design for a web development studio focused on reflecting its creativity.",
     h1:
       "<div>" +
       "<h1>Web Design</h1>" +
@@ -134,7 +134,7 @@ export const projects_EN = [
     tech2: "Javascript",
     tech: ["Astro", "Javascript", "Tailwind"],
     summary:
-      "Design for a donut shop, focus to highlight its variety of unique flavors.",
+      "Design for a donut shop for highlight its variety of unique flavors.",
     h1:
       "<div>" +
       "<h1>Web Design</h1>" +
@@ -213,16 +213,17 @@ export const projects_EN = [
       "<h1>Overview</h1>" +
       "<p>Website that displays the count of votes obtained and missing.</p>" +
       "<h1>Key Features</h1>" +
-      "<p>- User management: <strong>ADMIN or DIRIGENTE</strong>.</p>" +
-      "<p>- Permission management depending on the type of user.</p>" +
-      "<p>- Creation, deletion, and editing of data: <strong>ADMIN</strong>.</p>" +
-      "<p>- Data reading: <strong>ADMIN and DIRIGENTE</strong>.</p>" +
-      "<p>- Total percentage of votes obtained.</p>" +
-      "<p>- Percentage of votes obtained by voting center.</p>" +
-      "<p>- Percentage of votes obtained by dirigente.</p>" +
-      "<p>- Data sortable individually and collectively for printing.</p>" +
-      "<p>- Popup that shows each time a voter is created, deleted, or edited.</p>" +
-      "<p><em>*Dirigente: person in charge of finding voters.*</em></p>" +
+      "<p>- User management: <strong>ADMIN or DIRIGENTE</strong></p>" +
+      "<p>- Permission management depending on the type of user</p>" +
+      "<p>- Creation, deletion, and editing of data: <strong>ADMIN</strong></p>" +
+      "<p>- Data reading: <strong>ADMIN and DIRIGENTE</strong></p>" +
+      "<p>- Search for voters by ID or assigned dirigente</strong></p>" +
+      "<p>- Total percentage of votes obtained</p>" +
+      "<p>- Percentage of votes obtained by voting center</p>" +
+      "<p>- Percentage of votes obtained by dirigente</p>" +
+      "<p>- Data sortable individually and collectively for printing</p>" +
+      "<p>- Popup that shows each time a voter is created, deleted, or edited</p>" +
+      "<p><em>*Dirigente: person in charge of finding voters*</em></p>" +
       "<h1>Tools</h1>" +
       "<p>Use of a VPS from <a target=_blank href=https://www.hostinger.com//>Hostinger</a> for the website deployment.</p>" +
       "<p>CSS framework for the graphical interface <a target=_blank href=https://tailwindcss.com/>Tailwind</a>.</p>" +

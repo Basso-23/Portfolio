@@ -42,7 +42,7 @@ export const projects_ES = [
     tech2: "React",
     tech: ["Next", "React", "Tailwind", "Javascript", "Node"],
     summary:
-      "Diseño para una barbería única, pensada para resaltar la calidad del servicio ofrecido.",
+      "Diseño para una barbería única para resaltar la calidad del servicio ofrecido.",
     h1:
       "<div>" +
       "<h1>Diseño Web</h1>" +
@@ -105,7 +105,7 @@ export const projects_ES = [
     tech2: "React",
     tech: ["Next", "React", "Tailwind"],
     summary:
-      "Diseño para un estudio de desarrollo web, enfocado en reflejar su creatividad.",
+      "Diseño para un estudio de desarrollo web enfocado en reflejar su creatividad.",
     h1:
       "<div>" +
       "<h1>Diseño Web</h1>" +
@@ -136,7 +136,7 @@ export const projects_ES = [
     tech2: "Javascript",
     tech: ["Astro", "Javascript", "Tailwind"],
     summary:
-      "Diseño para una tienda de donas, enfocado en destacar su variedad de sabores únicos.",
+      "Diseño para una tienda de donas para destacar su variedad de sabores únicos.",
     h1:
       "<div>" +
       "<h1>Diseño Web</h1>" +
@@ -215,16 +215,17 @@ export const projects_ES = [
       "<h1>Resumen</h1>" +
       "<p>Página web que muestra el conteo de votos conseguidos y faltantes.</p>" +
       "<h1>Aspectos relevantes</h1>" +
-      "<p>- Manejo de usuarios: <strong>ADMIN o DIRIGENTE</strong>.</p>" +
-      "<p>- Manejo de permisos dependiendo del tipo de usuario.</p>" +
-      "<p>- Creación, eliminación y edición de datos: <strong>ADMIN</strong>.</p>" +
-      "<p>- Lectura de datos: <strong>ADMIN y DIRIGENTE</strong>.</p>" +
-      "<p>- Porcentaje total de votos conseguidos.</p>" +
-      "<p>- Porcentaje de votos conseguidos por centro de votación.</p>" +
-      "<p>- Porcentaje de votos conseguidos por dirigente.</p>" +
-      "<p>- Datos ordenables individual y grupalmente para impresión.</p>" +
-      "<p>- Popup que muestra cada vez que se crea, elimina o edita un votante.</p>" +
-      "<p><em>*Dirigente: persona encargada de buscar votantes.*</em></p>" +
+      "<p>- Manejo de usuarios: <strong>ADMIN o DIRIGENTE</strong></p>" +
+      "<p>- Manejo de permisos dependiendo del tipo de usuario</p>" +
+      "<p>- Creación, eliminación y edición de datos: <strong>ADMIN</strong></p>" +
+      "<p>- Lectura de datos: <strong>ADMIN y DIRIGENTE</strong></p>" +
+      "<p>- Busqueda de votantes por cédula o dirigente asignado</strong></p>" +
+      "<p>- Porcentaje total de votos conseguidos</p>" +
+      "<p>- Porcentaje de votos conseguidos por centro de votación</p>" +
+      "<p>- Porcentaje de votos conseguidos por dirigente</p>" +
+      "<p>- Datos ordenables individual y grupalmente para impresión</p>" +
+      "<p>- Popup que muestra cada vez que se crea, elimina o edita un votante</p>" +
+      "<p><em>*Dirigente: persona encargada de buscar votantes*</em></p>" +
       "<h1>Herramientas</h1>" +
       "<p>Uso de un VPS de <a target=_blank href=https://www.hostinger.com//>Hostinger</a> para el despliegue del sitio web.</p>" +
       "<p>Framework de CSS para realizar la interfaz gráfica <a target=_blank href=https://tailwindcss.com/>Tailwind</a>.</p>" +
