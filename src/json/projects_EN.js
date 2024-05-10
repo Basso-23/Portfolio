@@ -1,6 +1,6 @@
 export const projects_EN = [
   {
-    name: "Portafolio_v1",
+    name: "Portfolio 2023",
     category: "design",
     image: "https://i.imgur.com/UuDXeh8.jpeg",
     url: "https://portfolio-v2-three-woad.vercel.app/",
@@ -10,15 +10,26 @@ export const projects_EN = [
     tech2: "React",
     tech: ["Next", "React", "Tailwind", "Javascript"],
     summary:
-      "This is my first portfolio as a software developer, created with Next.js.",
-    h1: [
-      {
-        title: "Software Developer / Portfolio",
-        content:
-          "This is a <a target=_blank href=https://nextjs.org/>Next.js</a> project initialized with <code>create-next-app.</code>",
-      },
-    ],
-    h2: "",
+      "This is a portfolio design I created as a software developer in 2023.",
+    h1:
+      "<div>" +
+      "<h1>Software Developer / Portfolio</h1>" +
+      "<p>This is a <a target=_blank href=https://nextjs.org/>Next.js</a> project initialized with <code>create-next-app</code>.</p>" +
+      "</div>",
+    h2:
+      "<div>" +
+      "<h1>Overview</h1>" +
+      "<p>Portfolio where I showcase my skills, projects, and vision as a software developer.</p>" +
+      "<h1>Key Features</h1>" +
+      "<p>- Modern design</p>" +
+      "<p>- Smooth animations</p>" +
+      "<p>- Language selection</p>" +
+      "<p>- Individual project views</p>" +
+      "<h1>Tools</h1>" +
+      "<p><a target=_blank href=https://vercel.com/>Vercel</a> for the website deployment.</p>" +
+      "<p>CSS framework for the graphical interface <a target=_blank href=https://tailwindcss.com/>Tailwind</a>.</p>" +
+      "<p><a target=_blank href=https://www.framer.com/motion/>Framer Motion</a> for animations; a Framer library for developers.</p>" +
+      "</div>",
   },
   {
     name: "Babershop",
@@ -31,15 +42,29 @@ export const projects_EN = [
     tech2: "React",
     tech: ["Next", "React", "Tailwind", "Javascript", "Node"],
     summary:
-      "Design for a modern barber shop, designed to highlight the quality of the service offered.",
-    h1: [
-      {
-        title: "Web Design",
-        content:
-          "This is a <a target=_blank href=https://nextjs.org/>Next.js</a> project initialized with <code>create-next-app.</code>",
-      },
-    ],
-    h2: "",
+      "Design for a unique barber shop, designed to highlight the quality of the service offered.",
+    h1:
+      "<div>" +
+      "<h1>Web Design</h1>" +
+      "<p>This is a <a target=_blank href=https://nextjs.org/>Next.js</a> project initialized with <code>create-next-app</code>.</p>" +
+      "</div>",
+    h2:
+      "<div>" +
+      "<h1>Overview</h1>" +
+      "<p>Website of a barbershop to introduce the business, its work, and its team.</p>" +
+      "<h1>Key Features</h1>" +
+      "<p>- Western design</p>" +
+      "<p>- Smooth animations</p>" +
+      "<p>- 3D animations</p>" +
+      "<p>- Language selection</p>" +
+      "<p>- Scroll Spy in the different sections</p>" +
+      "<h1>Tools</h1>" +
+      "<p><a target=_blank href=https://vercel.com/>Vercel</a> for the website deployment.</p>" +
+      "<p>CSS framework for the graphical interface <a target=_blank href=https://tailwindcss.com/>Tailwind</a>.</p>" +
+      "<p><a target=_blank href=https://www.framer.com/motion/>Framer Motion</a> for animations; a Framer library for developers.</p>" +
+      "<p>Scroll Spy in the sections with <a target=_blank href=https://www.npmjs.com/package/react-scroll>react-scroll</a>.</p>" +
+      "<p>The 3D animations with <a target=_blank href=https://www.npmjs.com/package/react-parallax-tilt>react-parallax-tilt</a>.</p>" +
+      "</div>",
   },
   {
     name: "Ecommerce",
@@ -52,13 +77,7 @@ export const projects_EN = [
     tech2: "React",
     tech: ["Next", "React", "Tailwind"],
     summary: "Design for an eCommerce site for tech products.",
-    h1: [
-      {
-        title: "Web Design",
-        content:
-          "This is a <a target=_blank href=https://nextjs.org/>Next.js</a> project initialized with <code>create-next-app.</code>",
-      },
-    ],
+    h1: "",
     h2: "",
   },
   {
@@ -73,13 +92,7 @@ export const projects_EN = [
     tech: ["Next", "React", "Tailwind"],
     summary:
       "Design for a design company, focused on reflecting its creativity.",
-    h1: [
-      {
-        title: "Web Design",
-        content:
-          "This is a <a target=_blank href=https://nextjs.org/>Next.js</a> project initialized with <code>create-next-app.</code>",
-      },
-    ],
+    h1: "",
     h2: "",
   },
   {
@@ -94,13 +107,7 @@ export const projects_EN = [
     tech: ["Astro", "Tailwind", "Javascript"],
     summary:
       "Design for a donut shop, designed to highlight its variety of unique flavors.",
-    h1: [
-      {
-        title: "Web Design",
-        content:
-          "This is a <a target=_blank href=https://astro.build//>Astro</a> project initialized with <code>create astro@latest.</code>",
-      },
-    ],
+    h1: "",
     h2: "",
   },
   {
@@ -115,13 +122,7 @@ export const projects_EN = [
     tech: ["Next", "React", "Tailwind"],
     summary:
       "Design for a law firm, focused on professionalism and accessibility.",
-    h1: [
-      {
-        title: "Web Design",
-        content:
-          "This is a <a target=_blank href=https://nextjs.org/>Next.js</a> project initialized with <code>create-next-app.</code>",
-      },
-    ],
+    h1: "",
     h2: "",
   },
   {
@@ -143,13 +144,7 @@ export const projects_EN = [
       "Node",
     ],
     summary: "Online voting system for the 2024 Panama elections.",
-    h1: [
-      {
-        title: "Panama Elections 2024",
-        content:
-          "This is a <a target=_blank href=https://nextjs.org/>Next.js</a> project initialized with <code>create-next-app.</code>",
-      },
-    ],
+    h1: "",
     h2: "",
   },
 ];

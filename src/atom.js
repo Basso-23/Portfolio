@@ -12,5 +12,5 @@ export const dataAtom = atom([]);
 //* Idioma
 export const languageAtom = atom(true);
 
-//* Image
+//* Image lazy load
 export const imageAtom = atom(false);

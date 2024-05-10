@@ -51,7 +51,7 @@ const Projects = () => {
       }
     }, 1500);
     return () => clearTimeout(timer);
-  }, []);
+  }, [imageLoaded, setImageLoaded]);
 
   return (
     <div className="mt-4 py-4 pb-4">

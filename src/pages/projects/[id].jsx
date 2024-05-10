@@ -5,7 +5,6 @@ import { languageAtom } from "@/atom";
 import { originalAtom } from "@/atom";
 
 import ArrowLeft from "@/icons/ArrowLeft";
-
 import JS from "@/icons/skills/JS";
 import React_logo from "@/icons/skills/React";
 import Next from "@/icons/skills/Next";
@@ -15,6 +14,7 @@ import Firebase from "@/icons/skills/Firebase";
 import NodeJS from "@/icons/skills/NodeJS";
 import Shadcn from "@/icons/skills/Shadcn";
 import Head from "next/head";
+import Link from "next/link";
 
 const ProductInfo = () => {
   const router = useRouter();
@@ -50,13 +50,15 @@ const ProductInfo = () => {
         )}
       </Head>
       {/*//* Back (mobile) */}
-      <a
-        href="https://www.carlosbaso.com/"
-        className="z-40 w-fit lg:hidden flex gap-[2px] items-center text-[13px] text-[#9d9d9d] hover:text-black absolute top-0 lg:left-[48px] sm:left-6"
+      <Link
+        href={{
+          pathname: "/",
+        }}
+        className="z-40 w-fit lg:hidden flex gap-[2px] items-center text-[13px] text-[#9d9d9d] hover:text-black absolute top-0 lg:left-[48px] sm:left-6 cursor-pointer"
       >
         <ArrowLeft />
         {language ? <>Voler a Proyectos</> : <>Back to Projects</>}
-      </a>
+      </Link>
       {originalData
         .filter((item) => item.name.replace(/ /g, "-") === id)
         .map((item, index) => (
@@ -75,13 +77,15 @@ const ProductInfo = () => {
               ></div>
               <div className="lg:fixed xl:w-[470px] lg:w-[375px] lg:pr-[50px] lg:pl-[25px] ">
                 {/*//* Back (desktop) */}
-                <a
-                  href="https://www.carlosbaso.com/"
-                  className="w-fit hidden lg:flex gap-[2px] items-center text-[13px] text-[#9d9d9d] hover:text-black"
+                <Link
+                  href={{
+                    pathname: "/",
+                  }}
+                  className="w-fit hidden lg:flex gap-[2px] items-center text-[13px] text-[#9d9d9d] hover:text-black cursor-pointer"
                 >
                   <ArrowLeft />
                   {language ? <>Voler a Proyectos</> : <>Back to Projects</>}
-                </a>
+                </Link>
                 {/*//* Nombre */}
                 <h1 className="lg:text-[48px] text-[32px] font-bold tracking-tighter leading-none mt-8">
                   {item.name}
@@ -134,29 +138,21 @@ const ProductInfo = () => {
             </section>
 
             {/*//* Right side */}
-            <section className="lg:flex-1 lg:ml-[50px] lg:mt-8 mt-10">
+            <section className="lg:flex-1 lg:ml-[50px] lg:mt-8 mt-10 mb-10">
               {/*//* Image (desktop) */}
               <div
                 style={{
                   backgroundImage: `url("${item.image}")`,
                 }}
-                className=" aspect-video w-full bg-no-repeat bg-cover rounded-sm relative bg-top border hidden lg:flex animate-fade-right duration-500"
+                className=" aspect-video w-full bg-no-repeat bg-cover rounded-sm relative bg-top border hidden lg:flex animate-fade-right duration-500 lg:mb-10 mb-0"
               ></div>
-              {item.h1.map((text, index) => (
-                <div key={index}>
-                  <div className="lg:mt-10 mt-0 text-[32px] font-bold tracking-tighter">
-                    {text.title}
-                  </div>
-                  <div
-                    dangerouslySetInnerHTML={{ __html: text.content }}
-                    className="mt-3 text-[16px] text-[#585858] h1-content tracking-tight text-balance"
-                  ></div>
-                </div>
-              ))}
-
+              <div
+                dangerouslySetInnerHTML={{ __html: item.h1 }}
+                className="h1-content"
+              ></div>
               <div
                 dangerouslySetInnerHTML={{ __html: item.h2 }}
-                className="mt-3 h2-content"
+                className="mt-6 h2-content"
               ></div>
             </section>
           </div>
