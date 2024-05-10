@@ -17,6 +17,7 @@ import Head from "next/head";
 import Link from "next/link";
 import Html from "@/icons/skills/Html";
 import Css from "@/icons/skills/Css";
+import Related from "@/components/elements/Related";
 
 const ProductInfo = () => {
   const router = useRouter();
@@ -45,7 +46,7 @@ const ProductInfo = () => {
   };
 
   return (
-    <main className="pageSize min-h-screen relative">
+    <main className="relative">
       <Head>
         {id ? (
           <title>Carlos Baso | {id.replace(/-/g, " ")}</title>
@@ -58,109 +59,118 @@ const ProductInfo = () => {
         href={{
           pathname: "/",
         }}
-        className="z-40 w-fit lg:hidden flex gap-[2px] items-center text-[13px] text-[#9d9d9d] hover:text-black absolute top-0 lg:left-[48px] sm:left-6 cursor-pointer"
+        className="z-40 w-fit lg:hidden flex gap-[2px] items-center text-[13px] text-[#9d9d9d] hover:text-black absolute top-0 lg:left-[48px] sm:left-6 cursor-pointer pageSize"
       >
         <ArrowLeft />
         {language ? <>Voler a Proyectos</> : <>Back to Projects</>}
       </Link>
-      {originalData
-        .filter((item) => item.name.replace(/ /g, "-") === id)
-        .map((item, index) => (
-          <div
-            key={index}
-            className="lg:flex lg:flex-row flex flex-col lg:my-10 my-5"
-          >
-            {/*//* Left side */}
-            <section className="xl:w-[470px] lg:w-[375px] lg:border-r lg:min-h-screen relative ">
-              {/*//* Image (mobile) */}
-              <div
-                style={{
-                  backgroundImage: `url("${item.image}")`,
-                }}
-                className=" aspect-video w-full bg-no-repeat bg-cover rounded-sm relative bg-top border lg:hidden flex mt-10 animate-fade-right duration-500"
-              ></div>
-              <div className="lg:fixed xl:w-[470px] lg:w-[375px] lg:pr-[50px] lg:pl-[25px] ">
-                {/*//* Back (desktop) */}
-                <Link
-                  href={{
-                    pathname: "/",
-                  }}
-                  className="w-fit hidden lg:flex gap-[2px] items-center text-[13px] text-[#9d9d9d] hover:text-black cursor-pointer"
-                >
-                  <ArrowLeft />
-                  {language ? <>Voler a Proyectos</> : <>Back to Projects</>}
-                </Link>
-                {/*//* Nombre */}
-                <h1 className="lg:text-[48px] text-[32px] font-bold tracking-tighter leading-none mt-8">
-                  {item.name}
-                </h1>
-                {/*//* Summary */}
-                <h2 className="lg:mt-8 mt-6 text-[16px] text-[#585858] tracking-tight">
-                  {item.summary}
-                </h2>
-                <div className=" grid grid-cols-2 gap-6 text-center mt-4 text-[13.5px]">
-                  {/*//* Demo button */}
-                  <a
-                    target="_blank"
-                    href={item.url}
-                    className=" py-2 border rounded-md cursor-pointer hover:bg-[#ebebeb] transition-all"
-                  >
-                    Demo
-                  </a>
-                  {/*//* Github button */}
-                  <a
-                    target="_blank"
-                    href={item.github}
-                    className=" py-2 bg-black rounded-md text-white cursor-pointer hover:bg-[#343434] transition-all"
-                  >
-                    Github
-                  </a>
-                </div>
-                {/*//* Fecha */}
-                <div className=" border-b flex justify-between  text-[14px] py-2 mt-3 text-[#585858]">
-                  <div className="font-semibold">
-                    {language ? <>Fecha</> : <>Date</>}
-                  </div>
-                  <div>{item.date}</div>
-                </div>
-                {/*//* Category */}
-                <div className=" border-b flex justify-between  text-[14px] py-2 text-[#585858] capitalize">
-                  <div className="font-semibold">
-                    {language ? <>Categoría</> : <>Category</>}
-                  </div>
-                  <div>{item.category}</div>
-                </div>
-                {/*//* Techs */}
-                <div className=" flex gap-2 text-[25px] mt-4 justify-end">
-                  {item.tech.map((item, index) => (
-                    <div key={index}>
-                      <TechToRender name={item} />
-                    </div>
-                  ))}
-                </div>
-              </div>
-            </section>
 
-            {/*//* Right side */}
-            <section className="lg:flex-1 lg:ml-[50px] lg:mt-8 mt-10 mb-10">
-              {/*//* Image (desktop) */}
-              <div
-                style={{
-                  backgroundImage: `url("${item.image}")`,
-                }}
-                className=" aspect-video w-full bg-no-repeat bg-cover rounded-sm relative bg-top border hidden lg:flex animate-fade-right duration-500 lg:mb-10 mb-0"
-              ></div>
-              <div
-                dangerouslySetInnerHTML={{ __html: item.h1 }}
-                className="h1-content"
-              ></div>
-              <div
-                dangerouslySetInnerHTML={{ __html: item.h2 }}
-                className="mt-6 h2-content"
-              ></div>
-            </section>
-          </div>
-        ))}
+      <section className="pageSize ">
+        {originalData
+          .filter((item) => item.name.replace(/ /g, "-") === id)
+          .map((item, index) => (
+            <div
+              key={index}
+              className="lg:flex lg:flex-row flex flex-col lg:my-10 my-5"
+            >
+              {/*//* Left side */}
+              <section className="xl:w-[470px] lg:w-[375px] lg:border-r lg:min-h-screen relative ">
+                {/*//* Image (mobile) */}
+                <div
+                  style={{
+                    backgroundImage: `url("${item.image}")`,
+                  }}
+                  className=" aspect-video w-full bg-no-repeat bg-cover rounded-sm relative bg-top border lg:hidden flex mt-10 "
+                ></div>
+                <div className="lg:sticky top-10 xl:w-[470px] lg:w-[375px] lg:pr-[50px] lg:pl-[25px] ">
+                  {/*//* Back (desktop) */}
+                  <Link
+                    href={{
+                      pathname: "/",
+                    }}
+                    className="w-fit hidden lg:flex gap-[2px] items-center text-[13px] text-[#9d9d9d] hover:text-black cursor-pointer"
+                  >
+                    <ArrowLeft />
+                    {language ? <>Voler a Proyectos</> : <>Back to Projects</>}
+                  </Link>
+                  {/*//* Nombre */}
+                  <h1 className="lg:text-[48px] text-[32px] font-bold tracking-tighter leading-none mt-8">
+                    {item.name}
+                  </h1>
+                  {/*//* Summary */}
+                  <h2 className="lg:mt-8 mt-6 text-[16px] text-[#585858] tracking-tight">
+                    {item.summary}
+                  </h2>
+                  <div className=" grid grid-cols-2 gap-6 text-center mt-4 text-[13.5px]">
+                    {/*//* Demo button */}
+                    <a
+                      target="_blank"
+                      href={item.url}
+                      className=" py-2 border rounded-md cursor-pointer hover:bg-[#ebebeb] transition-all"
+                    >
+                      Demo
+                    </a>
+                    {/*//* Github button */}
+                    <a
+                      target="_blank"
+                      href={item.github}
+                      className=" py-2 bg-black rounded-md text-white cursor-pointer hover:bg-[#343434] transition-all"
+                    >
+                      Github
+                    </a>
+                  </div>
+                  {/*//* Fecha */}
+                  <div className=" border-b flex justify-between  text-[14px] py-2 mt-3 text-[#585858]">
+                    <div className="font-semibold">
+                      {language ? <>Fecha</> : <>Date</>}
+                    </div>
+                    <div>{item.date}</div>
+                  </div>
+                  {/*//* Category */}
+                  <div className=" border-b flex justify-between  text-[14px] py-2 text-[#585858] capitalize">
+                    <div className="font-semibold">
+                      {language ? <>Categoría</> : <>Category</>}
+                    </div>
+                    <div>{item.category}</div>
+                  </div>
+                  {/*//* Techs */}
+                  <div className=" flex gap-2 text-[25px] mt-4 justify-end">
+                    {item.tech.map((item, index) => (
+                      <div key={index}>
+                        <TechToRender name={item} />
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              </section>
+
+              {/*//* Right side */}
+              <section className="lg:flex-1 lg:ml-[50px] lg:mt-8 mt-10 mb-10">
+                {/*//* Image (desktop) */}
+                <div
+                  style={{
+                    backgroundImage: `url("${item.image}")`,
+                  }}
+                  className=" aspect-video w-full bg-no-repeat bg-cover rounded-sm relative bg-top border hidden lg:flex lg:mb-10 mb-0"
+                ></div>
+                <div
+                  dangerouslySetInnerHTML={{ __html: item.h1 }}
+                  className="h1-content"
+                ></div>
+                <div
+                  dangerouslySetInnerHTML={{ __html: item.h2 }}
+                  className="mt-6 h2-content"
+                ></div>
+              </section>
+            </div>
+          ))}
+      </section>
+
+      <Related />
+
+      <section className=" w-full sm:py-20 py-12 pageSize -mb-16">
+        <div className="bg-[#F7F7F7] h-64 w-full rounded-lg border"></div>
+      </section>
     </main>
   );
 };
