@@ -50,7 +50,7 @@ const Related = () => {
   };
 
   return (
-    <main className="sticky sm:py-10 py-8 border-t border-b">
+    <main className="sticky sm:py-10 py-8 mt-8 -mb-10">
       <div className=" pageSize font-bold text-[24px] mb-1 tracking-tighter">
         {language ? <>Proyectos Relacionados</> : <>Related Projects</>}
       </div>

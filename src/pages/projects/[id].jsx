@@ -167,27 +167,41 @@ const ProductInfo = () => {
           ))}
       </section>
 
-      <Related />
+      <section className=" w-full sm:py-20 py-12 bg-black">
+        <div className=" pageSize w-full flex flex-col relative">
+          {/*//* Banner */}
+          <div className=" py-14 px-11 bg-[#111010] border tracking-tighter border-[#333333] rounded-lg lg:items-start items-center lg:text-start text-center flex flex-col">
+            <h1 className=" font-bold lg:text-[48px] text-[36px] leading-none text-balance text-white">
+              {language ? (
+                <>Conoce un poco más de mi </>
+              ) : (
+                <>Get to know me a little more</>
+              )}
+            </h1>
+            <h2 className="lg:text-[20px] text-[18px] mt-5 leading-tight text-[#777777]">
+              {language ? (
+                <>
+                  Echa un vistazo a mi experiencia previa y a mis diversas
+                  habilidades
+                </>
+              ) : (
+                <>Take a look at my previous experience and my various skills</>
+              )}
+            </h2>
+            {/*//* Download CV (mobile) */}
+            <a
+              target="_blank"
+              href={
+                language
+                  ? "https://drive.google.com/file/d/1xK_8f4Jdlcjvw8a87wCpgfKEqfCBmR3O/view?usp=drive_link"
+                  : "https://drive.google.com/file/d/1O2gmqslUaGKqcvuj-d_cBgdJP1XEpCw4/view?usp=drive_link"
+              }
+              className="text-[14px] flex lg:hidden py-3 px-9 hover:bg-[#ebebeb] transition-all rounded-md bg-white tracking-normal mt-8 w-fit font-medium"
+            >
+              {language ? <>Descargar CV</> : <>Download CV</>}
+            </a>
+          </div>
 
-      <section className=" w-full sm:py-20 py-12 pageSize -mb-16">
-        <div className="bg-[#F7F7F7] w-full rounded-lg border tracking-tighter flex flex-col justify-center lg:px-15 px-12 lg:pt-14 lg:pb-16 p-14 lg:text-start text-center relative">
-          <h1 className=" font-bold lg:text-[48px] text-[32px] leading-none text-balance">
-            {language ? (
-              <>Conoce un poco más de mi </>
-            ) : (
-              <>Get to know me a little more</>
-            )}
-          </h1>
-          <h2 className="text-[20px] mt-5 leading-tight text-[#5f5f5f]">
-            {language ? (
-              <>
-                Echa un vistazo a mi experiencia previa y a mis diversas
-                habilidades
-              </>
-            ) : (
-              <>Take a look at my previous experience and my various skills</>
-            )}
-          </h2>
           {/*//* Download CV (desktop) */}
           <a
             target="_blank"
@@ -196,24 +210,13 @@ const ProductInfo = () => {
                 ? "https://drive.google.com/file/d/1xK_8f4Jdlcjvw8a87wCpgfKEqfCBmR3O/view?usp=drive_link"
                 : "https://drive.google.com/file/d/1O2gmqslUaGKqcvuj-d_cBgdJP1XEpCw4/view?usp=drive_link"
             }
-            className="text-[14px] lg:flex hidden absolute right-14 fixedCenterY py-3 px-9 bg-black rounded-md text-white hover:bg-[#343434] transition-all tracking-normal"
-          >
-            {language ? <>Descargar CV</> : <>Download CV</>}
-          </a>
-          {/*//* Download CV (mobile) */}
-          <a
-            target="_blank"
-            href={
-              language
-                ? "https://drive.google.com/file/d/1xK_8f4Jdlcjvw8a87wCpgfKEqfCBmR3O/view?usp=drive_link"
-                : "https://drive.google.com/file/d/1O2gmqslUaGKqcvuj-d_cBgdJP1XEpCw4/view?usp=drive_link"
-            }
-            className="text-[14px] flex lg:hidden py-3 px-9 bg-black rounded-md text-white hover:bg-[#343434] transition-all w-fit mx-auto mt-7 tracking-normal"
+            className="text-[14px] lg:flex hidden absolute right-20 fixedCenterY py-3 px-9 hover:bg-[#ebebeb] transition-all rounded-md bg-white tracking-normal font-medium"
           >
             {language ? <>Descargar CV</> : <>Download CV</>}
           </a>
         </div>
       </section>
+      <Related />
     </main>
   );
 };
