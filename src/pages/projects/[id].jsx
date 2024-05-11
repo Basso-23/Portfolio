@@ -170,7 +170,7 @@ const ProductInfo = () => {
       <Related />
 
       <section className=" w-full sm:py-20 py-12 pageSize -mb-16">
-        <div className="bg-[#F7F7F7] w-full rounded-lg border tracking-tighter flex flex-col justify-center lg:px-15 lg:pt-14 lg:pb-16 p-14 lg:text-start text-center relative">
+        <div className="bg-[#F7F7F7] w-full rounded-lg border tracking-tighter flex flex-col justify-center lg:px-15 px-12 lg:pt-14 lg:pb-16 p-14 lg:text-start text-center relative">
           <h1 className=" font-bold lg:text-[48px] text-[32px] leading-none text-balance">
             {language ? (
               <>Conoce un poco más de mi </>
@@ -196,7 +196,7 @@ const ProductInfo = () => {
                 ? "https://drive.google.com/file/d/1xK_8f4Jdlcjvw8a87wCpgfKEqfCBmR3O/view?usp=drive_link"
                 : "https://drive.google.com/file/d/1O2gmqslUaGKqcvuj-d_cBgdJP1XEpCw4/view?usp=drive_link"
             }
-            className="text-[14px] lg:flex hidden absolute right-16 fixedCenterY py-3 px-9 bg-black rounded-md text-white hover:bg-[#343434] transition-all tracking-normal"
+            className="text-[14px] lg:flex hidden absolute right-14 fixedCenterY py-3 px-9 bg-black rounded-md text-white hover:bg-[#343434] transition-all tracking-normal"
           >
             {language ? <>Descargar CV</> : <>Download CV</>}
           </a>
