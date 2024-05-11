@@ -120,7 +120,7 @@ const ProductInfo = () => {
                     </a>
                   </div>
                   {/*//* Fecha */}
-                  <div className=" border-b flex justify-between  text-[14px] py-2 mt-3 text-[#585858]">
+                  <div className=" border-b flex justify-between  text-[14px] py-2 mt-4 text-[#585858]">
                     <div className="font-semibold">
                       {language ? <>Fecha</> : <>Date</>}
                     </div>
@@ -195,7 +195,7 @@ const ProductInfo = () => {
                 ? "https://drive.google.com/file/d/1xK_8f4Jdlcjvw8a87wCpgfKEqfCBmR3O/view?usp=drive_link"
                 : "https://drive.google.com/file/d/1O2gmqslUaGKqcvuj-d_cBgdJP1XEpCw4/view?usp=drive_link"
             }
-            className="text-[14px] lg:flex hidden absolute right-16 fixedCenterY py-3 px-9 bg-black rounded-md text-white hover:bg-[#343434] transition-all"
+            className="text-[14px] lg:flex hidden absolute right-16 fixedCenterY py-3 px-9 bg-black rounded-md text-white hover:bg-[#343434] transition-all tracking-normal"
           >
             {language ? <>Descargar CV</> : <>Download CV</>}
           </a>
@@ -207,7 +207,7 @@ const ProductInfo = () => {
                 ? "https://drive.google.com/file/d/1xK_8f4Jdlcjvw8a87wCpgfKEqfCBmR3O/view?usp=drive_link"
                 : "https://drive.google.com/file/d/1O2gmqslUaGKqcvuj-d_cBgdJP1XEpCw4/view?usp=drive_link"
             }
-            className="text-[14px] flex lg:hidden py-3 px-9 bg-black rounded-md text-white hover:bg-[#343434] transition-all w-fit mx-auto mt-7"
+            className="text-[14px] flex lg:hidden py-3 px-9 bg-black rounded-md text-white hover:bg-[#343434] transition-all w-fit mx-auto mt-7 tracking-normal"
           >
             {language ? <>Descargar CV</> : <>Download CV</>}
           </a>
