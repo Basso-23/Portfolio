@@ -59,7 +59,8 @@ const ProductInfo = () => {
         href={{
           pathname: "/",
         }}
-        className="z-40 w-fit lg:hidden flex gap-[2px] items-center text-[13px] text-[#9d9d9d] hover:text-black absolute top-0 lg:left-[48px] sm:left-6 cursor-pointer pageSize"
+        style={{ width: "fit-content" }}
+        className="z-40 lg:hidden flex gap-[2px] items-center text-[13px] text-[#9d9d9d] hover:text-black absolute top-0 lg:left-[48px] cursor-pointer pageSize"
       >
         <ArrowLeft />
         {language ? <>Voler a Proyectos</> : <>Back to Projects</>}
@@ -170,11 +171,11 @@ const ProductInfo = () => {
 
       <section className=" w-full sm:py-20 py-12 pageSize -mb-16">
         <div className="bg-[#F7F7F7] w-full rounded-lg border tracking-tighter flex flex-col justify-center lg:px-15 lg:pt-14 lg:pb-16 p-14 lg:text-start text-center relative">
-          <h1 className=" font-bold lg:text-[48px] text-[32px] leading-none">
+          <h1 className=" font-bold lg:text-[48px] text-[32px] leading-none text-balance">
             {language ? (
               <>Conoce un poco más de mi </>
             ) : (
-              <>Get to know a little more about me</>
+              <>Get to know me a little more</>
             )}
           </h1>
           <h2 className="text-[20px] mt-5 leading-tight text-[#5f5f5f]">
