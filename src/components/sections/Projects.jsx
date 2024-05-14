@@ -48,14 +48,41 @@ const Projects = () => {
     return Tech ? Tech : null;
   };
 
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      if (!imageLoaded) {
-        setImageLoaded(true);
+  const ImageRender = ({ img, url }) => {
+    useEffect(() => {
+      if (imageLoaded) {
+        const imagen = new Image();
+        imagen.src = img;
+        imagen.onload = () => {
+          setTimeout(() => {
+            setImageLoaded(false);
+          }, 1000);
+        };
       }
-    }, 1500);
-    return () => clearTimeout(timer);
-  }, [imageLoaded, setImageLoaded]);
+    }, [img]);
+
+    return (
+      <div>
+        {imageLoaded && <p>Cargando...</p>}
+
+        <div
+          style={{
+            backgroundImage: `url(${img})`,
+            visibility: imageLoaded ? "hidden" : "visible",
+          }}
+          className="aspect-video w-full bg-no-repeat bg-cover rounded-sm relative bg-top border "
+        >
+          <Link
+            href={{
+              pathname: "/projects/[id]",
+              query: { id: url },
+            }}
+            className=" absolute w-full h-full cursor-pointer"
+          ></Link>
+        </div>
+      </div>
+    );
+  };
 
   return (
     <div className="mt-4 py-4 pb-4">
@@ -64,39 +91,20 @@ const Projects = () => {
       </div>
       <Filters />
 
-      <div className="grid xl:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-x-6 gap-y-10 mt-8 ">
+      <div className="grid-container mt-8 ">
         {data
           .map((item, index) => (
-            <m.div layout key={index}>
+            <m.div key={index}>
               <Tilt
                 scale={1.04}
                 transitionSpeed={2500}
                 tiltMaxAngleX={1.1}
                 tiltMaxAngleY={1.1}
               >
-                <div
-                  style={{
-                    backgroundImage: `url("${item.image}")`,
-                  }}
-                  className=" aspect-video w-full bg-no-repeat bg-cover rounded-sm relative bg-top border over"
-                >
-                  <div
-                    className={
-                      !imageLoaded
-                        ? "absolute w-full h-full z-30 bg-[#eeeeee] justify-center items-center flex"
-                        : "hidden"
-                    }
-                  >
-                    <Loader />
-                  </div>
-                  <Link
-                    href={{
-                      pathname: "/projects/[id]",
-                      query: { id: item.name.replace(/ /g, "-") },
-                    }}
-                    className=" absolute w-full h-full cursor-pointer"
-                  ></Link>
-                </div>
+                <ImageRender
+                  img={item.image}
+                  url={item.name.replace(/ /g, "-")}
+                />
               </Tilt>
               <div className=" flex justify-between items-center mt-3">
                 <div>

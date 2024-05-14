@@ -5,6 +5,7 @@ import Header from "@/components/sections/Header";
 import ScrollToTop from "@/components/elements/ScrollToTop";
 import Header_Mobile from "@/components/sections/Header_Mobile";
 import Head from "next/head";
+import Hero from "@/components/sections/Hero";
 
 const App = () => {
   return (
@@ -16,9 +17,12 @@ const App = () => {
           content="Portafolio - Carlos Baso Ing. de Software, JavaScript, React JS, Next JS. ¡Echa un vistazo a mis proyectos!"
         />
       </Head>
+      <Hero />
       <div className="pageSize min-h-screen">
-        <Header />
-        <Header_Mobile />
+        <div className=" hidden">
+          <Header />
+          <Header_Mobile />
+        </div>
         <Skills />
         <Projects />
       </div>
