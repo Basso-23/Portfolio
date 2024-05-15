@@ -6,6 +6,10 @@ import { filterAtom } from "@/atom";
 import { originalAtom } from "@/atom";
 import { dataAtom } from "@/atom";
 import { languageAtom } from "@/atom";
+import All from "@/icons/All";
+import Design from "@/icons/Design";
+import Stack from "@/icons/Stack";
+import Toolbox from "@/icons/Toolbox";
 const Filters = () => {
   const [currentFilter, setCurrentFilter] = useAtom(filterAtom);
   const [originalData, setOriginalData] = useAtom(originalAtom);
@@ -20,7 +24,7 @@ const Filters = () => {
     }
   }, [language, setCurrentFilter]);
 
-  const Tab = ({ name }) => {
+  const Tab = ({ name, icon }) => {
     return (
       <div
         onClick={() => {
@@ -29,10 +33,11 @@ const Filters = () => {
         }}
         className={
           currentFilter === name
-            ? "active-filter texto"
-            : "inactive-filter texto"
+            ? "active-filter texto py-3 px-4 flex items-center gap-2"
+            : "inactive-filter texto py-3 px-4 flex items-center gap-2"
         }
       >
+        {icon}
         {name}
       </div>
     );
@@ -50,11 +55,11 @@ const Filters = () => {
   };
 
   return (
-    <div className=" flex bg-[#f5f5f5] sm:gap-2 w-fit rounded-md text-[13px] font-semibold mt-5 tracking-tight">
-      <Tab name={language ? "todos" : "all"} />
-      <Tab name={language ? "diseño" : "design"} />
-      <Tab name={"full-stack"} />
-      <Tab name={language ? "otros" : "other"} />
+    <div className=" flex flex-col px-4 mt-6 text-sm gap-3">
+      <Tab name={language ? "todos" : "all"} icon={<All />} />
+      <Tab name={language ? "diseño" : "design"} icon={<Design />} />
+      <Tab name={"full-stack"} icon={<Stack />} />
+      <Tab name={language ? "otros" : "other"} icon={<Toolbox />} />
     </div>
   );
 };

@@ -34,7 +34,7 @@ const ScrollToTop = () => {
           onClick={() => {
             scrollToTop();
           }}
-          className="rounded-[2px] p-3 fixed sm:bottom-4  sm:right-3 bottom-2 right-2 bg-black sm:text-[20px] text-[23px] z-[60] text-white flex justify-center items-center cursor-pointer"
+          className="rounded-[0px] p-3 fixed sm:bottom-4 sm:right-3 bottom-2 right-2 bg-[#ffffff] sm:text-[20px] text-[23px] z-[60] text-black flex justify-center items-center cursor-pointer"
         >
           <Arrow />
         </m.div>

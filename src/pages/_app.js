@@ -25,7 +25,7 @@ const App = ({ Component, pageProps }) => {
   return (
     <div style={{ fontFamily: "Inter Variable, sans-serif" }}>
       <Component {...pageProps} />
-      <div className="bg-[#f7f7f7] border-t mt-20">
+      <div className="bg-[#f7f7f7] border-t mt-20 hidden">
         <div className="pageSize">
           <Footer />
         </div>

@@ -1,21 +1,11 @@
 import React, { useState, useEffect } from "react";
 
-import Download from "@/icons/Download";
-
-import {
-  Popover,
-  PopoverContent,
-  PopoverTrigger,
-} from "@/components/ui/popover";
-import Send from "@/icons/Send";
-import Clip from "@/icons/Clip";
-import Check from "@/icons/Check";
 import { useAtom } from "jotai";
 import { languageAtom } from "@/atom";
-import { PopoverClose } from "@radix-ui/react-popover";
 import { CopyToClipboard } from "react-copy-to-clipboard";
 import { toast } from "sonner";
 import Arrow from "@/icons/Arrow";
+import { Link, animateScroll as scroll } from "react-scroll";
 
 const Hero = () => {
   const [language, setLanguage] = useAtom(languageAtom);
@@ -34,13 +24,13 @@ const Hero = () => {
     );
   };
   return (
-    <main className="h-[100svh] w-full border-[#2f2f2f] border-b">
+    <main className="h-[100svh] w-full border-[#2f2f2f] border-b ">
       {/*//* Hero desktop----------------------------------- */}
       <section className="lg:flex hidden h-full w-full">
-        {/*//* Title */}
         <div className=" h-full w-[45%]  border-r border-[#2f2f2f] flex justify-center items-center">
           <div className="2xl:-ml-28 h-full flex items-end relative w-[385px] pb-[40px]">
             <div className="leading-none flex flex-col gap-6 absolute fixedCenterXnY -mt-14 w-[385px]">
+              {/*//* Title */}
               <h1 className=" text-3xl font-medium">
                 {language ? (
                   <>Bienvenido a mi Portafolio</>
@@ -48,6 +38,7 @@ const Hero = () => {
                   <>Welcome to My Portfolio</>
                 )}
               </h1>
+              {/*//* Subitle */}
               <div className="text-[#bababa] ">
                 <p>
                   {language ? (
@@ -64,13 +55,22 @@ const Hero = () => {
                   )}
                 </p>
               </div>
-              <button className="select-none w-full py-[18px] bg-white hover:bg-[#d7d7d7] transition-all text-black text-center rounded-sm font-semibold text-[15px]">
+              {/*//* Ver proyectos */}
+              <Link
+                to="projects"
+                smooth={true}
+                duration={1000}
+                className="select-none w-full py-[18px] bg-white hover:bg-[#d7d7d7] transition-all text-black text-center rounded-sm font-semibold text-[15px] cursor-pointer"
+              >
                 {language ? <>Ver proyectos</> : <>See projects</>}
-              </button>
+              </Link>
+
+              {/*//* Correo Electrónico */}
               <div className="font-medium -mb-4 mt-2 border-t border-[#2f2f2f] pt-8">
                 Correo Electrónico
               </div>
               <div className=" text-sm text-[#bababa] flex gap-2 ">
+                {/*//* Enviar correo */}
                 <a
                   href="mailto:carlos.baso23@gmail.com"
                   className=" underline underline-offset-4 cursor-pointer select-none hover:text-white transition-all"
@@ -78,6 +78,7 @@ const Hero = () => {
                   {language ? <>Enviar correo</> : <>Send email</>}
                 </a>
                 <div> {language ? <>o</> : <>or</>}</div>
+                {/*//* Copy */}
                 <CopyToClipboard
                   text={"carlos.baso23@gmail.com"}
                   onCopy={() => {
@@ -94,14 +95,14 @@ const Hero = () => {
                 </CopyToClipboard>
               </div>
             </div>
-            {/*//* Descargar */}
+            {/*//* Scroll down */}
             <div className="text-sm flex items-center gap-1 cursor-pointer text-[#bababa] hover:text-white transition-all -ml-1">
               <div className=" text-xl rotate-180">
                 <Arrow />
               </div>
-              <div>
+              <Link to="projects" smooth={true} duration={1000}>
                 {language ? <>Desplazarse hacia abajo</> : <>Scroll down</>}
-              </div>
+              </Link>
             </div>
           </div>
         </div>
@@ -133,8 +134,9 @@ const Hero = () => {
             <div className="text-[#bababa]">Design Originals</div>
           </div>
         </div>
-        {/*//* Title */}
+
         <div className=" bg-[#151415] leading-none flex flex-col gap-6 px-4 py-10 h-fit">
+          {/*//* Title */}
           <h1 className=" text-[26px] font-medium">
             {language ? (
               <>Bienvenido a mi Portafolio</>
@@ -142,6 +144,7 @@ const Hero = () => {
               <>Welcome to My Portfolio</>
             )}
           </h1>
+          {/*//* Subitle */}
           <div className="text-[#bababa]">
             <p>
               {language ? (
@@ -158,9 +161,15 @@ const Hero = () => {
               )}
             </p>
           </div>
-          <button className="select-none w-full py-[18px] bg-white text-black text-center rounded-sm font-semibold text-[15px]">
+          {/*//* Ver proyectos */}
+          <Link
+            to="projects"
+            smooth={true}
+            duration={1000}
+            className="select-none w-full py-[18px] bg-white text-black text-center rounded-sm font-semibold text-[15px] hover:bg-[#d7d7d7] transition-all cursor-pointer"
+          >
             {language ? <>Ver proyectos</> : <>See projects</>}
-          </button>
+          </Link>
         </div>
       </section>
     </main>

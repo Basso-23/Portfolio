@@ -18,6 +18,8 @@ const App = () => {
         />
       </Head>
       <Hero />
+      <Projects />
+      <div className="w-full min-h-screen relative"></div>
       <div className="hidden pageSize min-h-screen">
         <Header />
         <Header_Mobile />

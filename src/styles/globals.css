@@ -72,17 +72,16 @@
 }
 
 .pageSize {
-  padding-left: 0.8rem;
-  padding-right: 0.8rem;
+  padding: 1rem;
 }
 
-@media (min-width: 540px) {
+@media (min-width: 1045px) {
   .pageSize {
     width: 100%;
+    max-width: 1500px;
     margin-left: auto;
     margin-right: auto;
-    padding-left: 8.5rem;
-    padding-right: 8.5rem;
+    padding: 3rem;
   }
 }
 
@@ -107,14 +106,9 @@
 }
 
 .active-filter {
-  background-color: white;
-  padding-left: 1.25rem;
-  padding-right: 1.25rem;
-  padding-top: 3.5px;
-  padding-bottom: 3.5px;
-  border-width: 1px;
-  border-radius: calc(var(--radius) - 2px);
-  color: black;
+  background-color: #3f3e3f;
+  border-radius: calc(var(--radius) - 4px);
+  color: white;
   pointer-events: none;
   text-transform: capitalize;
   transition-property: all;
@@ -123,14 +117,8 @@
 }
 
 .inactive-filter {
-  font-weight: 500;
   background-color: transparent;
-  padding-left: 1.25rem;
-  padding-right: 1.25rem;
-  padding-top: 3.5px;
-  padding-bottom: 3.5px;
-  border-width: 1px;
-  border-radius: calc(var(--radius) - 2px);
+  border-radius: calc(var(--radius) - 4px);
   border-color: transparent;
   color: #afafaf;
   cursor: pointer;
@@ -141,9 +129,9 @@
 }
 
 .inactive-filter:hover {
-  color: black;
+  color: white;
+  background-color: #3f3e3f;
 }
-
 .header-tab {
   background-color: white;
   color: black;
@@ -275,20 +263,34 @@
   }
 }
 
-.grid-container {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  grid-gap: 20px;
+.grid-content {
+}
+
+@media (min-width: 1045px) {
+  .grid-container > div:first-child .grid-content {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
 }
 
 .grid-container > div:first-child {
-  grid-column: span 4 / span 4;
+  grid-column: span 1 / span 1;
 }
 
-.glass {
-  /* From https://css.glass */
-  background: rgba(0, 0, 0, 0.375);
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-  backdrop-filter: blur(5.2px);
-  -webkit-backdrop-filter: blur(5.2px);
+@media (min-width: 1045px) {
+  .grid-container > div:first-child {
+    grid-column: span 2 / span 2;
+  }
+}
+
+@media (min-width: 1280px) {
+  .grid-container > div:first-child {
+    grid-column: span 3 / span 3;
+  }
+}
+
+@media (min-width: 1501px) {
+  .grid-container > div:first-child {
+    grid-column: span 4 / span 4;
+  }
 }

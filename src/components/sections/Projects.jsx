@@ -70,7 +70,7 @@ const Projects = () => {
             backgroundImage: `url(${img})`,
             visibility: imageLoaded ? "hidden" : "visible",
           }}
-          className="aspect-video w-full bg-no-repeat bg-cover rounded-sm relative bg-top border "
+          className="aspect-video w-full bg-no-repeat bg-cover rounded-tr-sm rounded-tl-sm relative bg-top"
         >
           <Link
             href={{
@@ -85,56 +85,37 @@ const Projects = () => {
   };
 
   return (
-    <div className="mt-4 py-4 pb-4">
-      <div className="tracking-tighter text-[25px] font-semibold leading-tighter relative w-fit">
-        {language ? <>Todos los proyectos</> : <>All projects</>}
-      </div>
-      <Filters />
-
-      <div className="grid-container mt-8 ">
-        {data
-          .map((item, index) => (
-            <m.div key={index}>
-              <Tilt
-                scale={1.04}
-                transitionSpeed={2500}
-                tiltMaxAngleX={1.1}
-                tiltMaxAngleY={1.1}
-              >
-                <ImageRender
-                  img={item.image}
-                  url={item.name.replace(/ /g, "-")}
-                />
-              </Tilt>
-              <div className=" flex justify-between items-center mt-3">
-                <div>
-                  <div className="font-bold tracking-tighter text-[14px] ">
-                    {item.name}
-                  </div>
-                  <div className="text-[#5b5b5b] flex gap-2 leading-none font-medium tracking-tighter text-[13px] mt-[2px] relative">
-                    <div className="border-r pr-2 capitalize">
+    <div name="projects" className="flex border-[#2f2f2f] border-b">
+      <section className="w-[250px] min-h-[700px] bg-[#1d1d1d] border-r border-[#333333] sm:block hidden">
+        <div className=" flex flex-col sticky top-0">
+          <div className="p-5 font-medium border-b border-[#333333] flex">
+            {language ? <>Filtros</> : <>Filters</>}
+          </div>
+          <Filters />
+        </div>
+      </section>
+      <section className="pageSize flex-1">
+        <div className="grid-container grid 2xl:grid-cols-4 xl:grid-cols-3 lg:grid-cols-2 grid-cols-1 gap-x-6 gap-y-10 lg:p-0 sm:p-8">
+          {data
+            .map((item, index) => (
+              <div key={index}>
+                <div className="grid-content border border-[#333333] rounded-sm bg-[#1d1d1d]">
+                  <ImageRender
+                    img={item.image}
+                    url={item.name.replace(/ /g, "-")}
+                  />
+                  <div className=" p-4">
+                    <div className="text-[14px] ">{item.name}</div>
+                    <div className="text-[#808080] uppercase font-bold leading-none text-[13px] mt-2">
                       {item.category}
                     </div>
-                    <div>{item.date}</div>
-                  </div>
-                </div>
-
-                <div className="flex relative text-[11px] leading-none text-[#7e7e7e] -mt-8 select-none">
-                  <div className="flex justify-center items-center w-7 rounded-full aspect-square bg-[#eeeeee] border-[2px] border-white z-30 absolute right-0 tracking-tight">
-                    +{item.tech.length - 2}
-                  </div>
-                  <div className="text-[15px] flex justify-center items-center w-7 rounded-full aspect-square bg-[#eeeeee] border-[2px] border-white z-20 absolute right-[20px] tracking-tight">
-                    <TechToRender name={item.tech1} />
-                  </div>
-                  <div className="text-[15px] flex justify-center items-center w-7 rounded-full aspect-square bg-[#eeeeee] border-[2px] border-white z-10 absolute right-[40px] tracking-tight">
-                    <TechToRender name={item.tech2} />
                   </div>
                 </div>
               </div>
-            </m.div>
-          ))
-          .reverse()}
-      </div>
+            ))
+            .reverse()}
+        </div>
+      </section>
     </div>
   );
 };
