@@ -10,6 +10,8 @@ import All from "@/icons/All";
 import Design from "@/icons/Design";
 import Stack from "@/icons/Stack";
 import Toolbox from "@/icons/Toolbox";
+
+import { Link, animateScroll as scroll } from "react-scroll";
 const Filters = () => {
   const [currentFilter, setCurrentFilter] = useAtom(filterAtom);
   const [originalData, setOriginalData] = useAtom(originalAtom);
@@ -26,7 +28,10 @@ const Filters = () => {
 
   const Tab = ({ name, icon }) => {
     return (
-      <div
+      <Link
+        to="projects"
+        smooth={true}
+        duration={1000}
         onClick={() => {
           setCurrentFilter(name);
           filtering(name);
@@ -39,7 +44,7 @@ const Filters = () => {
       >
         {icon}
         {name}
-      </div>
+      </Link>
     );
   };
 

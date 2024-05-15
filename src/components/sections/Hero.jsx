@@ -6,9 +6,11 @@ import { CopyToClipboard } from "react-copy-to-clipboard";
 import { toast } from "sonner";
 import Arrow from "@/icons/Arrow";
 import { Link, animateScroll as scroll } from "react-scroll";
+import { imageAtom } from "@/atom";
 
 const Hero = () => {
   const [language, setLanguage] = useAtom(languageAtom);
+  const [imageLoaded, setImageLoaded] = useAtom(imageAtom);
 
   const handleToast = () => {
     toast(
@@ -21,6 +23,42 @@ const Hero = () => {
           onClick: () => console.log("Undo"),
         },
       }
+    );
+  };
+
+  const ImageRender = ({ img }) => {
+    useEffect(() => {
+      if (imageLoaded) {
+        const imagen = new Image();
+        imagen.src = img;
+        imagen.onload = () => {
+          setTimeout(() => {
+            setImageLoaded(false);
+          }, 1000);
+        };
+      }
+    }, [img]);
+
+    return (
+      <div className="relative w-[55%]">
+        {imageLoaded && (
+          <div className=" absolute fixedCenterXnY">
+            <div className=" loader"></div>
+          </div>
+        )}
+        <div
+          style={{
+            backgroundImage: `url(${img})`,
+            visibility: imageLoaded ? "hidden" : "visible",
+          }}
+          className="flex h-full w-full bg-no-repeat bg-cover bg-top relative"
+        >
+          <div className=" absolute bottom-10 right-11 text-end text-sm">
+            <div>The Kob</div>
+            <div className="text-[#bababa]">Design Originals</div>
+          </div>
+        </div>
+      </div>
     );
   };
   return (
@@ -107,17 +145,7 @@ const Hero = () => {
           </div>
         </div>
         {/*//* Image */}
-        <div
-          style={{
-            backgroundImage: "url(https://i.imgur.com/sIeaTaT.png)",
-          }}
-          className="flex h-full w-[55%] bg-no-repeat bg-cover bg-top relative"
-        >
-          <div className=" absolute bottom-10 right-11 text-end text-sm">
-            <div>The Kob</div>
-            <div className="text-[#bababa]">Design Originals</div>
-          </div>
-        </div>
+        <ImageRender img={"https://i.imgur.com/sIeaTaT.png"} />
       </section>
 
       {/*//* Hero mobile----------------------------------- */}

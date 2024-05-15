@@ -5,20 +5,7 @@ import { originalAtom } from "@/atom";
 import { dataAtom } from "@/atom";
 import { languageAtom } from "@/atom";
 import { imageAtom } from "@/atom";
-import { motion as m } from "framer-motion";
-import Tilt from "react-parallax-tilt";
 import Link from "next/link";
-import JS from "@/icons/skills/JS";
-import React_logo from "@/icons/skills/React";
-import Next from "@/icons/skills/Next";
-import Tailwind from "@/icons/skills/Tailwind";
-import Astro from "@/icons/skills/Astro";
-import Firebase from "@/icons/skills/Firebase";
-import NodeJS from "@/icons/skills/NodeJS";
-import Shadcn from "@/icons/skills/Shadcn";
-import Loader from "../elements/Loader";
-import Html from "@/icons/skills/Html";
-import Css from "@/icons/skills/Css";
 
 const Projects = () => {
   const [originalData, setOriginalData] = useAtom(originalAtom);
@@ -29,24 +16,6 @@ const Projects = () => {
   useEffect(() => {
     setData(originalData);
   }, [originalData, setData]);
-
-  const skills = {
-    Next: <Next />,
-    Javascript: <JS />,
-    React: <React_logo />,
-    Tailwind: <Tailwind />,
-    Astro: <Astro />,
-    Firebase: <Firebase />,
-    Node: <NodeJS />,
-    Shadcn: <Shadcn />,
-    HTML: <Html />,
-    CSS: <Css />,
-  };
-
-  const TechToRender = ({ name }) => {
-    const Tech = skills[name];
-    return Tech ? Tech : null;
-  };
 
   const ImageRender = ({ img, url }) => {
     useEffect(() => {
@@ -62,8 +31,12 @@ const Projects = () => {
     }, [img]);
 
     return (
-      <div>
-        {imageLoaded && <p>Cargando...</p>}
+      <div className="border-[#333333] border-b relative">
+        {imageLoaded && (
+          <div className=" absolute fixedCenterXnY">
+            <div className=" loader"></div>
+          </div>
+        )}
 
         <div
           style={{
@@ -87,7 +60,7 @@ const Projects = () => {
   return (
     <div name="projects" className="flex border-[#2f2f2f] border-b">
       <section className="w-[250px] min-h-[700px] bg-[#1d1d1d] border-r border-[#333333] sm:block hidden pb-6">
-        <div className=" flex flex-col sticky top-0">
+        <div className=" flex flex-col sticky top-14">
           <div className="p-5 font-medium border-b border-[#333333] flex">
             {language ? <>Filtros</> : <>Filters</>}
           </div>
@@ -95,7 +68,10 @@ const Projects = () => {
         </div>
       </section>
       <section className="pageSize flex-1">
-        <h1 className=" text-2xl font-medium mb-6 sm:mb-8 sm:-mt-4 mt-2">
+        <h1 className="sm:flex hidden sm:text-[5vw] text-[24px] font-semibold uppercase lg:pl-0 sm:pl-8 lg:mb-4 sm:-mb-4 mb-4 lg:mt-0 mt-6 text-[#5f5f5f] tracking-tighter">
+          {language ? <>Proyectos recientes</> : <>Recent projects</>}
+        </h1>
+        <h1 className="text-[24px] sm:hidden flex font-medium mb-5 mt-3">
           {language ? <>Proyectos recientes</> : <>Recent projects</>}
         </h1>
         <div className="grid-container grid 2xl:grid-cols-4 xl:grid-cols-3 lg:grid-cols-2 grid-cols-1 gap-6 lg:p-0 sm:p-8">

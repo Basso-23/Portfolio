@@ -237,29 +237,18 @@
 }
 
 /*LOADER--------------------------------------------------- */
+/* HTML: <div class="loader"></div> */
 .loader {
-  display: flex;
-  align-items: center;
+  width: 25px;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  border: 3.5px solid #7c7c7d;
+  border-right-color: #3b3a3a;
+  animation: l2 1s infinite linear;
 }
-
-.icon {
-  height: 1.5rem;
-  width: 1.5rem;
-  animation: spin 1s linear infinite;
-  stroke: rgba(107, 114, 128, 1);
-}
-
-.loading-text {
-  font-size: 0.75rem;
-  line-height: 1rem;
-  font-weight: 500;
-  color: rgba(107, 114, 128, 1);
-  margin-left: 2px;
-}
-
-@keyframes spin {
+@keyframes l2 {
   to {
-    transform: rotate(360deg);
+    transform: rotate(1turn);
   }
 }
 
@@ -293,4 +282,12 @@
   .grid-container > div:first-child {
     grid-column: span 4 / span 4;
   }
+}
+
+.glass {
+  /* From https://css.glass */
+  background: rgba(0, 0, 0, 0.375);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5.2px);
+  -webkit-backdrop-filter: blur(5.2px);
 }

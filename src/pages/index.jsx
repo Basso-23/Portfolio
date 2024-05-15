@@ -6,6 +6,7 @@ import ScrollToTop from "@/components/elements/ScrollToTop";
 import Header_Mobile from "@/components/sections/Header_Mobile";
 import Head from "next/head";
 import Hero from "@/components/sections/Hero";
+import Navbar from "@/components/sections/Navbar";
 
 const App = () => {
   return (
@@ -18,6 +19,7 @@ const App = () => {
         />
       </Head>
       <Hero />
+      <Navbar />
       <Projects />
       <div className="w-full min-h-screen relative"></div>
       <div className="hidden pageSize min-h-screen">
