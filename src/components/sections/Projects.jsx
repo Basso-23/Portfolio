@@ -70,7 +70,7 @@ const Projects = () => {
             backgroundImage: `url(${img})`,
             visibility: imageLoaded ? "hidden" : "visible",
           }}
-          className="aspect-video w-full bg-no-repeat bg-cover rounded-tr-sm rounded-tl-sm relative bg-top"
+          className="aspect-video w-full bg-no-repeat bg-cover relative bg-top"
         >
           <Link
             href={{
@@ -86,7 +86,7 @@ const Projects = () => {
 
   return (
     <div name="projects" className="flex border-[#2f2f2f] border-b">
-      <section className="w-[250px] min-h-[700px] bg-[#1d1d1d] border-r border-[#333333] sm:block hidden">
+      <section className="w-[250px] min-h-[700px] bg-[#1d1d1d] border-r border-[#333333] sm:block hidden pb-6">
         <div className=" flex flex-col sticky top-0">
           <div className="p-5 font-medium border-b border-[#333333] flex">
             {language ? <>Filtros</> : <>Filters</>}
@@ -95,17 +95,20 @@ const Projects = () => {
         </div>
       </section>
       <section className="pageSize flex-1">
-        <div className="grid-container grid 2xl:grid-cols-4 xl:grid-cols-3 lg:grid-cols-2 grid-cols-1 gap-x-6 gap-y-10 lg:p-0 sm:p-8">
+        <h1 className=" text-2xl font-medium mb-6 sm:mb-8 sm:-mt-4 mt-2">
+          {language ? <>Proyectos recientes</> : <>Recent projects</>}
+        </h1>
+        <div className="grid-container grid 2xl:grid-cols-4 xl:grid-cols-3 lg:grid-cols-2 grid-cols-1 gap-6 lg:p-0 sm:p-8">
           {data
             .map((item, index) => (
               <div key={index}>
-                <div className="grid-content border border-[#333333] rounded-sm bg-[#1d1d1d]">
+                <div className="grid-content border border-[#333333] rounded-sm overflow-hidden bg-[#1d1d1d] ">
                   <ImageRender
                     img={item.image}
                     url={item.name.replace(/ /g, "-")}
                   />
                   <div className=" p-4">
-                    <div className="text-[14px] ">{item.name}</div>
+                    <div className="text-[14px]">{item.name}</div>
                     <div className="text-[#808080] uppercase font-bold leading-none text-[13px] mt-2">
                       {item.category}
                     </div>
