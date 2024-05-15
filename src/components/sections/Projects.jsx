@@ -59,26 +59,16 @@ const Projects = () => {
 
   return (
     <div name="projects" className="flex border-[#2f2f2f] border-b">
-      <section className="w-[250px] min-h-[700px] bg-[#1d1d1d] border-r border-[#333333] sm:block hidden pb-6">
-        <div className=" flex flex-col sticky top-14">
-          <div className="p-5 font-medium border-b border-[#333333] flex">
-            {language ? <>Filtros</> : <>Filters</>}
-          </div>
-          <Filters />
-        </div>
-      </section>
-      <section className="pageSize flex-1">
-        <h1 className="sm:flex hidden sm:text-[5vw] text-[24px] font-semibold uppercase lg:pl-0 sm:pl-8 lg:mb-4 sm:-mb-4 mb-4 lg:mt-0 mt-6 text-[#5f5f5f] tracking-tighter">
+      <section className="pageSize flex-1 w-full">
+        <h1 className="text-[24px]  font-medium">
           {language ? <>Proyectos recientes</> : <>Recent projects</>}
         </h1>
-        <h1 className="text-[24px] sm:hidden flex font-medium mb-5 mt-3">
-          {language ? <>Proyectos recientes</> : <>Recent projects</>}
-        </h1>
-        <div className="grid-container grid 2xl:grid-cols-4 xl:grid-cols-3 lg:grid-cols-2 grid-cols-1 gap-6 lg:p-0 sm:p-8">
+        <Filters />
+        <div className="grid-container grid 2xl:grid-cols-4 xl:grid-cols-3 lg:grid-cols-2 grid-cols-1 gap-6">
           {data
             .map((item, index) => (
               <div key={index}>
-                <div className="grid-content border border-[#333333] rounded-sm overflow-hidden bg-[#1d1d1d] ">
+                <div className="grid-content border border-[#333333] rounded- overflow-hidden bg-[#1d1d1d] ">
                   <ImageRender
                     img={item.image}
                     url={item.name.replace(/ /g, "-")}

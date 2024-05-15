@@ -81,7 +81,7 @@ const ProductInfo = () => {
                   style={{
                     backgroundImage: `url("${item.image}")`,
                   }}
-                  className=" aspect-video w-full bg-no-repeat bg-cover rounded-sm relative bg-top border lg:hidden flex mt-10 "
+                  className=" aspect-video w-full bg-no-repeat bg-cover rounded- relative bg-top border lg:hidden flex mt-10 "
                 ></div>
                 <div className="lg:sticky top-10 xl:w-[470px] lg:w-[375px] lg:pr-[50px] lg:pl-[25px] ">
                   {/*//* Back (desktop) */}
@@ -152,7 +152,7 @@ const ProductInfo = () => {
                   style={{
                     backgroundImage: `url("${item.image}")`,
                   }}
-                  className=" aspect-video w-full bg-no-repeat bg-cover rounded-sm relative bg-top border hidden lg:flex lg:mb-10 mb-0"
+                  className=" aspect-video w-full bg-no-repeat bg-cover rounded- relative bg-top border hidden lg:flex lg:mb-10 mb-0"
                 ></div>
                 <div
                   dangerouslySetInnerHTML={{ __html: item.h1 }}

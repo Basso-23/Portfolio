@@ -1,12 +1,8 @@
 import Projects from "@/components/sections/Projects";
-import Skills from "@/components/sections/Skills";
 import React, { useState, useEffect } from "react";
-import Header from "@/components/sections/Header";
-import ScrollToTop from "@/components/elements/ScrollToTop";
-import Header_Mobile from "@/components/sections/Header_Mobile";
 import Head from "next/head";
 import Hero from "@/components/sections/Hero";
-import Navbar from "@/components/sections/Navbar";
+import Sidebar from "@/components/sections/Sidebar";
 
 const App = () => {
   return (
@@ -15,20 +11,16 @@ const App = () => {
         <title>Carlos Baso</title>
         <meta
           name="description"
-          content="Portafolio - Carlos Baso Ing. de Software, JavaScript, React JS, Next JS. ¡Echa un vistazo a mis proyectos!"
+          content="Portafolio de Carlos Baso - Desarrollador de Software y Web. Soy Carlos Baso, un desarrollador especializado en JavaScript, React JS y Next JS. ¡Explora mi trabajo!"
         />
       </Head>
       <Hero />
-      <Navbar />
-      <Projects />
-      <div className="w-full min-h-screen relative"></div>
-      <div className="hidden pageSize min-h-screen">
-        <Header />
-        <Header_Mobile />
-        <Skills />
-        <Projects />
+      <div className="relative h-full">
+        <Sidebar />
+        <div className="sm:pl-[250px] pl-0">
+          <Projects />
+        </div>
       </div>
-      <ScrollToTop />
     </main>
   );
 };

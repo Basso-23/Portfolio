@@ -72,7 +72,7 @@ const Related = () => {
                   style={{
                     backgroundImage: `url("${item.image}")`,
                   }}
-                  className=" aspect-video min-w-[325px] bg-no-repeat bg-cover rounded-sm relative bg-top border over"
+                  className=" aspect-video min-w-[325px] bg-no-repeat bg-cover rounded- relative bg-top border over"
                 >
                   <Link
                     href={{

@@ -10,8 +10,6 @@ import All from "@/icons/All";
 import Design from "@/icons/Design";
 import Stack from "@/icons/Stack";
 import Toolbox from "@/icons/Toolbox";
-
-import { Link, animateScroll as scroll } from "react-scroll";
 const Filters = () => {
   const [currentFilter, setCurrentFilter] = useAtom(filterAtom);
   const [originalData, setOriginalData] = useAtom(originalAtom);
@@ -28,23 +26,20 @@ const Filters = () => {
 
   const Tab = ({ name, icon }) => {
     return (
-      <Link
-        to="projects"
-        smooth={true}
-        duration={1000}
+      <div
         onClick={() => {
           setCurrentFilter(name);
           filtering(name);
         }}
         className={
           currentFilter === name
-            ? "active-filter texto py-3 px-4 flex items-center gap-2"
-            : "inactive-filter texto py-3 px-4 flex items-center gap-2"
+            ? "active-filter  py-3 px-4 flex items-center gap-2 min-w-[130px] justify-center"
+            : "inactive-filter  py-3 px-4 flex items-center gap-2 min-w-[130px] justify-center"
         }
       >
         {icon}
         {name}
-      </Link>
+      </div>
     );
   };
 
@@ -60,7 +55,7 @@ const Filters = () => {
   };
 
   return (
-    <div className=" flex flex-col px-4 mt-6 text-sm gap-3">
+    <div className=" flex overflow-x-auto w-full mt-6 text-sm gap-3 mb-5 pb-3">
       <Tab name={language ? "todos" : "all"} icon={<All />} />
       <Tab name={language ? "diseño" : "design"} icon={<Design />} />
       <Tab name={"full-stack"} icon={<Stack />} />
