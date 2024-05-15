@@ -151,6 +151,9 @@ const Hero_Desktop = () => {
                 </div>
               </CopyToClipboard>
             </div>
+
+            <div className="xl:block hidden w-12 aspect-square absolute -top-5 -right-12 border-t border-r"></div>
+            <div className="xl:block hidden w-12 aspect-square absolute -bottom-16 -left-16 border-b border-l"></div>
           </div>
 
           {/*//* Scroll down */}

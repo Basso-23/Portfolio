@@ -58,17 +58,17 @@ const Projects = () => {
   };
 
   return (
-    <div name="projects" className="flex border-[#2f2f2f] border-b">
-      <section className="pageSize flex-1 w-full">
+    <div name="projects" className="flex">
+      <section className="pageSize flex-1 w-full mt-10">
         <h1 className="text-[24px]  font-medium">
           {language ? <>Proyectos recientes</> : <>Recent projects</>}
         </h1>
         <Filters />
-        <div className="grid-container grid 2xl:grid-cols-4 xl:grid-cols-3 lg:grid-cols-2 grid-cols-1 gap-6">
+        <div className="grid-container grid 2xl:grid-cols-3 xl:grid-cols-3 lg:grid-cols-2 grid-cols-1 gap-6">
           {data
             .map((item, index) => (
               <div key={index}>
-                <div className="grid-content border border-[#333333] rounded- overflow-hidden bg-[#1d1d1d] ">
+                <div className="grid-content border border-[#333333] rounded- overflow-hidden bg-[#161616] ">
                   <ImageRender
                     img={item.image}
                     url={item.name.replace(/ /g, "-")}

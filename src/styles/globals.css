@@ -67,12 +67,13 @@
 }
 
 :root {
-  background-color: #151415;
+  background-color: #0f0f0f;
   color: white;
 }
 
 .pageSize {
-  padding: 1rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
 }
 
 @media (min-width: 1045px) {
@@ -81,8 +82,27 @@
     max-width: 1500px;
     margin-left: auto;
     margin-right: auto;
-    padding: 3rem;
+    padding-left: 3rem;
+    padding-right: 3rem;
   }
+}
+
+/* Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+*::-webkit-scrollbar-track {
+  background: #1b1b1b;
+}
+
+*::-webkit-scrollbar-thumb {
+  background: #404141;
+}
+
+*::-webkit-scrollbar-thumb:hover {
+  background: #5b5b5b;
 }
 
 .fixedCenterX {
@@ -280,7 +300,7 @@
 
 @media (min-width: 1501px) {
   .grid-container > div:first-child {
-    grid-column: span 4 / span 4;
+    grid-column: span 3 / span 3;
   }
 }
 
@@ -290,4 +310,23 @@
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
   backdrop-filter: blur(5.2px);
   -webkit-backdrop-filter: blur(5.2px);
+}
+
+.cardImage {
+  margin-left: auto;
+  margin-right: auto;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.footer_border {
+  --border-offset: 6rem;
+  content: "";
+  position: absolute;
+  top: 0;
+  left: calc(var(--border-offset) * -1);
+  width: calc(100% + var(--border-offset) * 2);
+  height: 0.5px;
+  background: linear-gradient(90deg, #0f0f0f 0, #333 10%, #333 90%, #000 100%);
 }

@@ -31,7 +31,7 @@ const Sidebar = () => {
   };
 
   return (
-    <main className=" sm:block hidden absolute left-0 h-full w-[250px] bg-[#1d1d1d] border-r border-[#333333] pb-6">
+    <main className=" sm:block hidden absolute left-0 h-full w-[250px] bg-[#161616] border-r border-[#333333] pb-6">
       <section className=" flex flex-col sticky top-0">
         <div className="p-5 font-medium border-b border-[#333333] flex">
           Menu
