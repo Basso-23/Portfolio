@@ -62,7 +62,7 @@ const Hero_Desktop = () => {
         imagen.onload = () => {
           setTimeout(() => {
             setImageLoaded(false);
-          }, 1000);
+          }, 1300);
         };
       }
     }, [img]);

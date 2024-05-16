@@ -3,26 +3,31 @@ import { useAtom } from "jotai";
 import { languageAtom } from "@/atom";
 import { CopyToClipboard } from "react-copy-to-clipboard";
 import { toast } from "sonner";
+import Check from "@/icons/Check";
 
 const Footer = () => {
   const [language, setLanguage] = useAtom(languageAtom);
+
   const handleToast = () => {
     toast(
-      language
-        ? "Correo electrónico copiado exitosamente"
-        : "Email copied to clipboard",
+      language ? "Correo electrónico copiado" : "Email copied to clipboard",
       {
         description: "carlos.baso23@gmail.com",
+
         action: {
-          label: "✔️",
+          label: (
+            <div className=" text-xl">
+              <Check />
+            </div>
+          ),
           onClick: () => console.log("Undo"),
         },
       }
     );
   };
+
   return (
-    <section className=" py-7 flex justify-between text-[#696969] text-[13px] flex-wrap gap-4 tracking-tight font-normal pageSize mt-20 relative ">
-      <div className=" w-full footer_border"></div>
+    <section className=" py-7 flex justify-between text-[#696969] text-[13px] flex-wrap gap-4 tracking-tight font-normal pageSize mt-20 ">
       <div className=" mx-auto sm:mx-0">©2024 CarlosBaso</div>
       <div className="sm:flex hidden gap-6 pl-4">
         <CopyToClipboard

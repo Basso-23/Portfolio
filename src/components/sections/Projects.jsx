@@ -25,7 +25,7 @@ const Projects = () => {
         imagen.onload = () => {
           setTimeout(() => {
             setImageLoaded(false);
-          }, 1000);
+          }, 1300);
         };
       }
     }, [img]);

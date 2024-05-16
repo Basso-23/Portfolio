@@ -127,7 +127,6 @@
 
 .active-filter {
   background-color: #3f3e3f;
-
   color: white;
   pointer-events: none;
   text-transform: capitalize;
@@ -138,7 +137,6 @@
 
 .inactive-filter {
   background-color: transparent;
-
   border-color: transparent;
   color: #afafaf;
   cursor: pointer;
@@ -152,6 +150,7 @@
   color: white;
   background-color: #3f3e3f;
 }
+
 .header-tab {
   background-color: white;
   color: black;
@@ -304,14 +303,6 @@
   }
 }
 
-.glass {
-  /* From https://css.glass */
-  background: rgba(0, 0, 0, 0.375);
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-  backdrop-filter: blur(5.2px);
-  -webkit-backdrop-filter: blur(5.2px);
-}
-
 .cardImage {
   margin-left: auto;
   margin-right: auto;
@@ -320,13 +311,10 @@
   background-position: center;
 }
 
-.footer_border {
-  --border-offset: 6rem;
-  content: "";
-  position: absolute;
-  top: 0;
-  left: calc(var(--border-offset) * -1);
-  width: calc(100% + var(--border-offset) * 2);
-  height: 0.5px;
-  background: linear-gradient(90deg, #0f0f0f 0, #333 10%, #333 90%, #000 100%);
+.logo-container:hover > .url-arrow {
+  background: white;
+  color: black;
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 250ms;
 }

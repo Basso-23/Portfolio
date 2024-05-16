@@ -3,7 +3,7 @@ import React, { useState, useEffect } from "react";
 import Head from "next/head";
 import Hero from "@/components/sections/Hero";
 import Sidebar from "@/components/sections/Sidebar";
-import Skills from "@/components/sections/Skills";
+import Experience from "@/components/sections/Experience";
 import Footer from "@/components/sections/Footer";
 
 const App = () => {
@@ -21,8 +21,7 @@ const App = () => {
         <Sidebar />
         <div className="sm:pl-[250px] pl-0">
           <Projects />
-          <Skills />
-
+          <Experience />
           <Footer />
         </div>
       </div>

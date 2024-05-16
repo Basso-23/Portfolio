@@ -55,7 +55,7 @@ const Filters = () => {
   };
 
   return (
-    <div className=" flex overflow-x-auto w-full mt-6 text-sm gap-3 mb-5 pb-3">
+    <div className=" flex overflow-x-auto w-full mt-6 text-sm gap-3 mb-3 pb-3">
       <Tab name={language ? "todos" : "all"} icon={<All />} />
       <Tab name={language ? "diseño" : "design"} icon={<Design />} />
       <Tab name={"full-stack"} icon={<Stack />} />
