@@ -1,7 +1,7 @@
-import { BiCopy } from "react-icons/bi";
+import { PiCopy } from "react-icons/pi";
 
 const Clip = () => {
-  return <BiCopy />;
+  return <PiCopy />;
 };
 
 export default Clip;

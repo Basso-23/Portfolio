@@ -43,7 +43,7 @@ const Projects = () => {
             backgroundImage: `url(${img})`,
             visibility: imageLoaded ? "hidden" : "visible",
           }}
-          className="aspect-video w-full bg-no-repeat bg-cover relative bg-top"
+          className="aspect-video h-full w-full bg-no-repeat bg-cover relative bg-top"
         >
           <Link
             href={{
@@ -73,11 +73,31 @@ const Projects = () => {
                     img={item.image}
                     url={item.name.replace(/ /g, "-")}
                   />
-                  <div className=" p-4">
+                  <div className=" p-4 grid-info">
                     <div className="text-[14px]">{item.name}</div>
                     <div className="text-[#808080] uppercase font-bold leading-none text-[13px] mt-2">
                       {item.category}
                     </div>
+                    <section className=" hidden relative h-full p-5 leading-none">
+                      <h1 className="text-[20px]"> {item.name}</h1>
+                      <h2 className="text-[15px] mt-4 text-[#b7b7b7] leading-6">
+                        {item.summary}
+                      </h2>
+                      <p className="text-[#808080] font-semibold text-[14px] w-fit mt-4">
+                        <Link
+                          href={{
+                            pathname: "/projects/[id]",
+                            query: { id: item.name.replace(/ /g, "-") },
+                          }}
+                          className="underline underline-offset-4"
+                        >
+                          {language ? <>Leer más</> : <>Read More</>}
+                        </Link>
+                      </p>
+                      <p className=" absolute bottom-5 left-5 text-[#808080] uppercase font-bold text-[13px]">
+                        {item.category}
+                      </p>
+                    </section>
                   </div>
                 </div>
               </div>

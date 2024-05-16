@@ -28,15 +28,26 @@ const Logo = ({ img, url, width }) => {
 const Experience = () => {
   const [language, setLanguage] = useAtom(languageAtom);
   return (
-    <main className="flex ">
+    <main name="experience" className="flex ">
       <section className="pageSize flex-1 w-full mt-10">
         <h1 className="text-[24px]  font-medium">
           {language ? <>Experiencia</> : <>Experience</>}
         </h1>
-        <div className="py-3 px-4 mt-6 text-[14px] border border-[#363636] bg-[#161616]">
-          dad
-        </div>
-        <div className="mt-6 grid xl:grid-cols-3 grid-cols-2 gap-[0.8px] border border-[#292929] bg-[#292929] relative">
+        <h1 className="text-[16px] mt-3 text-[#cccccc]">
+          {language ? (
+            <>
+              Algunas compañías y asociaciones con las que he podido colaborar a
+              lo largo de mi carrera.
+            </>
+          ) : (
+            <>
+              Some companies and associations with which I have been able to
+              collaborate throughout my career.
+            </>
+          )}
+        </h1>
+
+        <div className="mt-6 grid xl:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-[0.8px] border border-[#292929] bg-[#292929] relative">
           <div className="xl:block hidden  h-[125px] bg-[#010001] relative"></div>
           <div className="xl:block hidden  h-[125px] bg-[#010001]"></div>
           <div className="xl:block hidden  h-[125px] bg-[#010001]"></div>
@@ -70,7 +81,7 @@ const Experience = () => {
             width={"w-[80px]"}
             url={"https://pidepaya.com"}
           />
-          <div className="h-[125px] bg-[#010001] relative"></div>
+          <div className="md:block hidden h-[125px] bg-[#010001] relative"></div>
 
           <div className="xl:grid hidden absolute w-6 aspect-square top-[113.5px] -left-3 grid-cols-2">
             <div className=" w-full border-r border-b border-[#9a9a9a]"></div>

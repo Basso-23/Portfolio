@@ -274,10 +274,21 @@
 .grid-content {
 }
 
+.grid-info {
+}
+
 @media (min-width: 1045px) {
   .grid-container > div:first-child .grid-content {
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
+    min-height: 300px;
+  }
+  .grid-container > div:first-child .grid-info div {
+    display: none !important;
+  }
+
+  .grid-container > div:first-child section {
+    display: block !important;
   }
 }
 
@@ -317,4 +328,10 @@
   transition-property: all;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-duration: 250ms;
+}
+
+video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }

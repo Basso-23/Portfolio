@@ -6,53 +6,10 @@ import { useAtom } from "jotai";
 import { languageAtom } from "@/atom";
 import { imageAtom } from "@/atom";
 import Arrow from "@/icons/Arrow";
-import TextTransition, { presets } from "react-text-transition";
-import Check from "@/icons/Check";
 
 const Hero_Desktop = () => {
   const [language, setLanguage] = useAtom(languageAtom);
   const [imageLoaded, setImageLoaded] = useAtom(imageAtom);
-  const [index, setIndex] = useState(0);
-
-  const TEXTS = language
-    ? [
-        "Software developer",
-        "Programador",
-        "Diseñador front-end",
-        "desarrollador web",
-      ]
-    : [
-        "Software developer",
-        "Programmer",
-        "Front-end Designer",
-        "Web developer",
-      ];
-
-  useEffect(() => {
-    const intervalId = setInterval(
-      () => setIndex((index) => index + 1),
-      5000 //* every 5 seconds
-    );
-    return () => clearTimeout(intervalId);
-  }, []);
-
-  const handleToast = () => {
-    toast(
-      language ? "Correo electrónico copiado" : "Email copied to clipboard",
-      {
-        description: "carlos.baso23@gmail.com",
-
-        action: {
-          label: (
-            <div className=" text-xl">
-              <Check />
-            </div>
-          ),
-          onClick: () => console.log("Undo"),
-        },
-      }
-    );
-  };
 
   const ImageRender = ({ img }) => {
     useEffect(() => {
@@ -79,13 +36,17 @@ const Hero_Desktop = () => {
             backgroundImage: `url(${img})`,
             visibility: imageLoaded ? "hidden" : "visible",
           }}
-          className="flex h-full w-full bg-no-repeat bg-cover bg-top relative"
+          className=" h-full w-full bg-no-repeat bg-cover bg-top relative hidden"
         >
           <div className=" absolute bottom-10 right-11 text-end text-sm">
             <div>The Kob</div>
             <div className="text-[#bababa]">Design Originals</div>
           </div>
         </div>
+        <video width="600" loop muted autoPlay>
+          <source src="/landing.mp4" type="video/mp4" />
+          Tu navegador no soporta el elemento de video.
+        </video>
       </div>
     );
   };
@@ -93,17 +54,11 @@ const Hero_Desktop = () => {
   return (
     <section className="lg:flex hidden h-full w-full">
       {/*//* LEFT */}
-      <div className=" h-full w-[45%] border-r border-[#2f2f2f] flex justify-center items-center">
-        <div className="2xl:-ml-28 h-full flex items-end relative w-[390px] pb-[40px] font-medium">
-          <div className="leading-none flex flex-col gap-6 absolute fixedCenterXnY -mt-14 w-[390px]">
-            {/*//* Badges */}
-            <div className="flex pt-[6px] min-w-c w-fit font-bold text-[11px] uppercase bg-white text-black rounded- px-[8px] py-[2px] min-h-[20px]">
-              <TextTransition springConfig={presets.stiff}>
-                {TEXTS[index % TEXTS.length]}
-              </TextTransition>
-            </div>
+      <div className=" h-full w-[45%] border-r border-[#2f2f2f] flex justify-center items-center relative">
+        <div className="h-full flex flex-col justify-center relative w-fit pb-[40px] font-medium">
+          <div className="leading-none flex flex-col gap-6 relative -mt-16">
             {/*//* Title */}
-            <h1 className="text-3xl">
+            <h1 className="text-[30px]">
               {language ? (
                 <>Bienvenido a mi Portafolio</>
               ) : (
@@ -138,26 +93,24 @@ const Hero_Desktop = () => {
             </Link>
 
             {/*//* Message */}
-            <div className="text-sm text-[#bababa] flex gap-2">
-              <div>{language ? <>Ponte en contacto</> : <>Get in touch</>}</div>
-              <CopyToClipboard
-                text={"carlos.baso23@gmail.com"}
-                onCopy={() => {
-                  handleToast();
-                }}
+            <div className="text-sm text-[#bababa] flex gap-[5px] ">
+              <div>{language ? <>Ir a </> : <>Go to</>}</div>
+              <Link
+                to="experience"
+                smooth={true}
+                duration={1000}
+                className=" underline underline-offset-4 cursor-pointer select-none hover:text-white transition-all"
               >
-                <div className=" underline underline-offset-4 cursor-pointer select-none hover:text-white transition-all">
-                  {language ? <>Correo electrónico</> : <>Email</>}
-                </div>
-              </CopyToClipboard>
+                {language ? <>Experiencia</> : <>Experience</>}
+              </Link>
             </div>
-
-            <div className="xl:block hidden w-12 aspect-square absolute -top-5 -right-12 border-t border-r"></div>
-            <div className="xl:block hidden w-12 aspect-square absolute -bottom-16 -left-16 border-b border-l"></div>
+            <div className="xl:block hidden w-12 aspect-square absolute -top-20 -left-14 border-l border-t"></div>
+            <div className="xl:block hidden w-12 aspect-square absolute -top-20 -right-12 border-t border-r"></div>
+            <div className="xl:block hidden w-12 aspect-square absolute -bottom-20 -left-14 border-b border-l"></div>
+            <div className="xl:block hidden w-12 aspect-square absolute -bottom-20 -right-12 border-b border-r"></div>
           </div>
-
           {/*//* Scroll down */}
-          <div className="text-sm flex items-center gap-1 cursor-pointer text-[#bababa] hover:text-white transition-all -ml-1">
+          <div className=" absolute bottom-10 xl:left-[-55px] text-sm flex items-center gap-1 cursor-pointer text-[#bababa] hover:text-white transition-all -ml-1">
             <div className="text-xl rotate-180">
               <Arrow />
             </div>
