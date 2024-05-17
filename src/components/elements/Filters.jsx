@@ -1,8 +1,6 @@
 import React, { useState, useEffect } from "react";
-
 import { useAtom } from "jotai";
 import { filterAtom } from "@/atom";
-
 import { originalAtom } from "@/atom";
 import { dataAtom } from "@/atom";
 import { languageAtom } from "@/atom";

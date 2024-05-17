@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from "react";
 import "@/styles/globals.css";
 import "@fontsource-variable/inter";
+import "@fontsource-variable/syne";
+import "@fontsource/roboto";
 import { Toaster } from "@/components/ui/sonner";
-import Head from "next/head";
-import Footer from "@/components/sections/Footer";
 import { useAtom } from "jotai";
 import { originalAtom } from "@/atom";
 import { languageAtom } from "@/atom";
@@ -25,11 +25,6 @@ const App = ({ Component, pageProps }) => {
   return (
     <div style={{ fontFamily: "Inter Variable, sans-serif" }}>
       <Component {...pageProps} />
-      <div className="bg-[#f7f7f7] border-t mt-20 hidden">
-        <div className="pageSize">
-          <Footer />
-        </div>
-      </div>
       <Toaster />
     </div>
   );

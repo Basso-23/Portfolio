@@ -36,10 +36,13 @@ const Sidebar = () => {
         <div className="p-5 font-medium border-b border-[#333333] flex">
           Menu
         </div>
+
+        {/*//* Correo electrónico */}
         <div className=" flex flex-col px-4 mt-6 text-sm">
           <h1 className=" uppercase text-[11px] text-[#919191] font-semibold">
             {language ? <>correo electrónico</> : <>email</>}
           </h1>
+          {/*//* Enviar correo */}
           <a
             href="mailto:carlos.baso23@gmail.com"
             className="py-3 hover:bg-[#3F3E3F] flex items-center px-2 gap-2 text-[#afafaf] hover:text-white transition-all  mt-1 select-none"
@@ -55,6 +58,7 @@ const Sidebar = () => {
               handleToast();
             }}
           >
+            {/*//* Copiar al portapapeles */}
             <div className="py-3 hover:bg-[#3F3E3F] flex items-center px-2 gap-2 text-[#afafaf] hover:text-white transition-all cursor-pointer  mt-1 select-none">
               <div>
                 <Clip />
@@ -69,10 +73,13 @@ const Sidebar = () => {
             </div>
           </CopyToClipboard>
         </div>
+
+        {/*//* Links */}
         <div className=" flex flex-col px-4 mt-8 text-sm">
           <h1 className=" uppercase text-[11px] text-[#919191] font-semibold">
             Links
           </h1>
+          {/*//* Github */}
           <a
             target="_blank"
             href="https://github.com/Basso-23"
@@ -83,6 +90,7 @@ const Sidebar = () => {
             </div>
             <div>Github</div>
           </a>
+          {/*//* LinkedIn */}
           <a
             target="_blank"
             href="https://www.linkedin.com/in/carlosbaso/"
@@ -94,10 +102,13 @@ const Sidebar = () => {
             <div>LinkedIn</div>
           </a>
         </div>
+
+        {/*//* Currículum */}
         <div className=" flex flex-col px-4 mt-8 text-sm">
           <h1 className=" uppercase text-[11px] text-[#919191] font-semibold">
             {language ? <>currículum </> : <>Resume</>}
           </h1>
+          {/*//* Descargar */}
           <a
             target="_blank"
             href={
@@ -113,11 +124,13 @@ const Sidebar = () => {
             <div> {language ? <>Descargar</> : <>Download</>}</div>
           </a>
         </div>
+
+        {/*//* Idioma */}
         <div className=" flex flex-col px-4 mt-8 text-sm">
           <h1 className=" uppercase text-[11px] text-[#919191] font-semibold">
             {language ? <>idioma</> : <>language</>}
           </h1>
-
+          {/*//* Español */}
           <div
             onClick={() => {
               setLanguage(true);
@@ -134,6 +147,7 @@ const Sidebar = () => {
             </div>
             <div>{language ? <>Español</> : <>Spanish</>}</div>
           </div>
+          {/*//* Ingles */}
           <div
             onClick={() => {
               setLanguage(false);

@@ -61,7 +61,7 @@ const Footer = () => {
           onClick={() => {
             setLanguage(true);
           }}
-          className=" cursor-pointer pointer-events-none"
+          className=" cursor-pointer"
         >
           ES
         </div>
@@ -69,7 +69,7 @@ const Footer = () => {
           onClick={() => {
             setLanguage(false);
           }}
-          className=" cursor-pointer pointer-events-none"
+          className=" cursor-pointer"
         >
           EN
         </div>
