@@ -2,7 +2,7 @@ export const projects_EN = [
   {
     name: "Portfolio 2023",
     category: "design",
-    image: "https://i.imgur.com/UuDXeh8.jpeg",
+    image: "https://i.imgur.com/b6O73zQ.png",
     url: "https://portfolio-v2-three-woad.vercel.app/",
     github: "https://github.com/Basso-23/Portfolio_v2",
     date: "19 March 2023",
@@ -33,7 +33,7 @@ export const projects_EN = [
   {
     name: "Babershop",
     category: "design",
-    image: "https://i.imgur.com/LI4vJSJ.jpeg",
+    image: "https://i.imgur.com/UWvENEt.png",
     url: "https://barbershop-woad.vercel.app/",
     github: "https://github.com/Basso-23/Barbershop",
     date: "30 June 2023",
@@ -68,7 +68,7 @@ export const projects_EN = [
   {
     name: "Ecommerce",
     category: "design",
-    image: "https://i.imgur.com/0knFxc3.jpeg",
+    image: "https://i.imgur.com/Et9atgq.jpeg",
     url: "https://estructura-ecommerce.vercel.app/",
     github: "https://github.com/Basso-23/Estructura_Ecommerce",
     date: "10 July 2023",
@@ -95,7 +95,7 @@ export const projects_EN = [
   {
     name: "Hoshi Creative",
     category: "design",
-    image: "https://i.imgur.com/B6IE1nn.jpeg",
+    image: "https://i.imgur.com/ViuzE9J.png",
     url: "https://www.hoshicreative.art/",
     github: "https://www.hoshicreative.art/",
     date: "10 August 2023",
@@ -126,7 +126,7 @@ export const projects_EN = [
   {
     name: "Dogur",
     category: "design",
-    image: "https://i.imgur.com/3OPxyuh.jpeg",
+    image: "https://i.imgur.com/tikxSQt.png",
     url: "https://dogur.vercel.app/",
     github: "https://github.com/Basso-23/Dogur",
     date: "19 September 2023",
@@ -157,7 +157,7 @@ export const projects_EN = [
   {
     name: "Muñoz & Asociados",
     category: "design",
-    image: "https://i.imgur.com/1w6yvWH.jpeg",
+    image: "https://i.imgur.com/gqTizQc.png",
     url: "https://pagina-contador-abogado.vercel.app/",
     github: "https://github.com/Basso-23/Abogados_Firma",
     date: "29 October 2023",
@@ -187,7 +187,7 @@ export const projects_EN = [
   {
     name: "Voting system",
     category: "full-stack",
-    image: "https://i.imgur.com/5E3eLZy.jpeg",
+    image: "https://i.imgur.com/Xsm32kU.png",
     url: "https://github.com/Basso-23/Sistema_Elecciones",
     github: "https://github.com/Basso-23/Sistema_Elecciones",
     date: "4 May 2024",

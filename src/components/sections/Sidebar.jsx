@@ -42,7 +42,7 @@ const Sidebar = () => {
           </h1>
           <a
             href="mailto:carlos.baso23@gmail.com"
-            className="flex items-center px-2 gap-2 text-[#afafaf] hover:text-white transition-all mt-5 select-none"
+            className="py-3 hover:bg-[#3F3E3F] flex items-center px-2 gap-2 text-[#afafaf] hover:text-white transition-all  mt-1 select-none"
           >
             <div>
               <Send />
@@ -55,7 +55,7 @@ const Sidebar = () => {
               handleToast();
             }}
           >
-            <div className="flex items-center px-2 gap-2 text-[#afafaf] hover:text-white transition-all cursor-pointer mt-5 select-none">
+            <div className="py-3 hover:bg-[#3F3E3F] flex items-center px-2 gap-2 text-[#afafaf] hover:text-white transition-all cursor-pointer  mt-1 select-none">
               <div>
                 <Clip />
               </div>
@@ -76,7 +76,7 @@ const Sidebar = () => {
           <a
             target="_blank"
             href="https://github.com/Basso-23"
-            className="flex items-center px-2 gap-2 text-[#afafaf] hover:text-white transition-all mt-5 select-none"
+            className="py-3 hover:bg-[#3F3E3F] flex items-center px-2 gap-2 text-[#afafaf] hover:text-white transition-all  mt-1 select-none"
           >
             <div>
               <Github />
@@ -86,7 +86,7 @@ const Sidebar = () => {
           <a
             target="_blank"
             href="https://www.linkedin.com/in/carlosbaso/"
-            className="flex items-center px-2 gap-2 text-[#afafaf] hover:text-white transition-all mt-5 select-none"
+            className="py-3 hover:bg-[#3F3E3F] flex items-center px-2 gap-2 text-[#afafaf] hover:text-white transition-all  mt-1 select-none"
           >
             <div>
               <Linkedin />
@@ -105,7 +105,7 @@ const Sidebar = () => {
                 ? "https://drive.google.com/file/d/1xK_8f4Jdlcjvw8a87wCpgfKEqfCBmR3O/view?usp=drive_link"
                 : "https://drive.google.com/file/d/1O2gmqslUaGKqcvuj-d_cBgdJP1XEpCw4/view?usp=drive_link"
             }
-            className="flex items-center px-2 gap-2 text-[#afafaf] hover:text-white transition-all mt-5 select-none"
+            className="py-3 hover:bg-[#3F3E3F] flex items-center px-2 gap-2 text-[#afafaf] hover:text-white transition-all  mt-1 select-none"
           >
             <div>
               <Download />
@@ -122,7 +122,12 @@ const Sidebar = () => {
             onClick={() => {
               setLanguage(true);
             }}
-            className="flex items-center px-2 gap-2 text-[#afafaf] hover:text-white transition-all mt-5 select-none cursor-pointer"
+            style={{
+              backgroundColor: language ? "#3F3E3F" : null,
+              color: language ? "white" : null,
+              pointerEvents: language ? "none" : null,
+            }}
+            className="py-3 hover:bg-[#3F3E3F] flex items-center px-2 gap-2 text-[#afafaf] hover:text-white transition-all  mt-1 select-none cursor-pointer"
           >
             <div className={language ? " visible" : " invisible"}>
               <Check />
@@ -133,7 +138,12 @@ const Sidebar = () => {
             onClick={() => {
               setLanguage(false);
             }}
-            className="flex items-center px-2 gap-2 text-[#afafaf] hover:text-white transition-all mt-5 select-none cursor-pointer"
+            style={{
+              backgroundColor: !language ? "#3F3E3F" : null,
+              color: !language ? "white" : null,
+              pointerEvents: !language ? "none" : null,
+            }}
+            className="py-3 hover:bg-[#3F3E3F] flex items-center px-2 gap-2 text-[#afafaf] hover:text-white transition-all mt-1 select-none cursor-pointer"
           >
             <div className={!language ? " visible" : " invisible"}>
               <Check />
