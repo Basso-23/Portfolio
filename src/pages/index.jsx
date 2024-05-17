@@ -5,6 +5,7 @@ import Sidebar from "@/components/sections/Sidebar";
 import Experience from "@/components/sections/Experience";
 import Footer from "@/components/sections/Footer";
 import Skills from "@/components/sections/Skills";
+import Navbar from "@/components/sections/Navbar";
 
 const App = () => {
   return (
@@ -20,6 +21,7 @@ const App = () => {
       <div className="relative h-full">
         <Sidebar />
         <div className="sm:pl-[250px] pl-0">
+          <Navbar />
           <Skills />
           <Projects />
           <Experience />

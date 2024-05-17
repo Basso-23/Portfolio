@@ -1,8 +1,6 @@
 import React, { useState, useEffect } from "react";
 import "@/styles/globals.css";
 import "@fontsource-variable/inter";
-import "@fontsource-variable/syne";
-import "@fontsource/roboto";
 import { Toaster } from "@/components/ui/sonner";
 import { useAtom } from "jotai";
 import { originalAtom } from "@/atom";

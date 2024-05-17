@@ -122,7 +122,7 @@
   transform: translate(-50%, -50%);
 }
 
-.border-l button {
+.border-none button {
   display: none;
 }
 
@@ -345,4 +345,12 @@
   transition-property: all;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-duration: 250ms;
+}
+
+.mobile {
+}
+
+.mobile section {
+  display: block !important;
+  border: none;
 }

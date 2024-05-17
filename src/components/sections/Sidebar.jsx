@@ -31,9 +31,9 @@ const Sidebar = () => {
   };
 
   return (
-    <main className=" sm:block hidden absolute left-0 h-full w-[250px] bg-[#161616] border-r border-[#333333] pb-6">
-      <section className=" flex flex-col sticky top-0">
-        <div className="p-5 font-medium border-b border-[#333333] flex">
+    <section className=" sm:block hidden absolute left-0 h-full w-[250px] bg-[#161616] border-r border-[#333333] pb-6">
+      <div className=" flex flex-col sticky top-0 text-white">
+        <div className="p-5 sm:font-medium border-b border-[#333333] flex text-[16px]">
           Menu
         </div>
 
@@ -75,7 +75,7 @@ const Sidebar = () => {
         </div>
 
         {/*//* Links */}
-        <div className=" flex flex-col px-4 mt-8 text-sm">
+        <div className=" flex flex-col px-4 sm:mt-8 mt-4 text-sm">
           <h1 className=" uppercase text-[11px] text-[#919191] font-semibold">
             Links
           </h1>
@@ -104,7 +104,7 @@ const Sidebar = () => {
         </div>
 
         {/*//* Currículum */}
-        <div className=" flex flex-col px-4 mt-8 text-sm">
+        <div className=" flex flex-col px-4 sm:mt-8 mt-4 text-sm">
           <h1 className=" uppercase text-[11px] text-[#919191] font-semibold">
             {language ? <>currículum </> : <>Resume</>}
           </h1>
@@ -126,7 +126,7 @@ const Sidebar = () => {
         </div>
 
         {/*//* Idioma */}
-        <div className=" flex flex-col px-4 mt-8 text-sm">
+        <div className=" flex flex-col px-4 sm:mt-8 mt-4 text-sm">
           <h1 className=" uppercase text-[11px] text-[#919191] font-semibold">
             {language ? <>idioma</> : <>language</>}
           </h1>
@@ -165,8 +165,8 @@ const Sidebar = () => {
             <div>{language ? <>Inglés</> : <>English</>}</div>
           </div>
         </div>
-      </section>
-    </main>
+      </div>
+    </section>
   );
 };
 

@@ -33,7 +33,7 @@ const Experience = () => {
         <h1 className="text-[24px]  font-medium">
           {language ? <>Experiencia</> : <>Experience</>}
         </h1>
-        <h1 className="text-[16px] mt-3 text-[#cccccc]">
+        <h1 className="text-[15px] mt-3 text-[#cccccc]">
           {language ? (
             <>
               Algunas compañías y asociaciones con las que he podido colaborar a
