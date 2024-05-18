@@ -46,16 +46,32 @@ const Projects = () => {
 
   return (
     <section name="projects" className="flex min-h-screen">
-      <div className="pageSize flex-1 w-full mt-10">
-        <h1 className="text-[24px]  font-medium">
-          {language ? <>Proyectos recientes</> : <>Recent projects</>}
+      <div className="pageSize flex-1 w-full mt-14 ">
+        <h1 className="text-[32px]  font-bold">
+          {language ? <>Galería de Proyectos</> : <>Projects Gallery</>}
+        </h1>
+        <h1 className="text-[16px] mt-2 text-[#888] max-w-[950px]">
+          {language ? (
+            <>
+              Explora mis trabajos y descubre cómo aplico mi creatividad y
+              conocimientos para crear resultados innovadores.
+            </>
+          ) : (
+            <>
+              Explore my work and discover how I apply my creativity and
+              knowledge to create innovative results.
+            </>
+          )}
         </h1>
         <Filters />
         <div className="grid-container grid 2xl:grid-cols-3 xl:grid-cols-3 lg:grid-cols-2 grid-cols-1 gap-6">
           {data
             .map((item, index) => (
-              <div key={index} className=" cursor-pointer container-individual">
-                <div className="grid-content border border-[#333333] rounded- overflow-hidden bg-[#161616] ">
+              <div
+                key={index}
+                className=" cursor-pointer container-individual "
+              >
+                <div className="grid-content border border-[#333333] rounded- overflow-hidden bg-[#111111] rounded-smm">
                   <ImageRender img={item.image} />
                   <div className=" p-4 grid-info">
                     <div className="text-[14px]">{item.name}</div>

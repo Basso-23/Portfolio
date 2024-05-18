@@ -31,9 +31,9 @@ const Sidebar = () => {
   };
 
   return (
-    <section className=" sm:block hidden absolute left-0 h-full w-[250px] bg-[#161616] border-r border-[#333333] pb-6">
+    <section className=" sm:block hidden absolute left-0 h-full w-[250px] bg-[#111111] border-r border-[#333333] pb-6">
       <div className=" flex flex-col sticky top-0 text-white">
-        <div className="p-5 sm:font-medium border-b border-[#333333] flex text-[16px]">
+        <div className="p-5 font-medium border-b border-[#333333] flex text-[16px]">
           Menu
         </div>
 
@@ -75,7 +75,7 @@ const Sidebar = () => {
         </div>
 
         {/*//* Links */}
-        <div className=" flex flex-col px-4 sm:mt-8 mt-4 text-sm">
+        <div className=" flex flex-col px-4 sm:mt-6 mt-4 text-sm">
           <h1 className=" uppercase text-[11px] text-[#919191] font-semibold">
             Links
           </h1>
@@ -104,7 +104,7 @@ const Sidebar = () => {
         </div>
 
         {/*//* Currículum */}
-        <div className=" flex flex-col px-4 sm:mt-8 mt-4 text-sm">
+        <div className=" flex flex-col px-4 sm:mt-6 mt-4 text-sm">
           <h1 className=" uppercase text-[11px] text-[#919191] font-semibold">
             {language ? <>currículum </> : <>Resume</>}
           </h1>
@@ -126,7 +126,7 @@ const Sidebar = () => {
         </div>
 
         {/*//* Idioma */}
-        <div className=" flex flex-col px-4 sm:mt-8 mt-4 text-sm">
+        <div className=" flex flex-col px-4 sm:mt-6 mt-4 text-sm">
           <h1 className=" uppercase text-[11px] text-[#919191] font-semibold">
             {language ? <>idioma</> : <>language</>}
           </h1>
@@ -140,7 +140,7 @@ const Sidebar = () => {
               color: language ? "white" : null,
               pointerEvents: language ? "none" : null,
             }}
-            className="py-3 hover:bg-[#3F3E3F] flex items-center px-2 gap-2 text-[#afafaf] hover:text-white transition-all  mt-1 select-none cursor-pointer"
+            className="py-3 hover:bg-[#3F3E3F] flex items-center px-2 gap-2 text-[#afafaf] hover:text-white transition-all  mt-1 select-none cursor-pointer rounded-smm"
           >
             <div className={language ? " visible" : " invisible"}>
               <Check />
@@ -157,7 +157,7 @@ const Sidebar = () => {
               color: !language ? "white" : null,
               pointerEvents: !language ? "none" : null,
             }}
-            className="py-3 hover:bg-[#3F3E3F] flex items-center px-2 gap-2 text-[#afafaf] hover:text-white transition-all mt-1 select-none cursor-pointer"
+            className="py-3 hover:bg-[#3F3E3F] flex items-center px-2 gap-2 text-[#afafaf] hover:text-white transition-all mt-1 select-none cursor-pointer rounded-smm"
           >
             <div className={!language ? " visible" : " invisible"}>
               <Check />

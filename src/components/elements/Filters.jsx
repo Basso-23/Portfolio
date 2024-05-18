@@ -31,8 +31,8 @@ const Filters = () => {
         }}
         className={
           currentFilter === name
-            ? "active-filter  py-3 px-4 flex items-center gap-2 min-w-[130px] justify-center"
-            : "inactive-filter  py-3 px-4 flex items-center gap-2 min-w-[130px] justify-center"
+            ? " active-filter  py-3 px-4 flex items-center gap-2 min-w-[130px] justify-center rounded-smm"
+            : "inactive-filter  py-3 px-4 flex items-center gap-2 min-w-[130px] justify-center rounded-smm"
         }
       >
         {icon}

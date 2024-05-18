@@ -67,7 +67,7 @@
 }
 
 :root {
-  background-color: #0f0f0f;
+  background-color: #010101;
   color: white;
 }
 
@@ -76,7 +76,7 @@
   padding-right: 1rem;
 }
 
-@media (min-width: 1045px) {
+@media (min-width: 1102px) {
   .pageSize {
     width: 100%;
     max-width: 1500px;
@@ -137,7 +137,6 @@
 }
 
 .inactive-filter {
-  background-color: transparent;
   border-color: transparent;
   color: #afafaf;
   cursor: pointer;
@@ -281,7 +280,7 @@
 .imagen {
 }
 
-@media (min-width: 1045px) {
+@media (min-width: 1102px) {
   .grid-container > div:first-child .grid-content {
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -303,7 +302,7 @@
   grid-column: span 1 / span 1;
 }
 
-@media (min-width: 1045px) {
+@media (min-width: 1102px) {
   .grid-container > div:first-child {
     grid-column: span 2 / span 2;
   }
@@ -353,4 +352,16 @@
 .mobile section {
   display: block !important;
   border: none;
+}
+
+.radial {
+  background: radial-gradient(ellipse at top, #17222e 0%, #010101 0%);
+  border-bottom: 1px solid #333333;
+}
+
+@media (min-width: 900px) {
+  .radial {
+    background: radial-gradient(ellipse at top, #17222e 0%, #010101 75%);
+    border-bottom: 0px solid #333333;
+  }
 }

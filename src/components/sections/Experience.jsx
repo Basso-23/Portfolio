@@ -29,20 +29,26 @@ const Experience = () => {
   const [language, setLanguage] = useAtom(languageAtom);
   return (
     <main name="experience" className="flex ">
-      <section className="pageSize flex-1 w-full mt-10">
-        <h1 className="text-[24px]  font-medium">
-          {language ? <>Experiencia</> : <>Experience</>}
+      <section className="pageSize flex-1 w-full mt-14">
+        <h1 className="text-[32px]  font-bold leading-9">
+          {language ? (
+            <>Experiencia dentro del Campo</>
+          ) : (
+            <>Experience in the Field</>
+          )}
         </h1>
-        <h1 className="text-[15px] mt-3 text-[#cccccc]">
+        <h1 className="text-[16px] mt-3 text-[#888] max-w-[950px]">
           {language ? (
             <>
-              Algunas compañías y asociaciones con las que he podido colaborar a
-              lo largo de mi carrera.
+              Estas son algunas de las compañías y asociaciones con las que he
+              tenido la oportunidad de colaborar a lo largo de mi carrera,
+              brindando siempre resultados de la mejor calidad.
             </>
           ) : (
             <>
-              Some companies and associations with which I have been able to
-              collaborate throughout my career.
+              These are some of the companies and associations I have had the
+              opportunity to collaborate with throughout my career, always
+              delivering top-quality results.
             </>
           )}
         </h1>
